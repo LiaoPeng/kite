@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:ehcache="http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="
+        	http://www.springframework.org/schema/beans 
+        	http://www.springframework.org/schema/beans/spring-beans.xsd 
+        	http://www.springframework.org/schema/context
+       		http://www.springframework.org/schema/context/spring-context.xsd
+        	http://www.springframework.org/schema/tx 
+        	http://www.springframework.org/schema/tx/spring-tx.xsd
+        	http://www.springframework.org/schema/aop
+        	http://www.springframework.org/schema/aop/spring-aop.xsd
+        	http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring
+        	http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring/ehcache-spring-1.2.xsd
+        	http://www.springframework.org/schema/mvc
+        	http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+	<context:annotation-config />
+
+	<!-- To load properties file -->
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:dbConfig/local.properties</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- Initial data source bean -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+		destroy-method="close">
+		<property name="driverClass" value="${database.driver}" />
+		<property name="jdbcUrl" value="${database.url}" />
+		<property name="user" value="${database.user}" />
+		<property name="password" value="${database.password}" />
+	</bean>
+
+
+	<!-- Initial Hibernate Session Factory -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="packagesToScan" value="com.galaxy.kite.entity" />
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
+				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+				<prop key="hibernate.autoReconnect">${hibernate.autoReconnect}</prop>
+				<prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
+				<prop key="hibernate.default_schema">${hibernate.default_schema}</prop>
+			</props>
+		</property>
+	</bean>
+
+	<!-- Enables the Hibernate @Transactional programming model -->
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<context:component-scan base-package="com.galaxy.kite">
+		<context:exclude-filter type="regex" expression="com.galaxy.kite.controller" />
+	</context:component-scan>
+
+
+</beans>
