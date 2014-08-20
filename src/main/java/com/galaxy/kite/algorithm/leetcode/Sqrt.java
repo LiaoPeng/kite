@@ -28,7 +28,7 @@ public class Sqrt {
 				break;
 			}else if(middle * middle < x){
 				
-				if( (long)(middle+1) * (long)(middle+1) <= (long) x ){
+				if( (long)(middle+1) * (long)(middle+1) <= x ){
 					left = middle+1;
 				}else {
 					result = selectBetterResult(middle, middle+1, x);

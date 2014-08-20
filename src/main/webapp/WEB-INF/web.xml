@@ -6,6 +6,15 @@
 	<display-name>Archetype Created Web Application</display-name>
 
 
+	<!-- Initial all application bean -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			classpath:applicationContext.xml
+		</param-value>
+	</context-param>
+
+
 	<filter>
 		<filter-name>appliationEncoding</filter-name>
 		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -24,35 +33,26 @@
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
 
-
 	<!-- -->
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
 
-	<!-- Initial all application bean -->
-	<context-param>
-		<param-name>contextConfigLocation</param-name>
-		<param-value>
-			classpath:applicationContext.xml
-		</param-value>
-	</context-param>
-
 	<!-- Config spring MVC Servlet -->
 	<servlet>
 		<servlet-name>dispatcherServlet</servlet-name>
+		<display-name>dispatcherServlet</display-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-		<load-on-startup>1</load-on-startup>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
 			<param-value>classpath:spring-servlet-config.xml</param-value>
 		</init-param>
+		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>dispatcherServlet</servlet-name>
 		<url-pattern>*.do</url-pattern>
 	</servlet-mapping>
-
 
 
 </web-app>
