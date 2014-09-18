@@ -20,8 +20,11 @@ public class LoginController {
 	@Qualifier("userInfoService")
 	private IUserInfoService userInfoService;
 	
+
 	@Autowired
 	private ILoginService loginService;
+
+
 	
 	@RequestMapping(value="/showHomePage.do",method=RequestMethod.GET)
 	public ModelAndView showHomePage() {
