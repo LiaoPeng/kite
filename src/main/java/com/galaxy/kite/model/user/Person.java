@@ -1,7 +1,11 @@
 package com.galaxy.kite.model.user;
 
 import java.io.Serializable;
+import java.util.Calendar;
 import java.util.Date;
+
+import com.galaxy.kite.util.collections.Objects;
+import com.galaxy.kite.util.objects.ObjectFormat;
 
 
 public class Person implements Serializable {
@@ -17,6 +21,7 @@ public class Person implements Serializable {
 	private String address;
 	private Date birthday;
 	private Date luckDay;
+	private Calendar loveCalendar;
 	private double totalMoney;
 	
 	
@@ -57,7 +62,16 @@ public class Person implements Serializable {
 		this.address = address;
 	}
 	
-	
+	public Calendar getLoveCalendar() {
+		return loveCalendar;
+	}
+	public void setLoveCalendar(Calendar loveCalendar) {
+		this.loveCalendar = loveCalendar;
+	}
 
+	@Override
+	public String toString(){	
+		return ObjectFormat.toJsonString(this);
+	}
 
 }

@@ -19,6 +19,7 @@
             http://www.springframework.org/schema/cache/spring-cache.xsd
         	http://www.springframework.org/schema/mvc
         	http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+	
 	<context:annotation-config />
 
 	<!-- To load properties file -->
@@ -32,8 +33,7 @@
 	</bean>
 
 	<!-- Initial data source bean -->
-	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
-		destroy-method="close">
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
 		<property name="driverClass" value="${database.driver}" />
 		<property name="jdbcUrl" value="${database.url}" />
 		<property name="user" value="${database.user}" />
@@ -45,7 +45,7 @@
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"></property>
-		<property name="packagesToScan" value="com.galaxy.kite.entity" />
+		<property name="packagesToScan" value="com.galaxy.kite.util" />
 		<property name="hibernateProperties">
 			<props>
 				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
@@ -65,12 +65,13 @@
 	</bean>
 
 	<context:component-scan base-package="com.galaxy.kite">
+		<context:include-filter type="regex" expression="com\.galaxy\.kite\.service\.home\.LoginService"></context:include-filter>
 		<context:exclude-filter type="regex" expression="com.galaxy.kite.controller" />
 	</context:component-scan>
 
 	<!-- AOP -->
-	<aop:aspectj-autoproxy />
-	<bean class="com.galaxy.kite.common.interceptor.ServiceLogInterceptor"></bean>
+<!-- 	<aop:aspectj-autoproxy />
+	<bean class="com.galaxy.kite.common.interceptor.ServiceLogInterceptor"></bean> -->
 
 
 	<!-- ******************************* ***** CACHE CONFIGURATION ***** ******************************* -->

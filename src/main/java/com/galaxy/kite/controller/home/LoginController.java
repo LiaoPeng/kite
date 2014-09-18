@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.galaxy.kite.service.home.api.ILoginService;
 import com.galaxy.kite.service.home.api.IUserInfoService;
 
 
@@ -19,13 +20,17 @@ public class LoginController {
 	@Qualifier("userInfoService")
 	private IUserInfoService userInfoService;
 	
+	@Autowired
+	private ILoginService loginService;
+	
 	@RequestMapping(value="/showHomePage.do",method=RequestMethod.GET)
 	public ModelAndView showHomePage() {
 		
 		int countOfUser = userInfoService.getCountOfUsers();
 		
 		ModelMap modelMap = new ModelMap();
-		modelMap.put("countOfUser", countOfUser);
+		modelMap.put("countOfUser", loginService.isInstance());
+		
 
 		return new ModelAndView("home/home",modelMap);
 	}
