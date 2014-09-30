@@ -4,7 +4,6 @@ import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
 
-import org.aspectj.internal.lang.annotation.ajcDeclareAnnotation;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -59,12 +58,12 @@ public class SortListTest {
 	@Test
 	public void testMergeSort() {
 		ListNode temp = head;
-		sortList.printList(temp);
+		SortList.printList(temp);
 		ListNode temp1 = sortList.sortList(head);
-		sortList.printList(temp1);
+		SortList.printList(temp1);
 		ListNode temp2 = sortList.quickSort(temp1);
 
-		sortList.printList(temp2);
+		SortList.printList(temp2);
 
 		while (temp1 != null) {
 

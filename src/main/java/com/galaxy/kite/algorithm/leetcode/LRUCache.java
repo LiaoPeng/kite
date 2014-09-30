@@ -26,5 +26,4 @@ public class LRUCache extends LinkedHashMap<Integer, Integer> {
 	public void set(int key, int value) {
 		super.put(key, value);
 	}
-
 }

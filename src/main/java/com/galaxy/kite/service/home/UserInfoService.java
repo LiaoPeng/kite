@@ -19,6 +19,7 @@ public class UserInfoService implements IUserInfoService {
 	private UserPermissionDao userPermissionDao;
 
 
+	@Override
 	public int getCountOfUsers() {
 		
 		return userPermissionDao.getCount();
