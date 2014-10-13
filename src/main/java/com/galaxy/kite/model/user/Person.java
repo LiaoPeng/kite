@@ -7,6 +7,8 @@ import java.util.Date;
 import com.galaxy.kite.util.objects.ObjectFormat;
 
 
+
+
 public class Person implements Serializable {
 
 	/**

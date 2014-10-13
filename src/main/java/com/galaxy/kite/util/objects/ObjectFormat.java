@@ -5,7 +5,6 @@ import java.io.StringWriter;
 import java.io.Writer;
 
 import org.codehaus.jackson.map.ObjectMapper;
-import org.hamcrest.core.Is;
 
 public class ObjectFormat {
 	

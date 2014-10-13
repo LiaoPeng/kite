@@ -4,21 +4,25 @@ import java.util.Stack;
 
 enum Operator {
 	PLUS("+") {
+		@Override
 		int apply(int x, int y) {
 			return x + y;
 		}
 	},
 	SUB("-") {
+		@Override
 		int apply(int x, int y) {
 			return y - x;
 		}
 	},
 	MULTIPLICATION("*") {
+		@Override
 		int apply(int x, int y) {
 			return x * y;
 		}
 	},
 	DIVIDE("/") {
+		@Override
 		int apply(int x, int y) {
 			return y / x;
 		}
