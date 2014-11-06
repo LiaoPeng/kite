@@ -13,7 +13,7 @@ import com.galaxy.kite.service.home.api.IUserInfoService;
 
 
 @Controller
-@RequestMapping("/home")
+@RequestMapping("/knight")
 public class LoginController {
 	
 	@Autowired
@@ -29,13 +29,21 @@ public class LoginController {
 	@RequestMapping(value="/showHomePage.do",method=RequestMethod.GET)
 	public ModelAndView showHomePage() {
 		
-		int countOfUser = userInfoService.getCountOfUsers();
 		
 		ModelMap modelMap = new ModelMap();
-		modelMap.put("countOfUser", loginService.isInstance());
+		modelMap.put("countOfUser",1);
 		
-
-		return new ModelAndView("home/home",modelMap);
+		return new ModelAndView("/homepage",modelMap);
 	}
 
+	
+	@RequestMapping(value="/about.do",method=RequestMethod.GET)
+	public ModelAndView showAbout() {
+		
+		
+		ModelMap modelMap = new ModelMap();
+		modelMap.put("countOfUser",1);
+		
+		return new ModelAndView("/about",modelMap);
+	}
 }

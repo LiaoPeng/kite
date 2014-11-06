@@ -1,4 +1,4 @@
-<%@include file="../common/taglib.jsp"%>
+<%@include file="../views/common/taglib.jsp"%>
 <%@ page isELIgnored="false" %> 
 
 
