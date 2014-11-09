@@ -1,9 +1,13 @@
 package com.galaxy.kite.controller.home;
 
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.catalina.startup.HomesUserDatabase;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -38,11 +42,14 @@ public class LoginController {
 
 	
 	@RequestMapping(value="/about.do",method=RequestMethod.GET)
-	public ModelAndView showAbout() {
+	public ModelAndView showAbout(String target) {
 		
-		
+	
 		ModelMap modelMap = new ModelMap();
-		modelMap.put("countOfUser",1);
+		target = StringUtils.isEmpty(target) ? "service" : target;
+			
+		
+		modelMap.put("target", target +".jsp");
 		
 		return new ModelAndView("/about",modelMap);
 	}

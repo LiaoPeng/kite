@@ -3,8 +3,7 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
-	xmlns:cache="http://www.springframework.org/schema/cache"
-	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:cache="http://www.springframework.org/schema/cache" xmlns:mvc="http://www.springframework.org/schema/mvc"
 	xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="
         	http://www.springframework.org/schema/beans 
@@ -19,7 +18,7 @@
             http://www.springframework.org/schema/cache/spring-cache.xsd
         	http://www.springframework.org/schema/mvc
         	http://www.springframework.org/schema/mvc/spring-mvc.xsd">
-	
+
 	<context:annotation-config />
 
 	<!-- To load properties file -->
@@ -32,8 +31,25 @@
 		</property>
 	</bean>
 
+	<bean id="messageSource"
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="defaultEncoding" value="utf-8" />
+		<property name="useCodeAsDefaultMessage" value="true" />
+		<property name="basenames">
+			<list>
+				<value>classpath:messages/messages</value>
+			</list>
+		</property>
+	</bean>
+
+
+	<bean id="localeResolver"
+		class="org.springframework.web.servlet.i18n.CookieLocaleResolver" />
+
+
 	<!-- Initial data source bean -->
-	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+		destroy-method="close">
 		<property name="driverClass" value="${database.driver}" />
 		<property name="jdbcUrl" value="${database.url}" />
 		<property name="user" value="${database.user}" />
@@ -65,21 +81,22 @@
 	</bean>
 
 	<context:component-scan base-package="com.galaxy.kite">
-		<context:include-filter type="regex" expression="com\.galaxy\.kite\.service\.home\.LoginService"></context:include-filter>
-		<context:exclude-filter type="regex" expression="com.galaxy.kite.controller" />
+		<context:include-filter type="regex"
+			expression="com\.galaxy\.kite\.service\.home\.LoginService"></context:include-filter>
+		<context:exclude-filter type="regex"
+			expression="com.galaxy.kite.controller" />
 	</context:component-scan>
 
 	<!-- AOP -->
 
-<!-- 	<aop:aspectj-autoproxy />
-	<bean class="com.galaxy.kite.common.interceptor.ServiceLogInterceptor"></bean> -->
+	<!-- <aop:aspectj-autoproxy /> <bean class="com.galaxy.kite.common.interceptor.ServiceLogInterceptor"></bean> -->
 
 	<aop:aspectj-autoproxy />
-	
+
 
 
 	<!-- ******************************* ***** CACHE CONFIGURATION ***** ******************************* -->
-	<cache:annotation-driven cache-manager="cacheManager"/>
+	<cache:annotation-driven cache-manager="cacheManager" />
 	<bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager">
 		<property name="cacheManager" ref="ehcache" />
 	</bean>
