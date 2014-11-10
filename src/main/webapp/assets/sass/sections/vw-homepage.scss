@@ -1,0 +1,695 @@
+@import "components/fonts";
+@import "components/vw";
+@import "components/vw-structure";
+@import "vendor/bootstrap-includes";
+
+// ---------------------------------------------------------------------------
+// Homepage - Common
+#omdweb-home {
+  position: relative;
+
+  .mobile-visible {
+    display: none;
+
+    @include at-breakpoint($lt-tablet) {
+      display: block;
+    }
+  }
+
+  .mobile-hidden {
+    display: block;
+
+    @include at-breakpoint($lt-tablet) {
+      display: none;
+    }
+  }
+
+  a {
+    color: $link-color;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  // Navigation
+  #nav-menu-trigger {
+    position: relative;
+    background-color: $brand-primary;
+    font-family: $font-family-brand;
+    font-size: 16px;
+    line-height: 1;
+    color: #fff;
+    padding: 14px 12px;
+    text-decoration: none;
+
+    &.open {
+      background-color: $nav-hover-background-color;
+      color: $nav-hover-text-color;
+      margin-bottom: 0;
+
+      i {
+        border-color: $nav-hover-text-color;
+      }
+    }
+
+    i {
+      content: "";
+      display: block;
+      @include box-sizing(content-box);
+      border-bottom: 12px double #fff;
+      border-top: 4px solid #fff;
+      width: 24px;
+      height: 4px;
+      position: absolute;
+      top: 11px;
+      right: 12px;
+    }
+
+    @include at-breakpoint($lt-tablet) {
+      display: block;
+    }
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    @include box-sizing(border-box);
+    width: 100%;
+    z-index: 3000;
+
+    &.open {
+      display: block;
+    }
+
+    @include at-breakpoint($gt-tablet) {
+      display: block;
+      &.omdweb-alert-visible {
+        top: 97px;
+      }
+    }
+
+    > ul > li {
+      &.locate {
+        .nav-item {
+          &:before {
+            background-position: -160px 0;
+            width: 28px;
+            height: 28px;
+          }
+
+          &.omdweb-down,
+          &:hover {
+            &:before {
+              background-position: -160px -36px;
+            }
+          }
+        }
+      }
+      &.ordering {
+        .nav-item {
+          &:before {
+            background-position: -320px 0;
+            width: 28px;
+            height: 28px;
+          }
+
+          &.omdweb-down,
+          &:hover {
+            &:before {
+              background-position: -320px -36px;
+            }
+          }
+        }
+      }
+      &.sales {
+        .nav-item {
+          &:before {
+            background-position: -474px 0;
+            width: 34px;
+            height: 28px;
+          }
+
+          &.omdweb-down,
+          &:hover {
+            &:before {
+              background-position: -474px -36px;
+            }
+          }
+        }
+      }
+      &.vehicles {
+        .nav-item {
+          &:before {
+            background-position: -634px 0;
+            width: 34px;
+            height: 28px;
+          }
+
+          &.omdweb-down,
+          &:hover {
+            &:before {
+              background-position: -634px -36px;
+            }
+          }
+        }
+      }
+      &.analysis {
+        .nav-item {
+          &:before {
+            background-position: -805px 0;
+            width: 31px;
+            height: 28px;
+          }
+
+          &.omdweb-down,
+          &:hover {
+            &:before {
+              background-position: -805px -36px;
+            }
+          }
+        }
+      }
+      &.admin {
+        .nav-item {
+          &:before {
+            background-position: -956px 0;
+            width: 32px;
+            height: 28px;
+          }
+
+          &.omdweb-down,
+          &:hover {
+            &:before {
+              background-position: -956px -37px;
+            }
+          }
+        }
+      }
+    }
+
+    .nav-item {
+      position: relative;
+      font-family: $font-family-brand;
+      font-size: 18px;
+      color: white;
+      display: block;
+      text-decoration: none;
+      background-color: $brand-primary;
+      border-top: 1px solid #fff;
+      line-height: 1;
+      padding: 14px 12px;
+      z-index: 999;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 7px;
+        right: 12px;
+        -webkit-transform: none;
+            -ms-transform: none;
+                transform: none;
+        background-image: url(../../img/icons/sprite-homepage-nav.png);
+        background-repeat: no-repeat;
+        z-index: 1000;
+      }
+
+      &.omdweb-down {
+        background-color: darken($brand-primary, 30%);
+        color: $nav-hover-text-color;
+      }
+    }
+
+    .sub-menu {
+      display: block;
+      z-index: 1000;
+      border: 1px solid $borders;
+      border-top: none;
+      background-color: white;
+      padding: $gutter-width;
+
+      li {
+        border-top: 1px solid $borders;
+
+        a {
+          display: block;
+          padding: 4px 0;
+        }
+
+        &:first-child {
+          border-top: none;
+        }
+      }
+
+      &.omdweb-collapsed {
+        display: none;
+      }
+    }
+
+    @include at-breakpoint($gt-tablet) {
+      position: absolute;
+      top: 53px;
+
+      > ul {
+        @include pie-clearfix;
+        margin: 0;
+
+        > li {
+          @include isolate-grid(2,12);
+          padding: 0;
+          margin-bottom: 4px;
+          display: inline-block;
+          *display: inline;
+          *zoom: 1;
+          position: relative;
+
+          &.admin {
+            @include omega;
+          }
+        }
+      }
+
+      .nav-item {
+        border-top: none;
+        padding: 45% 0 7% 10%;
+        position: relative;
+
+        @include at-breakpoint($gt-desktop) {
+          padding: 60px 0 12px 15px;
+        }
+
+        &:before {
+          top: 8px;
+          right: 8px;
+        }
+
+        &:hover {
+          background-color: $nav-hover-background-color;
+          color: $nav-hover-text-color;
+          text-decoration: none;
+        }
+
+        &.omdweb-down {
+          background-color: $nav-hover-background-color;
+          color: $nav-hover-text-color;
+
+          &:after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: $nav-hover-background-color;
+            z-index: 1002;
+          }
+        }
+      }
+
+      .sub-menu {
+        display: block;
+        position: absolute;
+        border: 5px solid $nav-hover-background-color;
+        background-color: white;
+        padding: $gutter-width;
+        margin-top: 5px;
+        width: 207%;
+
+        &.omdweb-collapsed {
+          display: none;
+        }
+
+        li {
+          a {
+            display: block;
+            padding: 2px 0;
+          }
+        }
+      }
+
+      li.admin .sub-menu {
+        right: 0;
+        @include omega;
+      }
+    }
+  }
+
+  // Header
+  header {
+    @include pie-clearfix;
+    padding-bottom: $gutter-width;
+  }
+
+  #searchForm {
+    position: relative;
+    input[type="text"],
+    input[type="search"] {
+      @include box-sizing(border-box);
+      width: 100%;
+      line-height: 1;
+      border: none;
+      background-color: $input-bg;
+      color: $input-color;
+      font-size: 12px;
+      padding: 10px 40px 9px $gutter-width;
+      float: left;
+      &:focus {
+        outline: none;
+        background-color: lighten($input-bg, 3%);
+        -webkit-box-shadow: inset 1px 1px 2px 0 rgba(0,0,0,.3);
+                box-shadow: inset 1px 1px 2px 0 rgba(0,0,0,.3);
+      }
+    }
+    input[type="submit"] {
+      background: $input-bg url(../../img/icons/icon-search.png) no-repeat center center;
+      height: 33px;
+      width: 41px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      text-indent: -9999em;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    @include at-breakpoint($gt-tablet) {
+      @include span-columns(4 omega,12);
+    }
+  }
+
+  .omdweb-alert-banner {
+    @include span-columns (12,12);
+    float: left;
+    margin: $gutter-width 0 0;
+    min-height: 34px;
+    background: #000 url(../../img/icons/icon-messaging-alert.png) no-repeat 10px 6px;
+    color: #d6dcdc;
+    padding: 7px 8px 7px 48px;
+    strong {
+      color: #fff;
+    }
+  }
+
+  main {
+    @include pie-clearfix;
+    position: relative;
+  }
+
+  // Carousel
+  .has-carousel {
+    @include at-breakpoint($gt-sm-tablet) {
+      @include span-columns(6,12);
+      border: 1px solid $borders;
+      margin-bottom: $gutter-width;
+    }
+
+    @include at-breakpoint($gt-tablet) {
+      @include reset-columns;
+      border: none;
+      padding: 0;
+    }
+  }
+  #carousel {
+    @include at-breakpoint($lt-tablet) {
+      padding: 0 ($box-padding / 2) ($box-padding / 2);
+
+      h1.mobile-visible {
+        padding-bottom: .3em;
+        border-bottom: 3px solid $brand-primary;
+        margin-top: .67em;
+        font-size: 18px;
+        margin-bottom: .3em;
+      }
+    }
+
+    @include at-breakpoint($gt-sm-tablet) {
+      padding: 0 $box-padding ($box-padding / 2);
+      height: 244px;
+    }
+
+    @include at-breakpoint($gt-tablet) {
+      margin-bottom: 207px;
+      padding: 0;
+      height: auto;
+    }
+  }
+  .carousel-inner {
+    @include at-breakpoint($lt-tablet) {
+      overflow: visible;
+      img {
+        display: none;
+      }
+      > .item {
+        display: block;
+        -webkit-transition: none;
+            -ms-transition: none;
+             -o-transition: none;
+                transition: none;
+        border-bottom: 1px solid $borders;
+      }
+    }
+
+    @include at-breakpoint($gt-sm-tablet) {
+      height: 200px;
+      overflow: auto;
+    }
+
+    @include at-breakpoint($gt-tablet) {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      img {
+        display: block;
+      }
+    }
+  }
+  .carousel-caption {
+    color: $text-color;
+    text-align: left;
+    text-shadow: none;
+    position: static;
+    padding: 0;
+
+    h2 {
+      font-size: 12px;
+    }
+    p {
+      display: none;
+      padding: 4px 8px;
+
+      &.omdweb-open-list {
+        display: block;
+      }
+    }
+
+    @include at-breakpoint($gt-tablet) {
+      position: absolute;
+      top: 40%;
+      right: 0;
+      left: 32px;
+      bottom: 0;
+      max-width: 40%;
+
+      h2 {
+        font-family: $heading-font;
+        font-weight: 100;
+        font-size: 22px;
+        color: $headline-text-color;
+        text-shadow: none;
+        margin-bottom: .28em;
+        cursor: default;
+
+        &:after {
+          background: none;
+        }
+      }
+      p {
+        display: block;
+        padding: 0;
+      }
+    }
+  }
+  .carousel-indicators {
+    display: none;
+
+    @include at-breakpoint($gt-tablet) {
+      display: block;
+      left: 32px;
+      margin-left: 0;
+      width: auto;
+      text-align: left;
+    }
+
+    li {
+      @include at-breakpoint($gt-tablet) {
+        @include border-radius(0);
+        border: none;
+        width: 10px;
+        height: 10px;
+        background-color: rgba(255,255,255,.6);
+        margin: 0 0 0 8px;
+        &:first-child {
+          margin-left: 0;
+        }
+        &.active {
+          width: 10px;
+          height: 10px;
+        }
+      }
+    }
+  }
+
+  .info-box {
+    margin-bottom: $gutter-width;
+    padding: 0 ($box-padding / 2) ($box-padding / 2);
+
+    a.follow {
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      line-height: 15px;
+      font-weight: 700;
+      background: url(../../img/icons/icon-vw-brand-chevron-sm2.png) no-repeat 100% 0;
+      padding-right: 16px;
+
+      &:hover {
+        background-position: 100% -57px;
+      }
+    }
+
+    h1 {
+      padding-bottom: .3em;
+      border-bottom: 3px solid $brand-primary;
+      margin-bottom: .3em;
+      font-size: 170%;
+    }
+
+    ul {
+      margin: 0;
+      li {
+        border-bottom: 1px solid $borders;
+      }
+    }
+
+    @include at-breakpoint($gt-sm-tablet) {
+      @include span-columns(6,12);
+      border: 1px solid $borders;
+      padding: 0 $box-padding ($box-padding / 2);
+
+      &:nth-last-child(2) {
+        clear: both;
+      }
+      &:last-child {
+        @include omega;
+      }
+    }
+
+    @include at-breakpoint($gt-tablet) {
+      @include reset-columns;
+      @include span-columns(4,12);
+      margin-bottom: 0;
+
+      position: absolute;
+      bottom: 0;
+
+      &#omdweb-info-box-1 {
+        left: 0;
+      }
+      &#omdweb-info-box-2 {
+        left: 50%;
+        -webkit-transform: translate(-50%, 0);
+            -ms-transform: translate(-50%, 0);
+                transform: translate(-50%, 0);
+      }
+      &#omdweb-info-box-3 {
+        right: 0;
+      }
+    }
+  }
+
+  .has-carousel + .info-box {
+    li {
+      padding: 5px 0;
+      line-height: 16px;
+    }
+
+    @include at-breakpoint($gt-sm-tablet) {
+      @include omega;
+    }
+  }
+
+  .scroller {
+    @include at-breakpoint($gt-sm-tablet) {
+      height: 200px;
+      overflow: auto;
+    }
+
+    @include at-breakpoint($gt-tablet) {
+      height: 140px;
+    }
+  }
+
+  .view-list-trigger {
+    position: relative;
+    cursor: pointer;
+    display: block;
+    cursor: pointer;
+    padding: 5px 0;
+    background: url(../../img/icons/icon-vw-brand-chevron2.png) no-repeat 100% 8px;
+
+    &:hover {
+      background-position: 100% -55px;
+    }
+
+    &.omdweb-down-trigger {
+      background-position: 100% -25px;
+      &:hover {
+        background-position: 100% -88px;
+      }
+    }
+  }
+
+  .view-list {
+    display: none;
+    li {
+      padding: 4px;
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    &.omdweb-open-list {
+      display: block;
+    }
+  }
+
+  @include at-breakpoint($gt-tablet) {
+    // Carousel "Announcements" trigger does not need link icon
+    .carousel-caption .view-list-trigger {
+      background: none;
+    }
+    // Bottom expanding boxes
+    .home-expander {
+      margin-top: 4px;
+    }
+    .omdweb-info-box-expanded {
+      position: absolute;
+      bottom: 0;
+      height: 300px;
+      background-color: #fff;
+      z-index: 9999;
+
+      .scroller {
+        height: 240px;
+      }
+    }
+    .home-expander-more {
+      display: none;
+    }
+  }
+}
+
+.no-js #omdweb-home .messaging {
+  overflow: auto;
+}

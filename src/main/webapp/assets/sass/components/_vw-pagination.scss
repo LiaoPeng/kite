@@ -1,0 +1,68 @@
+.omdweb-container {
+  // ++++++++++++++++++++++++++++++++++++++++++++++++++
+  // Pagination
+  // ++++++++++++++++++++++++++++++++++++++++++++++++++
+  .omdweb-pagination {
+    @include pie-clearfix;
+  }
+
+  .dataTables_paginate,
+  .omdweb-paging-buttons {
+    display: block;
+    position: relative;
+    top: -4px;
+    line-height: 27px;
+
+    @include at-breakpoint($gt-mobile) {
+      @include omega;
+    }
+  }
+
+  a.paginate_disabled_previous, a.paginate_enabled_previous,
+  a.paginate_disabled_next, a.paginate_enabled_next {
+    display: block;
+    float: left;
+    background-image: url(../../img/icons/datatables/icons-vw-pagination.png);
+    background-repeat: no-repeat;
+    width: 27px;
+    height: 27px;
+    overflow: hidden;
+    text-indent: -9999em;
+    text-transform: capitalize;
+    color: #fff;
+    margin-right: 5px;
+    font-size: 0;
+    line-height: 0;
+  }
+  a.paginate_enabled_previous,
+  a.paginate_enabled_next {
+    cursor: pointer;
+    *cursor: hand;
+  }
+  a.paginate_disabled_previous:active, a.paginate_enabled_previous:active,
+  a.paginate_disabled_next:active, a.paginate_enabled_next:active {
+    outline: none;
+  }
+  a.paginate_disabled_previous { background-position: 0 -27px; }
+  a.paginate_disabled_next { background-position: -32px -27px; }
+  a.paginate_enabled_next { background-position: -32px 0; }
+  a.paginate_enabled_next:hover { background-position: -32px 0; }
+
+  // Sorting - make this into a sprite
+  .sorting_asc { background: url(../../img/icons/datatables/sort_asc.png) no-repeat center right; }
+  .sorting_desc { background: url(../../img/icons/datatables/sort_desc.png) no-repeat center right; }
+  .sorting { background: url(../../img/icons/datatables/sort_both.png) no-repeat center right; }
+  .sorting_asc_disabled { background: url(../../img/icons/datatables/sort_asc_disabled.png) no-repeat center right; }
+  .sorting_desc_disabled { background: url(../img/icons/datatables/sort_desc_disabled.png) no-repeat center right; }
+
+  .dataTable { // space for sorting arrows
+    thead {
+      > tr > th {
+        padding-right: 16px;
+        &:active {
+          outline: none;
+        }
+      }
+    }
+  }
+}

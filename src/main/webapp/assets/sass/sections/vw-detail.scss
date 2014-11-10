@@ -1,0 +1,257 @@
+@import "components/vw";
+
+#omdweb-detail {
+  .downloadable {
+    @include pie-clearfix;
+    a {
+      font-weight: 100 !important;
+    }
+    li {
+      float: left;
+      margin-right: 2em;
+    }
+  }
+
+  .vehicle-detail-overview {
+    > h1 {
+      float: left;
+      margin-bottom: 1.5em;
+
+      @include at-breakpoint($lt-tablet) {
+        margin-bottom: $gutter-width;
+      }
+    }
+    .icon-legend {
+      float: right;
+      margin-top: 12px;
+
+      @include at-breakpoint($lt-tablet) {
+        float: none;
+        clear: left;
+        margin-bottom: 2em;
+
+        li {
+          display: inline-block;
+          *display: inline;
+          *zoom: 1;
+          margin-right: $gutter-width;
+        }
+      }
+    }
+  }
+
+  .omdweb-vehicle-detail-container {
+    @include pie-clearfix;
+
+    > h2 {
+      font-size: 18px;
+      font-weight: 100;
+      margin-bottom: $gutter-width;
+      position: relative;
+    }
+
+    .vehicle-options,
+    .vehicle-colors {
+      clear: both;
+      margin: 0;
+      font-weight: 700;
+    }
+
+    .vehicle-colors,
+    .follow,
+    button {
+      margin-bottom: 1em;
+    }
+
+    @include at-breakpoint($gt-mobile) {
+      > h2 {
+        float: left;
+        width: 65%;
+      }
+      button {
+        position: absolute;
+        right: 0;
+      }
+    }
+
+    @include at-breakpoint($gt-desktop) {
+      .follow {
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+
+  .omdweb-vehicle-detail-container {
+    clear: both;
+
+    @include at-breakpoint($gt-mobile) {
+      > h2 {
+        width: auto;
+      }
+    }
+
+    @include at-breakpoint($gt-tablet) {
+      @include span-columns(7,12);
+    }
+  }
+
+  .vehicle-image {
+    @include at-breakpoint($gt-tablet) {
+      @include omega;
+    }
+  }
+
+  .omdweb-collapsible-menus {
+    .btn {
+      display: block;
+    }
+    .view-list-trigger {
+      font-size: 150%;
+      line-height: 26px;
+      padding-left: 36px;
+      background-image: url(../../img/icons/header-toggle-vw-square-sm.png);
+      background-repeat: no-repeat;
+      background-position: 0 -31px;
+      line-height: 26px;
+      &.omdweb-down-trigger {
+        background: url(../../img/icons/header-toggle-vw-square-sm.png) no-repeat 0 5px;
+      }
+    }
+  }
+
+  .action-buttons {
+    clear: both;
+    border-top: 1px solid $borders;
+    padding-top: 1.5em;
+    margin-bottom: 3em;
+
+    .btn {
+      margin-bottom: 1em;
+    }
+
+    @include at-breakpoint($gt-tablet) {
+      @include pie-clearfix;
+      .btn {
+        margin-bottom: 0;
+      }
+      .btn-danger {
+        float: right;
+      }
+    }
+  }
+
+  .omdweb-collapsed {
+    h2 {
+      font-size: pxtoem(18,12);
+    }
+  }
+
+  @include at-breakpoint($lt-tablet) {
+    .owner-info + input[type="checkbox"] + label {
+      width: 94%;
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      vertical-align: top;
+    }
+  }
+
+  .customer-info {
+    .form-group {
+      label {
+        display: block;
+      }
+      input {
+        padding: 4px 8px;
+      }
+      input, select {
+        width: 100%;
+      }
+
+      @include at-breakpoint($gt-tablet) {
+        label {
+          display: inline-block;
+          *display: inline;
+          *zoom: 1;
+          width: 30%;
+        }
+        input,
+        select {
+          width: 65%;
+        }
+      }
+    }
+    .form-group-buyers-order {
+      .float-link {
+        text-decoration: underline;
+        display: block;
+
+        @include at-breakpoint($gt-tablet) {
+          float: right;
+          position: relative;
+          top: 2px;
+        }
+      }
+    }
+    .btn {
+      margin-top: 1.5em;
+    }
+    h2 {
+      margin-bottom: 1.2em;
+      border-bottom: 1px solid $borders;
+    }
+  }
+
+  .owner-info {
+    margin-bottom: 2em;
+  }
+  .driver-info {
+    margin-top: 2em;
+  }
+
+  .form-group-buyers-order {
+    @include at-breakpoint($gt-tablet) {
+      .form-control-static,
+      .icon-pdf {
+        float: left;
+      }
+      .form-control-static {
+        width: 30%;
+      }
+    }
+  }
+
+  .list-details {
+    dt, dd {
+      display: block;
+      float: none;
+    }
+    dd {
+      margin-left: 12px;
+    }
+    @include at-breakpoint($gt-tablet) {
+      dt {
+        float: left;
+        clear: left;
+        width: 47%;
+      }
+      dd:after {
+        content: '\00a0';
+      }
+    }
+  }
+
+  @include at-breakpoint($gt-tablet) {
+    .configuration-info,
+    .customer-sales-info {
+      @include span-columns(6,12);
+      padding-right: $gutter-width * 2;
+    }
+    .customer-sales-info {
+      @include omega;
+      padding-left: $gutter-width * 2;
+      padding-right: 0;
+    }
+  }
+}

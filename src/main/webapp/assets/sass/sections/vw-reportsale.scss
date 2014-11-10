@@ -1,0 +1,96 @@
+@import "components/vw";
+
+#omdweb-reportsale {
+  .hgroup {
+    @include pie-clearfix;
+    margin-bottom: 1em;
+
+    h1 {
+      font-size: 250%;
+      font-family: $font-family-brand;
+      float: left;
+      margin-bottom: 0;
+      margin-right: 1em;
+      span {
+        @include vwBook;
+        font-size: 22px;
+      }
+    }
+  }
+  .action-buttons:not(.step-action-buttons) {
+    @include pie-clearfix;
+    .btn {
+      float: right;
+    }
+  }
+  .step-action-buttons {
+    .btn {
+      @include at-breakpoint($lt-tablet) {
+        float: none;
+      }
+    }
+  }
+  .top-action-buttons,
+  .bottom-action-buttons {
+    float: left;
+    margin-top: 26px;
+    @include at-breakpoint($gt-tablet) {
+      float: right;
+    }
+  }
+  .bottom-action-buttons {
+    @include at-breakpoint($gt-tablet) {
+      margin-top: 0;
+    }
+  }
+  .vehicle-detail-info {
+    clear: both;
+    margin-top: 1em;
+    font-size: 12px;
+    h2 {
+      margin-bottom: .67em;
+      font-size: 16px;
+    }
+
+    @include at-breakpoint($gt-tablet) {
+      @include span-columns(6,12);
+    }
+  }
+  .omdweb-incentives,
+  .omdweb-programs {
+    @include at-breakpoint($gt-tablet) {
+      @include span-columns(6,12);
+      padding-right: $gutter-width * 2;
+      clear: none;
+    }
+  }
+  .omdweb-programs {
+    @include at-breakpoint($gt-tablet) {
+      @include omega;
+      padding-left: $gutter-width * 2;
+      padding-right: 0;
+    }
+  }
+  .opt-out {
+    margin-top: 1em;
+  }
+
+  section.omdweb-report-sale-step2 {
+    // display: none;
+  }
+
+  @include at-breakpoint($gt-tablet) {
+    fieldset.two-up.vehicle-information-set {
+      .form-group {
+        margin-right: 0;
+      }
+      .form-group:nth-child(even) {
+        @include remove-omega;
+        float: left;
+        padding-left: 0;
+        padding-right: $gutter-width * 2;
+        margin-right: 0;
+      }
+    }
+  }
+}

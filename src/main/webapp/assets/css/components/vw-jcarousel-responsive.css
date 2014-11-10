@@ -1,0 +1,58 @@
+@font-face { font-family: "VWHeadlineOTBlack"; src: url("../../fonts/vwheadlineot-black-webfont.eot"); src: url("../../fonts/vwheadlineot-black-webfont?#iefix") format("embedded-opentype"), url("../../fonts/vwheadlineot-black-webfont.woff") format("woff"), url("../../fonts/vwheadlineot-black-webfont.ttf") format("truetype"), url("../../fonts/vwheadlineot-black-webfont.svg#vwheadlineot-black-webfont") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: "VWHeadlineOTSemibold"; src: url("../../fonts/vwheadlineot-semibold-webfont.eot"); src: url("../../fonts/vwheadlineot-semibold-webfont?#iefix") format("embedded-opentype"), url("../../fonts/vwheadlineot-semibold-webfont.woff") format("woff"), url("../../fonts/vwheadlineot-semibold-webfont.ttf") format("truetype"), url("../../fonts/vwheadlineot-semibold-webfont.svg#vwheadlineot-semibold-webfont") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'VWHeadlineOTBook'; src: url("../../fonts/vwheadlineot-book-webfont.eot"); src: url("../../fonts/vwheadlineot-book-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/vwheadlineot-book-webfont.woff") format("woff"), url("../../fonts/vwheadlineot-book-webfont.ttf") format("truetype"), url("../../fonts/vwheadlineot-book-webfont.svg#vw_headline_otbook") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'Glyphicons Halflings'; src: url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.eot"); src: url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.svg#Glyphicons Halflings") format("svg"); font-style: normal; font-weight: normal; }
+
+.glyphicon { position: relative; top: 1px; display: inline-block; *display: inline; *zoom: 1; font-family: 'Glyphicons Halflings'; font-style: normal; font-weight: normal; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+.glyphicon-check:before { content: "\e067"; }
+
+.glyphicon-remove:before { content: "\e014"; }
+
+.omdweb-container .jcarousel-wrapper { width: 100%; margin: 0; position: relative; }
+.omdweb-container .jcarousel { position: relative; overflow: hidden; width: 100%; margin: 0 auto; }
+@media (min-width: 30em) { .omdweb-container .jcarousel { width: 90%; } }
+.no-mediaqueries .omdweb-container .jcarousel { width: 90%; }
+@media (min-width: 48em) { .omdweb-container .jcarousel { width: 94.105263158%; } }
+.no-mediaqueries .omdweb-container .jcarousel { width: 94.105263158%; }
+.omdweb-container .jcarousel ul { width: 20000em; position: relative; list-style: none; margin: 0; padding: 0; }
+.omdweb-container .jcarousel li { cursor: pointer; *cursor: hand; float: left; line-height: 3.66667em; position: relative; }
+.omdweb-container .jcarousel li .item-content { position: relative; background-color: #cfd7d9; height: 44px; overflow: hidden; }
+.omdweb-container .jcarousel li .item-content:after { content: ""; position: absolute; top: 0; right: 0; width: 16px; height: 100%; background-color: white; }
+@media (min-width: 48em) { .omdweb-container .jcarousel li .item-content:after { background: none; } }
+.no-mediaqueries .omdweb-container .jcarousel li .item-content:after { background: none; }
+.omdweb-container .jcarousel li .item-content img { display: none; max-width: 100%; height: auto !important; }
+.omdweb-container .jcarousel li .item-content strong, .omdweb-container .jcarousel li .item-content i { font-size: 1em; font-weight: 100; color: #8e9598; display: inline-block; *display: inline; *zoom: 1; line-height: 1; vertical-align: top; position: relative; }
+.omdweb-container .jcarousel li .item-content strong { font-family: "VWHeadlineOTSemibold", "VWHeadlineOT-Semibold", Arial, Helvetica, sans-serif; top: 15px; left: 15px; padding-right: 16px; }
+.omdweb-container .jcarousel li .item-content i { font-family: "VWHeadlineOTBook", "VWHeadlineOT-Book", arial, helvetica, sans-serif; font-size: 12px; position: absolute; top: 6px; right: 22px; }
+@media (min-width: 48em) { .omdweb-container .jcarousel li .item-content i { right: 6px; } }
+.no-mediaqueries .omdweb-container .jcarousel li .item-content i { right: 6px; }
+@media (min-width: 48em) { .omdweb-container .jcarousel li { width: 132px !important; margin-right: 16px; } }
+.no-mediaqueries .omdweb-container .jcarousel li { width: 132px !important; margin-right: 16px; }
+.omdweb-container .jcarousel li.active { margin-right: 1em; cursor: default; }
+.omdweb-container .jcarousel li.active .item-content { background-color: #fff; height: auto; }
+.omdweb-container .jcarousel li.active .item-content:after { background: none; }
+.omdweb-container .jcarousel li.active .item-content strong { position: static; font-size: 1.33333em; color: #000; padding: 1px 0.8em 0 0; margin-right: 0.8em; }
+.omdweb-container .jcarousel li.active .item-content i { font-family: arial, helvetica, sans-serif; font-size: 1em; color: #c03; top: 0; right: 0; }
+.omdweb-container .jcarousel li.active .item-content img { display: block; margin-bottom: 5px; }
+@media (max-width: 47.9375em) { .omdweb-container .jcarousel li.active .item-content { top: 10px; } }
+@media (min-width: 48em) { .omdweb-container .jcarousel li.active { width: 280px !important; margin-left: 13px; margin-right: 22px; }
+  .omdweb-container .jcarousel li.active .item-content strong { font-size: 1.66667em; border-right: 1px solid #cfd7d9; }
+  .omdweb-container .jcarousel li.active .item-content i { font-size: 1.16667em; position: static; } }
+.no-mediaqueries .omdweb-container .jcarousel li.active { width: 280px !important; margin-left: 13px; margin-right: 22px; }
+.no-mediaqueries .omdweb-container .jcarousel li.active .item-content strong { font-size: 1.66667em; border-right: 1px solid #cfd7d9; }
+.no-mediaqueries .omdweb-container .jcarousel li.active .item-content i { font-size: 1.16667em; position: static; }
+.omdweb-container .jcarousel-control-prev, .omdweb-container .jcarousel-control-next { display: none; }
+@media (min-width: 30em) { .omdweb-container .jcarousel-control-prev, .omdweb-container .jcarousel-control-next { display: block; width: 90%; position: absolute; top: 28%; text-decoration: none; background-image: url(../../img/icons/icon-vw-brand-chevron.png); background-repeat: no-repeat; width: 10px; height: 13px; } }
+.no-mediaqueries .omdweb-container .jcarousel-control-prev, .no-mediaqueries .omdweb-container .jcarousel-control-next { display: block; width: 90%; position: absolute; top: 28%; text-decoration: none; background-image: url(../../img/icons/icon-vw-brand-chevron.png); background-repeat: no-repeat; width: 10px; height: 13px; }
+.omdweb-container .jcarousel-control-prev { background-position: -30px -62px; left: 0; }
+.omdweb-container .jcarousel-control-next { background-position: 0 -62px; right: 0; text-align: right; }
+
+.no-mediaqueries .omdweb-container .jcarousel { width: 94.105263158%; }
+.no-mediaqueries .omdweb-container .jcarousel li .item-content { position: relative; top: 2.5em; }
+.no-mediaqueries .omdweb-container .jcarousel li .item-content:after { width: 0px !important; border: none !important; }
+.no-mediaqueries .omdweb-container .jcarousel li.active .item-content { top: 0; }
+.no-mediaqueries .omdweb-container .jcarousel-control-prev, .no-mediaqueries .omdweb-container .jcarousel-control-next { top: 31%; }

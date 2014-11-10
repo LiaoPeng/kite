@@ -1,0 +1,31 @@
+@font-face { font-family: "VWHeadlineOTBlack"; src: url("../../fonts/vwheadlineot-black-webfont.eot"); src: url("../../fonts/vwheadlineot-black-webfont?#iefix") format("embedded-opentype"), url("../../fonts/vwheadlineot-black-webfont.woff") format("woff"), url("../../fonts/vwheadlineot-black-webfont.ttf") format("truetype"), url("../../fonts/vwheadlineot-black-webfont.svg#vwheadlineot-black-webfont") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: "VWHeadlineOTSemibold"; src: url("../../fonts/vwheadlineot-semibold-webfont.eot"); src: url("../../fonts/vwheadlineot-semibold-webfont?#iefix") format("embedded-opentype"), url("../../fonts/vwheadlineot-semibold-webfont.woff") format("woff"), url("../../fonts/vwheadlineot-semibold-webfont.ttf") format("truetype"), url("../../fonts/vwheadlineot-semibold-webfont.svg#vwheadlineot-semibold-webfont") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'VWHeadlineOTBook'; src: url("../../fonts/vwheadlineot-book-webfont.eot"); src: url("../../fonts/vwheadlineot-book-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/vwheadlineot-book-webfont.woff") format("woff"), url("../../fonts/vwheadlineot-book-webfont.ttf") format("truetype"), url("../../fonts/vwheadlineot-book-webfont.svg#vw_headline_otbook") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'Glyphicons Halflings'; src: url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.eot"); src: url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.svg#Glyphicons Halflings") format("svg"); font-style: normal; font-weight: normal; }
+
+.glyphicon { position: relative; top: 1px; display: inline-block; *display: inline; *zoom: 1; font-family: 'Glyphicons Halflings'; font-style: normal; font-weight: normal; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+.glyphicon-check:before { content: "\e067"; }
+
+.glyphicon-remove:before { content: "\e014"; }
+
+#omdweb-accessorize .omdweb-mass-choices-container li { *zoom: 1; }
+#omdweb-accessorize .omdweb-mass-choices-container li:after { content: ""; display: table; clear: both; }
+#omdweb-accessorize .omdweb-mass-choices-container label, #omdweb-accessorize .omdweb-mass-choices-container input[type="checkbox"] { float: left; }
+#omdweb-accessorize .omdweb-mass-choices-container label { width: 90%; font-size: 11px; }
+#omdweb-accessorize .omdweb-mass-choices-container input[type="checkbox"] { width: 5%; position: relative; top: 5px; }
+@media (min-width: 48em) { #omdweb-accessorize .omdweb-mass-choices-container label { width: 88%; }
+  #omdweb-accessorize .omdweb-mass-choices-container input[type="checkbox"] { width: 7%; position: relative; top: 3px; } }
+.no-mediaqueries #omdweb-accessorize .omdweb-mass-choices-container label { width: 88%; }
+.no-mediaqueries #omdweb-accessorize .omdweb-mass-choices-container input[type="checkbox"] { width: 7%; position: relative; top: 3px; }
+#omdweb-accessorize .omdweb-options-row td { padding-left: 42px; }
+#omdweb-accessorize .omdweb-options-row strong, #omdweb-accessorize .omdweb-options-row ul, #omdweb-accessorize .omdweb-options-row li { float: left; }
+#omdweb-accessorize .omdweb-options-row strong { margin-right: 4px; }
+#omdweb-accessorize .omdweb-options-row ul { margin: 0; }
+#omdweb-accessorize .omdweb-options-row li { margin-right: 14px; }
+#omdweb-accessorize .omdweb-remove-option { margin-left: 4px; position: relative; top: -2px; }
+@media (min-width: 48em) { #omdweb-accessorize .omdweb-remove-option { color: #fff; font-size: 10px; background: #999; border: none; border-radius: 100%; text-align: center; padding: 0 3px 1px; line-height: 1; margin-top: 4px; } }
+.no-mediaqueries #omdweb-accessorize .omdweb-remove-option { color: #fff; font-size: 10px; background: #999; border: none; border-radius: 100%; text-align: center; padding: 0 3px 1px; line-height: 1; margin-top: 4px; }

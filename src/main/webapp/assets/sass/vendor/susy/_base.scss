@@ -1,0 +1,37 @@
+//**
+//  Susy: Un-obtrusive grids for designers
+//  By: Eric A. Meyer and OddBird
+//  Site: susy.oddbird.net
+//**
+
+// Settings --------------------------------------------------------------
+// Susy & Compass use HTML hacks to support IE 6 and 7. You can turn that off:
+$legacy-support-for-ie  : true;
+$legacy-support-for-ie6 : false;
+$legacy-support-for-ie7 : true;
+
+$breakpoint-media-output: true;
+
+// Font Sizes --------------------------------------------------------------
+$relative-font-sizing      : true;
+$base-font-size            : 12px !default;
+$base-line-height          : 20px;
+$round-to-nearest-half-line: true;
+
+// Grid --------------------------------------------------------------
+$total-cols         : 12;
+$column-width       : 5.8333333333em;   // 70px
+$gutter-width       : 0.83333333333em;  // 10px
+$wrap-padding       : 1.323%;           // 19px
+$grid-padding       : 0;
+
+$show-grid-backgrounds: true;
+
+// Breakpoints
+// ----------------------------------------------------------------
+$gt-desktop  : 82.5em 12 no-mediaqueries;   // 990px
+$gt-tablet   : 64em 12 no-mediaqueries;     // 768px
+$gt-sm-tablet: 41.6666667em 12 no-mediaqueries;    // 500px
+$gt-mobile   : 40em 12 no-mediaqueries;            // 480px
+$lt-tablet   : 12 63.9166666667em; // < 767px
+

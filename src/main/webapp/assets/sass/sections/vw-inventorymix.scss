@@ -1,0 +1,164 @@
+@import "components/vw";
+
+#omdweb-inventorymix {
+  hr {
+    margin-bottom: 1em;
+  }
+  .omdweb-form-controls {
+    .btn {
+      margin-bottom: 1em;
+    }
+    .icon-legend {
+      li {
+        float: left;
+        &:first-child {
+          margin-right: 30px;
+        }
+      }
+      .inventory-icons {
+        background-image: none;
+        position: relative;
+        top: 5px;
+      }
+      .icon-dealer {
+        background-color: $brand-primary;
+      }
+      .icon-area {
+        background-color: $brand-neutral;
+      }
+    }
+    .form-group-toggle-colors {
+      clear: left;
+    }
+    .form-multiples {
+      .control-label + label {
+        margin-right: 12px;
+      }
+    }
+  }
+
+  .form-multiples {
+    label {
+      font-weight: 100;
+    }
+    .control-label {
+      margin-right: 2em;
+      font-weight: 700;
+    }
+    input {
+      margin-right: 4px;
+    }
+  }
+
+  .omdweb-options,
+  .omdweb-colors {
+    display: block;
+  }
+
+  #omdweb-inventory-mix-table {
+    th {
+      width: 19% !important;
+      &:first-child { width: 32% !important; }
+      &:first-child + th { width: 14% !important; }
+    }
+    tbody td:first-child { max-width: 300px; }
+  }
+
+  td {
+    vertical-align: middle;
+    white-space: normal;
+  }
+
+  // Charts
+  .omdweb-horizontal-chart {
+    width: 100%;
+    .omdweb-horizontal-chart-value {
+      line-height: 16px;
+    }
+    .omdweb-horizontal-chart-bar-wrapper {
+      background-color: $borders;
+      height: 16px;
+      position: relative;
+      margin-bottom: 1px;
+    }
+  }
+  .omdweb-horizontal-chart-bar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 16px;
+  }
+  .omdweb-bar {
+    @include pie-clearfix;
+  }
+  .omdweb-bar-dealer {
+    .omdweb-horizontal-chart-bar {
+      background-color: $brand-primary;
+    }
+  }
+  .omdweb-bar-area {
+    .omdweb-horizontal-chart-bar {
+      background-color: $brand-neutral;
+    }
+  }
+
+  // Media Queries
+  @include at-breakpoint($gt-tablet) {
+    .btn {
+      float: left;
+    }
+    .form-group {
+     @include span-columns(4,12);
+    }
+    .form-group-viewing-as {
+     width: 100%;
+    }
+    .omdweb-form-controls {
+      .icon-legend {
+        @include omega;
+        position: relative;
+        top: -3px;
+        li {
+          margin-left: 16px;
+          &:first-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    .form-multiples {
+      .control-label {
+        display: block;
+      }
+    }
+    .omdweb-horizontal-chart {
+      @include pie-clearfix;
+      .omdweb-horizontal-chart-value {
+        float: left;
+        width: 30%;
+      }
+      .omdweb-horizontal-chart-bar-wrapper {
+        width: 66%;
+        float: left;
+        margin-left: 4px;
+      }
+    }
+  }
+
+  @include at-breakpoint($gt-desktop) {
+    .form-multiples {
+      .control-label {
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+      }
+    }
+    .omdweb-horizontal-chart {
+      .omdweb-horizontal-chart-bar-wrapper {
+        width: 70%;
+        margin-left: 0;
+      }
+    }
+  }
+}

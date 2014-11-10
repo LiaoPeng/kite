@@ -1,0 +1,28 @@
+@font-face { font-family: "VWHeadlineOTBlack"; src: url("../../fonts/vwheadlineot-black-webfont.eot"); src: url("../../fonts/vwheadlineot-black-webfont?#iefix") format("embedded-opentype"), url("../../fonts/vwheadlineot-black-webfont.woff") format("woff"), url("../../fonts/vwheadlineot-black-webfont.ttf") format("truetype"), url("../../fonts/vwheadlineot-black-webfont.svg#vwheadlineot-black-webfont") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: "VWHeadlineOTSemibold"; src: url("../../fonts/vwheadlineot-semibold-webfont.eot"); src: url("../../fonts/vwheadlineot-semibold-webfont?#iefix") format("embedded-opentype"), url("../../fonts/vwheadlineot-semibold-webfont.woff") format("woff"), url("../../fonts/vwheadlineot-semibold-webfont.ttf") format("truetype"), url("../../fonts/vwheadlineot-semibold-webfont.svg#vwheadlineot-semibold-webfont") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'VWHeadlineOTBook'; src: url("../../fonts/vwheadlineot-book-webfont.eot"); src: url("../../fonts/vwheadlineot-book-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/vwheadlineot-book-webfont.woff") format("woff"), url("../../fonts/vwheadlineot-book-webfont.ttf") format("truetype"), url("../../fonts/vwheadlineot-book-webfont.svg#vw_headline_otbook") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'Glyphicons Halflings'; src: url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.eot"); src: url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.svg#Glyphicons Halflings") format("svg"); font-style: normal; font-weight: normal; }
+
+.glyphicon { position: relative; top: 1px; display: inline-block; *display: inline; *zoom: 1; font-family: 'Glyphicons Halflings'; font-style: normal; font-weight: normal; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+.glyphicon-check:before { content: "\e067"; }
+
+.glyphicon-remove:before { content: "\e014"; }
+
+@media (min-width: 48em) { #omdweb-help .omdweb-help-topics { width: 74.73684%; float: right; margin-right: 0; } }
+.no-mediaqueries #omdweb-help .omdweb-help-topics { width: 74.73684%; float: right; margin-right: 0; *margin-left: -0.83333em; }
+#omdweb-help .omdweb-help-topics h1 { margin-top: 0; }
+#omdweb-help dt, #omdweb-help dd { float: none; position: relative; padding-left: 20px; }
+#omdweb-help dt:before, #omdweb-help dd:before { color: #919596; font-weight: 700; font-size: 14px; position: absolute; top: 20px; left: 0; }
+#omdweb-help dt { margin-top: 20px; border-top: 1px solid #cfd7d9; padding-top: 20px; margin-bottom: 20px; }
+#omdweb-help dt:before { content: "Q"; }
+#omdweb-help dt:first-child { margin-top: 0; border-top: none; padding-top: 0; }
+#omdweb-help dt:first-child:before { top: 0; }
+#omdweb-help dd p { margin-bottom: 1em; }
+#omdweb-help dd:before { content: "A"; top: 0; }
+#omdweb-help .omdweb-help-filters a { text-decoration: underline; }
+#omdweb-help .omdweb-help-filters select { width: 100%; }
+#omdweb-help .omdweb-help-filters .omdweb-help-contacts li:first-child { margin-bottom: 1.2em; }

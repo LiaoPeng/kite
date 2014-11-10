@@ -1,0 +1,100 @@
+/*
+Naming convention:
+omdweb-colorcode_ex (exterior color, where 'colorcode' is something like 'reflex_silver')
+omdweb-colorcode_in (interior color, where 'colorcode' is something like 'beige')
+*/
+
+// Exterior colors: VW
+/* If there is nothing defined, default color is #ffffff (white), which is different than the VW-defined shades of "white" */
+$omdweb-deep_black_ex      : #292929;
+$omdweb-reflex_silver_ex   : #c6c6c6;
+$omdweb-candy_white_ex     : #ffffff;
+$omdweb-night_blue_ex      : #13265d;
+$omdweb-white_gold_ex      : #f9f8e8;
+$omdweb-alpine_gray_ex     : #848484;
+$omdweb-wild_cherry_ex     : #750a1b;
+$omdweb-black_ex           : #292929;
+$omdweb-platinum_gray_ex   : #6d7275;
+$omdweb-tempest_blue_ex    : #2f3f60;
+$omdweb-tornado_red_ex     : #aa0000;
+$omdweb-toffee_brown_ex    : #553824;
+$omdweb-frost_silver_ex    : #c6c6c6;
+$omdweb-iron_gray_ex       : #b3b6b4;
+$omdweb-island_gray_ex     : #819096;
+$omdweb-light_brown_ex     : #553824;
+$omdweb-shadow_blue_ex     : #1c2b6f;
+$omdweb-urano_gray_ex      : #6d7275;
+$omdweb-moonrock_silver_ex : #c6c6c6;
+$omdweb-moon_rock_gray_ex  : #626569;
+$omdweb-denim_blue_ex      : #1c67c3;
+$omdweb-saturn_yellow_ex   : #fae22a;
+$omdweb-reef_blue_ex       : #1c67c3;
+$omdweb-tungsten_silver_ex : #e2e0dc;
+$omdweb-glacier_blue_ex    : #bad4e0;
+$omdweb-opera_red_ex       : #83222a;
+$omdweb-pepper_gray_ex     : #6d7275;
+$omdweb-pure_white_ex      : #ffffff;
+$omdweb-oryx_white_ex      : #c6c6c6;
+
+.omdweb-vehicle-config-swatch-container {
+  &.omdweb-deep_black_ex        { background-color: $omdweb-deep_black_ex; }
+  &.omdweb-reflex_silver_ex     { background-color: $omdweb-reflex_silver_ex; }
+  &.omdweb-candy_white_ex       { background-color: $omdweb-candy_white_ex; }
+  &.omdweb-night_blue_ex        { background-color: $omdweb-night_blue_ex; }
+  &.omdweb-white_gold_ex        { background-color: $omdweb-white_gold_ex; }
+  &.omdweb-alpine_gray_ex       { background-color: $omdweb-alpine_gray_ex; }
+  &.omdweb-wild_cherry_ex       { background-color: $omdweb-wild_cherry_ex; }
+  &.omdweb-black_ex             { background-color: $omdweb-black_ex; }
+  &.omdweb-platinum_gray_ex     { background-color: $omdweb-platinum_gray_ex; }
+  &.omdweb-tempest_blue_ex      { background-color: $omdweb-tempest_blue_ex; }
+  &.omdweb-tornado_red_ex       { background-color: $omdweb-tornado_red_ex; }
+  &.omdweb-toffee_brown_ex      { background-color: $omdweb-toffee_brown_ex; }
+  &.omdweb-frost_silver_ex      { background-color: $omdweb-frost_silver_ex; }
+  &.omdweb-iron_gray_ex         { background-color: $omdweb-iron_gray_ex; }
+  &.omdweb-island_gray_ex       { background-color: $omdweb-island_gray_ex; }
+  &.omdweb-light_brown_ex       { background-color: $omdweb-light_brown_ex; }
+  &.omdweb-shadow_blue_ex       { background-color: $omdweb-shadow_blue_ex; }
+  &.omdweb-urano_gray_ex        { background-color: $omdweb-urano_gray_ex; }
+  &.omdweb-moonrock_silver_ex   { background-color: $omdweb-moonrock_silver_ex; }
+  &.omdweb-moon_rock_gray_ex    { background-color: $omdweb-moon_rock_gray_ex; }
+  &.omdweb-denim_blue_ex        { background-color: $omdweb-denim_blue_ex; }
+  &.omdweb-saturn_yellow_ex     { background-color: $omdweb-saturn_yellow_ex; }
+  &.omdweb-reef_blue_ex         { background-color: $omdweb-reef_blue_ex; }
+  &.omdweb-tungsten_silver_ex   { background-color: $omdweb-tungsten_silver_ex; }
+  &.omdweb-glacier_blue_ex      { background-color: $omdweb-glacier_blue_ex; }
+  &.omdweb-opera_red_ex         { background-color: $omdweb-opera_red_ex; }
+  &.omdweb-pepper_gray_ex       { background-color: $omdweb-pepper_gray_ex; }
+  &.omdweb-pure_white_ex        { background-color: $omdweb-pure_white_ex; }
+  &.omdweb-oryx_white_ex        { background-color: $omdweb-oryx_white_ex; }
+}
+
+// Interior colors: VW
+/* If there is nothing defined, default color is #ffffff (white) */
+$omdweb-charcoal_in      : #282828;
+$omdweb-clay_gray_in     : #363636;
+$omdweb-sandstone_in     : #828158;
+$omdweb-black_in         : #282828;
+$omdweb-beige_in         : #828158;
+$omdweb-moonrock_in      : #8f8f8d;
+$omdweb-quartz_in        : #aaaaaa;
+$omdweb-black_blue_in_1  : #000000;
+$omdweb-black_blue_in_2  : #1c67c3;
+$omdweb-black_gray_in_1  : #000000;
+$omdweb-black_gray_in_2  : #333300;
+$omdweb-beige_black_in_1 : #828158;
+$omdweb-beige_black_in_2 : #000000;
+
+$omdweb-white-text       : #ffffff;
+
+.omdweb-vehicle-config-swatch-container {
+  &.omdweb-charcoal_in          { > div { border-top-color: $omdweb-charcoal_in; } }
+  &.omdweb-clay_gray_in         { > div { border-top-color: $omdweb-clay_gray_in; } }
+  &.omdweb-sandstone_in         { > div { border-top-color: $omdweb-sandstone_in; } }
+  &.omdweb-black_in             { > div { border-top-color: $omdweb-black_in; } }
+  &.omdweb-beige_in             { > div { border-top-color: $omdweb-beige_in; } }
+  &.omdweb-moonrock_in          { > div { border-top-color: $omdweb-moonrock_in; } }
+  &.omdweb-quartz_in            { > div { border-top-color: $omdweb-quartz_in; } }
+  &.omdweb-black_blue_in        { > div { border-top-color: $omdweb-black_blue_in_2;  border-left-color: $omdweb-black_blue_in_1;  span { color: $omdweb-white-text; } } }
+  &.omdweb-black_gray_in        { > div { border-top-color: $omdweb-black_gray_in_2;  border-left-color: $omdweb-black_gray_in_1;  span { color: $omdweb-white-text; } } }
+  &.omdweb-beige_black_in       { > div { border-top-color: $omdweb-beige_black_in_2; border-left-color: $omdweb-beige_black_in_1; span { color: $omdweb-white-text; } } }
+}

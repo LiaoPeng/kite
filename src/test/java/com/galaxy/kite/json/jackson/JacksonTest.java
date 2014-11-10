@@ -21,6 +21,9 @@ public class JacksonTest {
 	@Test
 	public void testConverObjectToJson() throws JsonGenerationException,
 			JsonMappingException, IOException {
+		
+		Date date = new Date(2014-1900,10,3);
+		System.out.println(date);
 
 		ObjectMapper mapper = new ObjectMapper();
 		mapper.setDateFormat(new SimpleDateFormat("MM/dd/yyyy"));
@@ -29,7 +32,7 @@ public class JacksonTest {
 		kite.setName("Kite");
 		kite.setAge(12);
 		kite.setBirthday(new Date(1988 - 1900, 10, 22));
-		kite.setLuckDay(new Date(2014 - 1900, 10, 22));
+		kite.setLuckDay(new Date(2014 - 1900, 10, 3));
 		kite.setLoveCalendar(Calendar.getInstance());
 
 		Writer strWriter = new StringWriter();

@@ -1,0 +1,135 @@
+@import "components/vw";
+
+#omdweb-profile {
+  .omdweb-dealer-info-group {
+    @include pie-clearfix;
+    margin-bottom: 1em;
+    .form-group {
+      @include at-breakpoint($gt-tablet) {
+        @include span-columns(6,12);
+        padding-right: 1em;
+
+        &:nth-child(even) {
+          @include omega;
+          padding-right: 0;
+        }
+      }
+    }
+    label,
+    .form-control-static {
+      @include at-breakpoint($gt-tablet) {
+        float: left;
+      }
+    }
+    label {
+      font-weight: 700;
+    }
+
+    &.omdweb-full-width-group {
+      label {
+        width: 100%;
+      }
+    }
+  }
+  .omdweb-form-group-search-dealer {
+    input[type="text"] {
+      @include box-sizing(border-box);
+      width: 85%;
+      line-height: 1;
+      border: none;
+      background-color: $input-bg;
+      color: $input-color;
+      font-size: 12px;
+      padding: 7px 20px 4px $gutter-width;
+      float: left;
+      &:focus {
+        outline: none;
+        background-color: lighten($input-bg, 3%);
+        -webkit-box-shadow: inset 1px 1px 2px 0 rgba(0,0,0,.3);
+                box-shadow: inset 1px 1px 2px 0 rgba(0,0,0,.3);
+      }
+
+      @include at-breakpoint($gt-tablet) {
+        width: 300px;
+      }
+    }
+  }
+  td {
+    vertical-align: middle;
+    &:last-child {
+      .btn {
+        float: right;
+      }
+    }
+  }
+  .omdweb-delivery-hours-rows {
+    clear: both;
+    margin-top: 6px;
+    li {
+      @include pie-clearfix;
+    }
+    strong {
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      margin: 0 4px;
+    }
+    select {
+      float: none;
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+    }
+    li {
+      margin-top: 1em;
+      border-top: 1px solid $borders;
+      padding-top: 1em;
+      &:first-child {
+        margin-top: 0;
+        border-top: none;
+      }
+    }
+  }
+  .omdweb-delivery-dates {
+    margin-bottom: 1em;
+    select {
+      width: 95px;
+    }
+
+    @include at-breakpoint($gt-desktop) {
+      margin-bottom: 0;
+    }
+  }
+  .omdweb-delivery-hours {
+    select {
+      width: 80px;
+    }
+  }
+  .form-group-delivery-hours {
+    .btn.btn-primary-button {
+      margin-left: 0;
+      margin-bottom: 1em;
+
+      @include at-breakpoint($gt-tablet) {
+        float: right;
+      }
+    }
+  }
+  .omdweb-full-width-group .omdweb-visibility-check {
+    label {
+      font-weight: 100;
+      width: auto;
+      float: none;
+    }
+  }
+
+  @include at-breakpoint($gt-tablet) {
+    .omdweb-delivery-dates {
+      margin-right: 5%;
+    }
+    .omdweb-delivery-dates,
+    .omdweb-delivery-hours {
+      float: left;
+    }
+  }
+}

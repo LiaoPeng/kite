@@ -1,0 +1,140 @@
+@import "mixins";
+
+// ++++++++++++++++++++++++++++
+// VW-SPECIFIC
+// ++++++++++++++++++++++++++++
+// Brand colors
+// -------------------------
+
+$brand-primary: #029ddd;
+$brand-secondary: #434c53;
+$brand-neutral: #8994a0;
+$brand-danger: #cc0033;
+$brand-error: $brand-danger;
+
+$messaging-bg: $brand-neutral;
+
+// Scaffolding
+// -------------------------
+
+$body-bg:  #eaeeed;
+$text-color: #333333;
+$headline-text-color: #111111;
+
+$borders: #cfd7d9;
+
+$box-padding: pxtoem(19,12);
+
+// Links
+// -------------------------
+
+$link-color: #2274ac;
+$link-hover-color: darken($link-color, 10%);
+
+$nav-hover-background-color: darken($brand-primary, 10%);
+$nav-hover-text-color: $borders;
+
+// Typography
+// -------------------------
+
+$sans-font:          arial, helvetica, sans-serif;
+$serif-font:         "Times New Roman", Times, Georgia, serif;
+
+$base-font-color:    $text-color;
+$base-font-family:   $sans-font;
+
+$heading-font:       "VWHeadlineOTSemibold", "VWHeadlineOT-Semibold", sans-serif;
+$heading-color:      $headline-text-color;
+$heading-font-alt:   $sans-font;
+
+$font-family-brand:           "VWHeadlineOTSemibold", "VWHeadlineOT-Semibold", Arial, Helvetica, sans-serif !default;
+$font-family-brand-secondary: "VWHeadlineOTBlack", "VWHeadlineOT-Black", Arial, Helvetica, sans-serif !default;
+
+// Forms
+// -------------------------
+
+$input-bg: #e9ebea;
+$input-color: #8994a0;
+$input-color-placeholder: $input-color;
+
+
+// Tables
+// --------------------------
+$innerTableBorder:     #d1d7d7;
+$tableAndHeaderBorder: #8a93a2;
+$stripeRow:            #f1f3f2;
+
+
+// Carousel
+// ------------------------
+
+$carousel-text-shadow: 0 1px 2px rgba(0,0,0,.6) !default;
+
+$carousel-control-color: #fff !default;
+$carousel-control-width: 15% !default;
+$carousel-control-opacity: .5 !default;
+$carousel-control-font-size: 20px !default;
+
+$carousel-indicator-active-bg: #fff !default;
+$carousel-indicator-border-color: #fff !default;
+
+$carousel-caption-color: #fff !default;
+
+
+// Popovers
+// -------------------------
+$popover-bg:                          #000 !default;
+$popover-max-width:                   25em !default;
+$popover-border-color:                rgba(0,0,0,1) !default;
+$popover-fallback-border-color:       #000 !default;
+
+$popover-title-bg:                    darken($popover-bg, 3%) !default;
+
+$popover-arrow-width:                 6px !default;
+$popover-arrow-color:                 #000 !default;
+
+$popover-arrow-outer-width:           ($popover-arrow-width + 1) !default;
+$popover-arrow-outer-color:           rgba(0,0,0,1) !default;
+$popover-arrow-outer-fallback-color:  #000 !default;
+
+
+//**
+//  Susy: Un-obtrusive grids for designers
+//  By: Eric A. Meyer and OddBird
+//  Site: susy.oddbird.net
+//**
+
+// Settings --------------------------------------------------------------
+// Susy & Compass use HTML hacks to support IE 6 and 7. You can turn that off:
+$legacy-support-for-ie  : true;
+$legacy-support-for-ie6 : false;
+$legacy-support-for-ie7 : $legacy-support-for-ie;
+
+$breakpoint-media-output: true;
+
+// Font Sizes --------------------------------------------------------------
+$relative-font-sizing      : true;
+$base-font-size            : 12px !default;
+$base-line-height          : 20px;
+$round-to-nearest-half-line: true;
+
+// Grid --------------------------------------------------------------
+$total-cols         : 12;
+$column-width       : 5.8333333333em;   // 70px
+$gutter-width       : 0.83333333333em;  // 10px
+$wrap-padding       : 1.323%;           // 19px
+$grid-padding       : 0;
+
+$show-grid-backgrounds: true;
+
+// Breakpoints
+// ----------------------------------------------------------------
+$gt-desktop  : 82.5em 12 no-mediaqueries;   // 990px
+$gt-tablet   : 64em 12 no-mediaqueries;     // 768px
+$gt-sm-tablet: 50em 12 no-mediaqueries;            // 600px
+$gt-mobile   : 40em 12 no-mediaqueries;            // 480px
+$lt-tablet   : 12 63.9166666667em; // < 767px
+
+
+@import "susy";
+@import "compass";

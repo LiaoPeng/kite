@@ -1,0 +1,415 @@
+// MBO-specific styling
+// ++++++++++++++++++++++++++++++++++++++++++++++
+@import "components/vw";
+@import "components/vw-responsive-tabs";
+@import "components/mbo-colors";
+@import "vendor/single-handle-slider";
+@import "vendor/multi-handle-slider";
+
+.omdweb-container {
+
+// Selected vehicle show
+  .omdweb-selected-car-line {
+    width: 280px;
+    max-width: 280px;
+    margin: 1em auto 2em;
+    text-align: center;
+    img {
+      display: block;
+      margin-bottom: 5px;
+    }
+    strong {
+      font-family: $font-family-brand;
+      font-weight: 100;
+      line-height: 1;
+      font-size: pxtoem(18,12);
+      color: #000;
+      padding: 1px pxtoem(16,20) 0 0;
+      margin-right: pxtoem(16,20);
+    }
+  }
+// Buttons
+  .btn {
+    -webkit-border-radius: 3px;
+            border-radius: 3px;
+  }
+  .action-buttons {
+    @include pie-clearfix;
+    .btn {
+      float: right;
+    }
+  }
+  .omdweb-tab-top-buttons {
+    margin: 1em 0;
+
+    .btn {
+      margin-right: 6px;
+    }
+    span {
+      display: block;
+      margin-top: 3px;
+      font-size: 11px;
+    }
+
+    @include at-breakpoint($gt-tablet) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 0;
+
+      .btn {
+        margin-left: 6px;
+        margin-right: 0;
+      }
+      span {
+        text-align: right;
+      }
+    }
+  }
+  .btn-add-row {
+    margin: 1em 0 0;
+  }
+  .action-menu {
+    position: relative;
+    top: 1em;
+  }
+// Tabs
+  .omdweb-rtabs {
+    margin-top: 16px;
+
+    .r-tabs-anchor {
+      color: #8f9595;
+      font-size: 16px;
+      font-weight: 100 !important;
+      margin-bottom: 1px;
+
+      @include at-breakpoint($gt-tablet) {
+        padding: 1em 2%;
+        text-align: center;
+      }
+
+      @include at-breakpoint($gt-desktop) {
+        padding-left: 1em;
+        padding-right: 1em;
+        text-align: left;
+      }
+    }
+    .r-tabs-state-default {
+      border: 1px solid $borders;
+      border-bottom: none;
+      .r-tabs-anchor {
+        background-color: #eaeeed;
+      }
+    }
+    .r-state-active .r-tabs-anchor {
+      color: $brand-primary;
+    }
+  }
+  #omdweb-mbo-analytics-tabs {
+    div[id^="tab-"] {
+      @include at-breakpoint($gt-tablet) {
+        h1 {
+          float: left;
+        }
+      }
+    }
+  }
+// Tables
+  .table {
+    border-bottom-width: 2px;
+  }
+  .table > tbody > tr > td {
+    vertical-align: middle;
+  }
+  #allocation-table {
+    tbody td:first-child { width: 150px; }
+  }
+
+// Form controls
+  .omdweb-form-controls {
+    @include pie-clearfix;
+
+    .icon-legend {
+      float: none;
+      li {
+        float: left;
+        &:first-child {
+          margin-right: 12px;
+        }
+      }
+      .omdweb-criteria-icons {
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        width: 18px;
+        height: 18px;
+        position: relative;
+        top: 2px;
+        margin-left: 5px;
+      }
+      .omdweb-criteria-1 {
+        background-color: $brand-primary;
+      }
+      .omdweb-criteria-2 {
+        background-color: lighten($brand-primary, 10%);
+      }
+
+      @include at-breakpoint($gt-tablet) {
+        float: right;
+        margin-top: 16px;
+      }
+    }
+  }
+// Blue info bar
+  .omdweb-rtabs-info-bar {
+    @include pie-clearfix;
+    margin-top: 0;
+    background-color: $brand-primary;
+    padding: 10px;
+    color: white;
+    @include vwBook;
+    font-size: 16px;
+    margin-bottom: 2em;
+
+    .omdweb-rtabs-info-standard {
+      margin-bottom: 0;
+    }
+
+    .omdweb-rtabs-info-extra {
+      margin-top: 10px;
+      text-align: center;
+      margin-bottom: 0;
+    }
+
+    li {
+      display: inline;
+      white-space: nowrap;
+      margin-right: 6.6%;
+    }
+  }
+
+// Vehicle config swatches
+  .omdweb-vehicles-config {
+    @include pie-clearfix;
+  }
+  .omdweb-vehicles-config-list {
+    > li {
+      margin-bottom: 2em;
+      padding-bottom: 1em;
+      position: relative;
+      border-bottom: 1px solid $borders;
+      hr {
+        margin-top: 25px;
+      }
+    }
+    h2 {
+      margin-bottom: 6px;
+    }
+
+    @include at-breakpoint($gt-tablet) {
+      > li {
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+    }
+  }
+  .omdweb-vehicle-config-swatches {
+    @include pie-clearfix;
+
+    @include at-breakpoint($gt-tablet) {
+      width: 60%;
+    }
+
+    li {
+      float: left;
+      margin-right: 1px;
+      border: 2px solid #fff;
+      width: 46px;
+      height: 46px;
+      margin-bottom: 8px;
+
+      &.selected {
+        border-color: #fc0;
+      }
+    }
+  }
+
+  hr.omdweb-hr-short {
+    display: none;
+    text-align: left;
+    @include at-breakpoint($gt-tablet) {
+      display: block;
+      width: 60%;
+    }
+  }
+// Vehicle detail
+  .omdweb-vehicle-config-detail {
+    @include pie-clearfix;
+    margin-top: 1em;
+    padding-top: 1em;
+
+    .omdweb-vehicle-config-detail-single {
+      display: none;
+      margin-top: 0;
+      padding-top: 0;
+    }
+
+    h3 {
+      font-size: 22px;
+      @include vwSemibold;
+      margin-bottom: 10px;
+    }
+    dl {
+      @include pie-clearfix;
+      width: 100%;
+      margin: 0 0 1em;
+      a {
+        font-weight: 100;
+      }
+    }
+    dt {
+      width: 100px;
+      clear: left;
+    }
+    dt,
+    dd {
+      white-space: nowrap;
+      margin-bottom: 5px;
+      float: left;
+    }
+    .btn-reject-all {
+      display: none;
+    }
+
+    @include at-breakpoint($gt-tablet) {
+      width: 35%;
+      position: absolute;
+      top: -25px;
+      right: 0;
+      dl {
+        padding-bottom: .5em;
+        border-bottom: 1px solid $borders;
+      }
+      .btn {
+        float: right;
+      }
+      .btn-reject-all {
+        float: none;
+        position: relative;
+        top: 30px;
+      }
+    }
+  }
+// Header text
+  .omdweb-section-header {
+    clear: both;
+    margin-top: 1em;
+  }
+// Search controls
+  .form-horizontal.omdweb-form .search-controls-header {
+    @include pie-clearfix;
+
+    .form-group {
+      clear: none;
+      margin-top: 5px;
+    }
+
+    @include at-breakpoint($gt-tablet) {
+      h2 {
+        @include span-columns(7,12);
+      }
+      .form-group {
+        text-align: right;
+        @include span-columns(5 omega,12);
+        margin-bottom: 8px;
+      }
+    }
+  }
+}
+
+// More MBO specificity
+#omdweb-mbo {
+  .omdweb-form {
+    .omdweb-form-controls {
+      @include at-breakpoint($gt-tablet) {
+        .form-group {
+          float: left;
+          clear: none !important;
+          margin-right: 2em !important;
+        }
+        h1 {
+          clear: both;
+        }
+      }
+    }
+  }
+  .range-slider {
+    position: relative;
+    padding-top: 0;
+  }
+  .form-group-lot-size {
+    .control-label {
+      font-size: 14px;
+      line-height: 1;
+      margin-top: -3px;
+    }
+    .range-val {
+      font-family: $font-family-brand;
+      font-size: 20px;
+      line-height: 1;
+      margin-top: 12px;
+    }
+  }
+}
+.omdweb-lot-size-selector {
+  position: relative;
+
+}
+
+
+// MBO Preferences
+#omdweb-mbo-preferences-tabs {
+  .omdweb-trim-selection-color-config {
+    border-top: 1px solid $borders;
+    padding-top: 1em;
+    border-bottom: 1px solid $borders;
+    margin-bottom: 1em;
+  }
+  .omdweb-color-config-selectors {
+    margin: 0;
+  }
+  .omdweb-color-config-row {
+    margin-bottom: 2em;
+  }
+}
+
+
+// Color swatch container rows
+.omdweb-vehicle-config-swatch-container {
+  position: relative;
+  border: 1px solid $borders;
+  background-color: lime;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+
+  > div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    line-height: 1;
+    width:  1px;
+    height: 1px;
+    background-color: white; // This does not change
+    border-left: 22px solid #fff;
+    border-top: 22px solid lime; // if there is no interior color defined - it will stand out
+
+    span {
+      position: absolute;
+      bottom: -1px;
+      left: -20px;
+      font-size: 11px;
+    }
+  }
+}

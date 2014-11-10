@@ -1,0 +1,385 @@
+@import "components/vw";
+
+#omdweb-configure {
+  .action-menu .btn {
+    font-family: $sans-font;
+    font-size: 11px;
+    line-height: 14px;
+  }
+  .omdweb-car-line-carousel {
+    @include at-breakpoint($lt-tablet) {
+      margin-bottom: 1em;
+    }
+  }
+  .configuration-entry-details {
+    @include pie-clearfix;
+    padding-top: 2em;
+
+    .configuration {
+      margin-bottom: 2em;
+
+      .configuration-form {
+        h1 + button {
+          @include border-radius-all;
+          text-transform: uppercase;
+          padding-right: 8px;
+          padding-left: 8px;
+          margin-bottom: 1em;
+          font-size: 12px;
+        }
+        label {
+          display: block;
+        }
+        select {
+          width: 100%;
+        }
+
+        @include at-breakpoint($gt-mobile) {
+          > h1 {
+            display: inline-block;
+            *display: inline;
+            *zoom: 1;
+            vertical-align: middle;
+          }
+          button {
+            margin-top: 15px;
+            display: inline-block;
+            *display: inline;
+            *zoom: 1;
+            vertical-align: middle;
+            float: right;
+          }
+          > p {
+            clear: both;
+          }
+          .control-label {
+            @include span-columns(3,12);
+          }
+          select,
+          input[type="text"],
+          .choices-container {
+            @include span-columns(9 omega,12);
+          }
+
+          input.btn {
+            @include pre(3);
+          }
+
+          .omdweb-textarea {
+            @include span-columns(9 omega,12);
+          }
+        }
+      }
+
+      @include at-breakpoint($lt-tablet) {
+        padding-bottom: 2em;
+        border-bottom: 1px solid $borders;
+        margin-bottom: 2em;
+      }
+
+      @include at-breakpoint($gt-tablet) {
+        @include span-columns(6,12);
+        padding-right: 15px;
+      }
+    }
+
+    .configuration-details {
+      @include at-breakpoint($gt-tablet) {
+        @include span-columns(6 omega,12);
+        padding-left: 15px;
+      }
+    }
+
+    .msrp {
+      @include pie-clearfix;
+      border-bottom: 1px solid $borders;
+      padding-bottom: 1.5em;
+      margin-bottom: 1.5em;
+
+      .msrp-context {
+        h1 {
+          line-height: 20px;
+        }
+        p {
+          font-weight: 700;
+          line-height: 14px;
+        }
+
+        @include at-breakpoint($gt-mobile) {
+          @include span-columns(6,12);
+        }
+      }
+
+      .msrp-show {
+        position: relative;
+        top: 6px;
+        padding: 10px 0 12px;
+        background-color: #8994a0;
+        font: 700 30px $sans-font;
+        color: #fff;
+        line-height: 1;
+        text-align: center;
+
+        @include at-breakpoint($gt-mobile) {
+          @include span-columns(6 omega,12);
+        }
+      }
+    }
+
+    .allocation {
+      dl {
+        margin-bottom: 86px;
+      }
+
+      $allocation: #09c;
+      $submitted:  #096;
+      $pending:    #f93;
+      $remaining:  #e21838;
+
+      .chart-wrapper {
+        @include pie-clearfix;
+        position: relative;
+        height: 122px;
+
+        + p {
+          margin-top: 1em;
+          text-align: right;
+        }
+
+        &:before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: -30px;
+          width: 100%;
+          height: 2px;
+          background-color: #8994a0;
+          z-index: 5000;
+        }
+      }
+
+      .axis {
+        position: absolute;
+        top: -5px;
+        width: 100%;
+      }
+
+      .axis-label {
+        position: relative;
+        line-height: 12px;
+        width: 100%;
+        padding-bottom: 20px;
+
+        &:after {
+          content: "";
+          height: 1px;
+          position: absolute;
+          left: pxtopercent(41,453);
+          bottom: 26px;
+          width: pxtopercent(412,453);
+          border-bottom: 1px solid $borders;
+          z-index: 200;
+        }
+
+        &:nth-child(2) {
+          top: -2px;
+          &:after {
+            bottom: 26px;
+          }
+        }
+        &:nth-child(3) {
+          top: -3px;
+          &:after {
+            bottom: 26px;
+          }
+        }
+        &:last-child {
+          top: -4px;
+          &:after {
+            bottom: 27px;
+          }
+        }
+      }
+
+      .chart {
+        margin: 0;
+        border-bottom: 2px solid black;
+        border-left: 2px solid black;
+        padding: 0;
+        height: 124px;
+        @include span-columns(11 omega,12);
+
+        .bar-container {
+          position: relative;
+          text-align: center;
+          height: 100%;
+          @include span-columns(3,12);
+        }
+
+        h6 {
+          display: inline-block;
+          *display: inline;
+          *zoom: 1;
+          position: absolute;
+          top: -54px;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          padding-top: 2px;
+          padding-right: 1em;
+          text-align: right;
+          font-weight: 700;
+
+          &:after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            border-right: 1px solid $borders;
+            width: 1px;
+            height: 176px;
+            line-height: 20px;
+          }
+        }
+        .bar {
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin-left: auto;
+          margin-right: 1em;
+          width: 25px;
+          height: auto;
+          z-index: 1000;
+        }
+        .percent {
+          position: absolute;
+          top: -1.5em;
+          left: 0;
+          right: 0;
+          margin-left: auto;
+          margin-right: auto;
+          width: 100%;
+          font-weight: 700;
+          font-size: 16px;
+          white-space: nowrap;
+
+          .explanation {
+            margin-left: -3px;
+            display: inline-block;
+            *display: inline;
+            *zoom: 1;
+            vertical-align: top;
+            font-size: 9px;
+            line-height: 1;
+          }
+        }
+        .allocation {
+          @include isolate(1,12);
+          border-left: none;
+          h6 {
+            color: $allocation;
+          }
+          .bar {
+            background-color: $allocation;
+          }
+        }
+        .submitted {
+          @include isolate(4,12);
+          h6 {
+            color: $submitted;
+          }
+          .bar {
+            background-color: $submitted;
+          }
+        }
+        .pending {
+          @include isolate(7,12);
+          h6 {
+            color: $pending;
+          }
+          .bar {
+            background-color: $pending;
+          }
+        }
+        .remaining {
+          h6 {
+            color: $remaining;
+          }
+          .bar {
+            background-color: $remaining;
+          }
+          @include isolate(10,12);
+          @include omega;
+        }
+      }
+    }
+  }
+}
+// IE styles
+.no-mediaqueries {
+  #omdweb-configure {
+    .configuration-entry-details .configuration {
+      @include span-columns(6,12);
+      padding-right: 15px;
+
+      .configuration-form {
+        > h1 {
+          float: left;
+        }
+        button {
+          margin-top: 13px;
+          float: right;
+        }
+        > p {
+          clear: both;
+        }
+        .control-label {
+          @include span-columns(3,12);
+        }
+        .choices-container,
+        select,
+        textarea {
+          @include span-columns(9 omega,12);
+        }
+        .btn {
+          @include pre(3);
+        }
+      }
+    }
+    .configuration-entry-details .configuration .configuration-details {
+      @include span-columns(6 omega,12);
+      padding-left: 15px;
+    }
+    .msrp .msrp-context {
+      @include span-columns(6,12);
+    }
+    .msrp .msrp-show {
+      @include span-columns(6 omega,12);
+    }
+  }
+
+
+  .omdweb-vehicle-detail-container {
+    > h2 {
+      float: left;
+      width: 65%;
+    }
+    button {
+      position: absolute;
+      right: 0;
+    }
+    .follow {
+      position: absolute;
+      right: 0;
+    }
+  }
+  .omdweb-vehicle-detail-item {
+    @include span-columns(4,12);
+    &:nth-child(even) {
+      @include span-columns(8,12);
+      @include omega;
+    }
+  }
+}

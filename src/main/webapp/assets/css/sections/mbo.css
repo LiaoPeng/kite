@@ -1,0 +1,285 @@
+@font-face { font-family: "VWHeadlineOTBlack"; src: url("../../fonts/vwheadlineot-black-webfont.eot"); src: url("../../fonts/vwheadlineot-black-webfont?#iefix") format("embedded-opentype"), url("../../fonts/vwheadlineot-black-webfont.woff") format("woff"), url("../../fonts/vwheadlineot-black-webfont.ttf") format("truetype"), url("../../fonts/vwheadlineot-black-webfont.svg#vwheadlineot-black-webfont") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: "VWHeadlineOTSemibold"; src: url("../../fonts/vwheadlineot-semibold-webfont.eot"); src: url("../../fonts/vwheadlineot-semibold-webfont?#iefix") format("embedded-opentype"), url("../../fonts/vwheadlineot-semibold-webfont.woff") format("woff"), url("../../fonts/vwheadlineot-semibold-webfont.ttf") format("truetype"), url("../../fonts/vwheadlineot-semibold-webfont.svg#vwheadlineot-semibold-webfont") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'VWHeadlineOTBook'; src: url("../../fonts/vwheadlineot-book-webfont.eot"); src: url("../../fonts/vwheadlineot-book-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/vwheadlineot-book-webfont.woff") format("woff"), url("../../fonts/vwheadlineot-book-webfont.ttf") format("truetype"), url("../../fonts/vwheadlineot-book-webfont.svg#vw_headline_otbook") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'Glyphicons Halflings'; src: url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.eot"); src: url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.svg#Glyphicons Halflings") format("svg"); font-style: normal; font-weight: normal; }
+
+.glyphicon { position: relative; top: 1px; display: inline-block; *display: inline; *zoom: 1; font-family: 'Glyphicons Halflings'; font-style: normal; font-weight: normal; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+.glyphicon-check:before { content: "\e067"; }
+
+.glyphicon-remove:before { content: "\e014"; }
+
+@font-face { font-family: "VWHeadlineOTBlack"; src: url("../../fonts/vwheadlineot-black-webfont.eot"); src: url("../../fonts/vwheadlineot-black-webfont?#iefix") format("embedded-opentype"), url("../../fonts/vwheadlineot-black-webfont.woff") format("woff"), url("../../fonts/vwheadlineot-black-webfont.ttf") format("truetype"), url("../../fonts/vwheadlineot-black-webfont.svg#vwheadlineot-black-webfont") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: "VWHeadlineOTSemibold"; src: url("../../fonts/vwheadlineot-semibold-webfont.eot"); src: url("../../fonts/vwheadlineot-semibold-webfont?#iefix") format("embedded-opentype"), url("../../fonts/vwheadlineot-semibold-webfont.woff") format("woff"), url("../../fonts/vwheadlineot-semibold-webfont.ttf") format("truetype"), url("../../fonts/vwheadlineot-semibold-webfont.svg#vwheadlineot-semibold-webfont") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'VWHeadlineOTBook'; src: url("../../fonts/vwheadlineot-book-webfont.eot"); src: url("../../fonts/vwheadlineot-book-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/vwheadlineot-book-webfont.woff") format("woff"), url("../../fonts/vwheadlineot-book-webfont.ttf") format("truetype"), url("../../fonts/vwheadlineot-book-webfont.svg#vw_headline_otbook") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'Glyphicons Halflings'; src: url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.eot"); src: url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.svg#Glyphicons Halflings") format("svg"); font-style: normal; font-weight: normal; }
+
+.glyphicon { position: relative; top: 1px; display: inline-block; *display: inline; *zoom: 1; font-family: 'Glyphicons Halflings'; font-style: normal; font-weight: normal; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+.glyphicon-check:before { content: "\e067"; }
+
+.glyphicon-remove:before { content: "\e014"; }
+
+.r-tabs { position: relative; }
+.r-tabs .r-tabs-tab { display: inline-block; *display: inline; *zoom: 1; margin: 0; list-style: none; }
+.r-tabs .r-tabs-panel { padding: 15px; display: none; }
+.r-tabs .r-tabs-panel.r-tabs-state-active { display: block; }
+.r-tabs .r-tabs-accordion-title { display: none; }
+.r-tabs .r-tabs-nav { margin: 0; padding: 0; border-bottom: 1px solid #cfd7d9; }
+.r-tabs .r-tabs-nav .r-tabs-tab { position: relative; top: 1px; }
+.r-tabs .r-tabs-nav .r-tabs-anchor { background: #cfd7d9; margin-bottom: 3px; padding: 10px 12px; display: inline-block; *display: inline; *zoom: 1; text-decoration: none; color: #fff; font-weight: 700 !important; }
+.r-tabs .r-tabs-nav .r-tabs-state-active { background-color: #fff; margin-bottom: -1px; border-top: 1px solid #cfd7d9; border-right: 1px solid #cfd7d9; border-left: 1px solid #cfd7d9; }
+.r-tabs .r-tabs-nav .r-tabs-state-active .r-tabs-anchor { color: #029ddd; background-color: #fff; }
+.r-tabs .r-tabs-panel { border-right: 1px solid #cfd7d9; border-bottom: 1px solid #cfd7d9; border-left: 1px solid #cfd7d9; margin-bottom: 3px; }
+.r-tabs .r-tabs-accordion-title .r-tabs-anchor { display: block; padding: 10px; background-color: #cfd7d9; color: #fff; font-weight: bold; text-decoration: none; margin-bottom: 3px; }
+.r-tabs .r-tabs-accordion-title.r-tabs-state-active .r-tabs-anchor { background-color: #fff; color: #029ddd !important; border-top: 1px solid #cfd7d9; border-right: 1px solid #cfd7d9; border-left: 1px solid #cfd7d9; margin-bottom: 0; }
+@media (max-width: 47.9375em) { .r-tabs .r-tabs-nav { display: none; }
+  .r-tabs .r-tabs-nav .r-tabs-anchor { background: #cfd7d9; }
+  .r-tabs .r-tabs-accordion-title { display: block; } }
+
+/*
+Naming convention:
+omdweb-colorcode_ex (exterior color, where 'colorcode' is something like 'reflex_silver')
+omdweb-colorcode_in (interior color, where 'colorcode' is something like 'beige')
+*/
+/* If there is nothing defined, default color is #ffffff (white), which is different than the VW-defined shades of "white" */
+.omdweb-vehicle-config-swatch-container.omdweb-deep_black_ex { background-color: #292929; }
+.omdweb-vehicle-config-swatch-container.omdweb-reflex_silver_ex { background-color: #c6c6c6; }
+.omdweb-vehicle-config-swatch-container.omdweb-candy_white_ex { background-color: white; }
+.omdweb-vehicle-config-swatch-container.omdweb-night_blue_ex { background-color: #13265d; }
+.omdweb-vehicle-config-swatch-container.omdweb-white_gold_ex { background-color: #f9f8e8; }
+.omdweb-vehicle-config-swatch-container.omdweb-alpine_gray_ex { background-color: #848484; }
+.omdweb-vehicle-config-swatch-container.omdweb-wild_cherry_ex { background-color: #750a1b; }
+.omdweb-vehicle-config-swatch-container.omdweb-black_ex { background-color: #292929; }
+.omdweb-vehicle-config-swatch-container.omdweb-platinum_gray_ex { background-color: #6d7275; }
+.omdweb-vehicle-config-swatch-container.omdweb-tempest_blue_ex { background-color: #2f3f60; }
+.omdweb-vehicle-config-swatch-container.omdweb-tornado_red_ex { background-color: #aa0000; }
+.omdweb-vehicle-config-swatch-container.omdweb-toffee_brown_ex { background-color: #553824; }
+.omdweb-vehicle-config-swatch-container.omdweb-frost_silver_ex { background-color: #c6c6c6; }
+.omdweb-vehicle-config-swatch-container.omdweb-iron_gray_ex { background-color: #b3b6b4; }
+.omdweb-vehicle-config-swatch-container.omdweb-island_gray_ex { background-color: #819096; }
+.omdweb-vehicle-config-swatch-container.omdweb-light_brown_ex { background-color: #553824; }
+.omdweb-vehicle-config-swatch-container.omdweb-shadow_blue_ex { background-color: #1c2b6f; }
+.omdweb-vehicle-config-swatch-container.omdweb-urano_gray_ex { background-color: #6d7275; }
+.omdweb-vehicle-config-swatch-container.omdweb-moonrock_silver_ex { background-color: #c6c6c6; }
+.omdweb-vehicle-config-swatch-container.omdweb-moon_rock_gray_ex { background-color: #626569; }
+.omdweb-vehicle-config-swatch-container.omdweb-denim_blue_ex { background-color: #1c67c3; }
+.omdweb-vehicle-config-swatch-container.omdweb-saturn_yellow_ex { background-color: #fae22a; }
+.omdweb-vehicle-config-swatch-container.omdweb-reef_blue_ex { background-color: #1c67c3; }
+.omdweb-vehicle-config-swatch-container.omdweb-tungsten_silver_ex { background-color: #e2e0dc; }
+.omdweb-vehicle-config-swatch-container.omdweb-glacier_blue_ex { background-color: #bad4e0; }
+.omdweb-vehicle-config-swatch-container.omdweb-opera_red_ex { background-color: #83222a; }
+.omdweb-vehicle-config-swatch-container.omdweb-pepper_gray_ex { background-color: #6d7275; }
+.omdweb-vehicle-config-swatch-container.omdweb-pure_white_ex { background-color: white; }
+.omdweb-vehicle-config-swatch-container.omdweb-oryx_white_ex { background-color: #c6c6c6; }
+
+/* If there is nothing defined, default color is #ffffff (white) */
+.omdweb-vehicle-config-swatch-container.omdweb-charcoal_in > div { border-top-color: #282828; }
+.omdweb-vehicle-config-swatch-container.omdweb-clay_gray_in > div { border-top-color: #363636; }
+.omdweb-vehicle-config-swatch-container.omdweb-sandstone_in > div { border-top-color: #828158; }
+.omdweb-vehicle-config-swatch-container.omdweb-black_in > div { border-top-color: #282828; }
+.omdweb-vehicle-config-swatch-container.omdweb-beige_in > div { border-top-color: #828158; }
+.omdweb-vehicle-config-swatch-container.omdweb-moonrock_in > div { border-top-color: #8f8f8d; }
+.omdweb-vehicle-config-swatch-container.omdweb-quartz_in > div { border-top-color: #aaaaaa; }
+.omdweb-vehicle-config-swatch-container.omdweb-black_blue_in > div { border-top-color: #1c67c3; border-left-color: black; }
+.omdweb-vehicle-config-swatch-container.omdweb-black_blue_in > div span { color: white; }
+.omdweb-vehicle-config-swatch-container.omdweb-black_gray_in > div { border-top-color: #333300; border-left-color: black; }
+.omdweb-vehicle-config-swatch-container.omdweb-black_gray_in > div span { color: white; }
+.omdweb-vehicle-config-swatch-container.omdweb-beige_black_in > div { border-top-color: black; border-left-color: #828158; }
+.omdweb-vehicle-config-swatch-container.omdweb-beige_black_in > div span { color: white; }
+
+#omdweb-mbo .omdweb-mbo-slider { margin-bottom: 50px; }
+#omdweb-mbo .noUi-horizontal { height: 40px; }
+#omdweb-mbo .noUi-horizontal .noUi-handle { height: 50px; }
+#omdweb-mbo .noUi-target { -webkit-border-radius: 0px; border-radius: 0px; padding: 0; }
+#omdweb-mbo .noUi-base { background-color: #029ddd; }
+#omdweb-mbo .noUi-origin { -webkit-border-radius: 0px; border-radius: 0px; background-color: #eaeeed; }
+#omdweb-mbo .noUi-handle { border-color: #06b5fd; background-color: #028bc4; }
+#omdweb-mbo .noUi-handle:before, #omdweb-mbo .noUi-handle:after { background-color: #02aff6; height: 36px; }
+#omdweb-mbo .omdweb-range-val-scale { position: absolute; top: 0; display: inline-block; *display: inline; *zoom: 1; line-height: 42px; font-family: "VWHeadlineOTSemibold", "VWHeadlineOT-Semibold", Arial, Helvetica, sans-serif; font-size: 20px; }
+#omdweb-mbo .omdweb-range-val-scale-start { left: 10px; }
+#omdweb-mbo .omdweb-range-val-scale-end { right: 10px; }
+#omdweb-mbo .omdweb-color-config-selector-ex.omdweb-deep_black_ex .noUi-base { background-color: #292929; }
+#omdweb-mbo .omdweb-color-config-selector-ex.omdweb-reflex_silver_ex .noUi-base { background-color: #c6c6c6; }
+#omdweb-mbo .omdweb-color-config-selector-ex.omdweb-candy_white_ex .noUi-base { background-color: white; }
+#omdweb-mbo .omdweb-color-config-selector-ex.omdweb-night_blue_ex .noUi-base { background-color: #13265d; }
+#omdweb-mbo .omdweb-color-config-selector-ex.omdweb-white_gold_ex .noUi-base { background-color: #f9f8e8; }
+#omdweb-mbo .omdweb-color-config-selector-ex.omdweb-alpine_gray_ex .noUi-base { background-color: #848484; }
+#omdweb-mbo .omdweb-color-config-selector-ex.omdweb-wild_cherry_ex .noUi-base { background-color: #750a1b; }
+#omdweb-mbo .omdweb-color-config-selector-ex.omdweb-black_ex .noUi-base { background-color: #292929; }
+#omdweb-mbo .omdweb-color-config-selector-ex.omdweb-platinum_gray_ex .noUi-base { background-color: #6d7275; }
+#omdweb-mbo .omdweb-color-config-selector-ex.omdweb-tempest_blue_ex .noUi-base { background-color: #2f3f60; }
+#omdweb-mbo .omdweb-color-config-selector-ex.omdweb-tornado_red_ex .noUi-base { background-color: #aa0000; }
+#omdweb-mbo .omdweb-color-config-selector-ex.omdweb-toffee_brown_ex .noUi-base { background-color: #553824; }
+#omdweb-mbo .omdweb-color-config-selector-ex.omdweb-frost_silver_ex .noUi-base { background-color: #c6c6c6; }
+#omdweb-mbo .omdweb-color-config-selector-ex.omdweb-iron_gray_ex .noUi-base { background-color: #b3b6b4; }
+#omdweb-mbo .omdweb-color-config-selector-ex.omdweb-island_gray_ex .noUi-base { background-color: #819096; }
+#omdweb-mbo .omdweb-color-config-selector-ex.omdweb-light_brown_ex .noUi-base { background-color: #553824; }
+#omdweb-mbo .omdweb-color-config-selector-ex.omdweb-shadow_blue_ex .noUi-base { background-color: #1c2b6f; }
+#omdweb-mbo .omdweb-color-config-selector-ex.omdweb-urano_gray_ex .noUi-base { background-color: #6d7275; }
+#omdweb-mbo .omdweb-color-config-selector-ex.omdweb-moonrock_silver_ex .noUi-base { background-color: #c6c6c6; }
+#omdweb-mbo .omdweb-color-config-selector-ex.omdweb-moon_rock_gray_ex .noUi-base { background-color: #626569; }
+#omdweb-mbo .omdweb-color-config-selector-ex.omdweb-denim_blue_ex .noUi-base { background-color: #1c67c3; }
+#omdweb-mbo .omdweb-color-config-selector-ex.omdweb-saturn_yellow_ex .noUi-base { background-color: #fae22a; }
+#omdweb-mbo .omdweb-color-config-selector-ex.omdweb-reef_blue_ex .noUi-base { background-color: #1c67c3; }
+#omdweb-mbo .omdweb-color-config-selector-ex.omdweb-tungsten_silver_ex .noUi-base { background-color: #e2e0dc; }
+#omdweb-mbo .omdweb-color-config-selector-ex.omdweb-glacier_blue_ex .noUi-base { background-color: #bad4e0; }
+#omdweb-mbo .omdweb-color-config-selector-ex.omdweb-opera_red_ex .noUi-base { background-color: #83222a; }
+#omdweb-mbo .omdweb-color-config-selector-ex.omdweb-pepper_gray_ex .noUi-base { background-color: #6d7275; }
+#omdweb-mbo .omdweb-color-config-selector-ex.omdweb-pure_white_ex .noUi-base { background-color: white; }
+#omdweb-mbo .omdweb-color-config-selector-ex.omdweb-oryx_white_ex .noUi-base { background-color: #c6c6c6; }
+#omdweb-mbo .omdweb-color-config-selectors .noUi-target { border: none; }
+#omdweb-mbo .omdweb-color-config-selectors .noUi-handle { background-color: #c1cbce; border-color: #96a8ac; }
+#omdweb-mbo .omdweb-color-config-selectors .noUi-handle:before, #omdweb-mbo .omdweb-color-config-selectors .noUi-handle:after { background-color: #96a8ac; }
+
+#omdweb-mbo .omdweb-multi-selector-slider { position: relative; margin-bottom: 8em; background-color: white; }
+#omdweb-mbo .range { border: none; height: 15px; }
+#omdweb-mbo .range td { border: none; padding: 0 !important; }
+#omdweb-mbo .rangeGrip { display: block; cursor: e-resize; z-index: 8; position: relative; top: -5px; -webkit-border-radius: 4px; border-radius: 4px; width: 18px; height: 25px; background-color: #c1cbce; border: 1px solid #96a8ac; }
+#omdweb-mbo .rangeGrip:before, #omdweb-mbo .rangeGrip:after { content: ""; display: block; position: absolute; height: 16px; width: 1px; background: #96a8ac; left: 5px; top: 3px; }
+#omdweb-mbo .rangeGrip:after { left: 9px; }
+#omdweb-mbo section.omdweb-trim-mix-selector .range { height: 40px; }
+#omdweb-mbo section.omdweb-trim-mix-selector .rangeGrip { width: 34px; height: 50px; border: 1px solid #06b5fd; background-color: #028bc4; }
+#omdweb-mbo section.omdweb-trim-mix-selector .rangeGrip:before, #omdweb-mbo section.omdweb-trim-mix-selector .rangeGrip:after { content: ""; height: 36px; background: #02aff6; left: 11px; top: 6px; }
+#omdweb-mbo section.omdweb-trim-mix-selector .rangeGrip:after { left: 15px; }
+#omdweb-mbo .omdweb-trim-info { position: absolute; bottom: -42px; width: 100%; }
+#omdweb-mbo .omdweb-manage { float: left; }
+#omdweb-mbo .omdweb-manage strong { float: left; display: block; margin-top: 1px; margin-right: 6px; width: 38px; }
+#omdweb-mbo .omdweb-manage .btn { margin-top: -2px; margin-left: 40px !important; }
+#omdweb-mbo .sliderAmounts { *zoom: 1; position: absolute; width: 100%; bottom: -40px; }
+#omdweb-mbo .sliderAmounts:after { content: ""; display: table; clear: both; }
+#omdweb-mbo .omdweb-slider-amount { float: left; padding-left: 28px; }
+#omdweb-mbo .omdweb-slider-amount-4 { width: 25%; }
+#omdweb-mbo .omdweb-slider-amount-3 { width: 33%; }
+#omdweb-mbo .omdweb-slider-amount-2 { width: 50%; }
+#omdweb-mbo .omdweb-slider-amount-1 { width: 100%; }
+#omdweb-mbo section.omdweb-trim-mix-selector .omdweb-trim-selection-range-value-1 { background-color: #029ddd; }
+#omdweb-mbo section.omdweb-trim-mix-selector .omdweb-trim-selection-range-value-2 { background-color: #42b6e7; }
+#omdweb-mbo section.omdweb-trim-mix-selector .omdweb-trim-selection-range-value-3 { background-color: #7fceed; }
+#omdweb-mbo section.omdweb-trim-mix-selector .omdweb-trim-selection-range-value-4 { background-color: #c1e6f6; }
+#omdweb-mbo .omdweb-color-config-selectors h2 { margin-bottom: 10px; }
+#omdweb-mbo .omdweb-color-config-selectors .omdweb-manage strong { width: auto; }
+#omdweb-mbo .omdweb-color-config-selector-in td.omdweb-charcoal_in { background-color: #282828; }
+#omdweb-mbo .omdweb-color-config-selector-in td.omdweb-clay_gray_in { background-color: #363636; }
+#omdweb-mbo .omdweb-color-config-selector-in td.omdweb-sandstone_in { background-color: #828158; }
+#omdweb-mbo .omdweb-color-config-selector-in td.omdweb-black_in { background-color: #282828; }
+#omdweb-mbo .omdweb-color-config-selector-in td.omdweb-beige_in { background-color: #828158; }
+#omdweb-mbo .omdweb-color-config-selector-in td.omdweb-moonrock_in { background-color: #8f8f8d; }
+#omdweb-mbo .omdweb-color-config-selector-in td.omdweb-quartz_in { background-color: #aaaaaa; }
+#omdweb-mbo .omdweb-color-config-selector-in td.omdweb-black_blue_in { background-color: #1c67c3; }
+#omdweb-mbo .omdweb-color-config-selector-in td.omdweb-black_gray_in { background-color: #333300; }
+#omdweb-mbo .omdweb-color-config-selector-in td.omdweb-beige_black_in { background-color: black; }
+
+.omdweb-container .omdweb-selected-car-line { width: 280px; max-width: 280px; margin: 1em auto 2em; text-align: center; }
+.omdweb-container .omdweb-selected-car-line img { display: block; margin-bottom: 5px; }
+.omdweb-container .omdweb-selected-car-line strong { font-family: "VWHeadlineOTSemibold", "VWHeadlineOT-Semibold", Arial, Helvetica, sans-serif; font-weight: 100; line-height: 1; font-size: 1.5em; color: #000; padding: 1px 0.8em 0 0; margin-right: 0.8em; }
+.omdweb-container .btn { -webkit-border-radius: 3px; border-radius: 3px; }
+.omdweb-container .action-buttons { *zoom: 1; }
+.omdweb-container .action-buttons:after { content: ""; display: table; clear: both; }
+.omdweb-container .action-buttons .btn { float: right; }
+.omdweb-container .omdweb-tab-top-buttons { margin: 1em 0; }
+.omdweb-container .omdweb-tab-top-buttons .btn { margin-right: 6px; }
+.omdweb-container .omdweb-tab-top-buttons span { display: block; margin-top: 3px; font-size: 11px; }
+@media (min-width: 48em) { .omdweb-container .omdweb-tab-top-buttons { position: absolute; top: 0; right: 0; margin: 0; }
+  .omdweb-container .omdweb-tab-top-buttons .btn { margin-left: 6px; margin-right: 0; }
+  .omdweb-container .omdweb-tab-top-buttons span { text-align: right; } }
+.no-mediaqueries .omdweb-container .omdweb-tab-top-buttons { position: absolute; top: 0; right: 0; margin: 0; }
+.no-mediaqueries .omdweb-container .omdweb-tab-top-buttons .btn { margin-left: 6px; margin-right: 0; }
+.no-mediaqueries .omdweb-container .omdweb-tab-top-buttons span { text-align: right; }
+.omdweb-container .btn-add-row { margin: 1em 0 0; }
+.omdweb-container .action-menu { position: relative; top: 1em; }
+.omdweb-container .omdweb-rtabs { margin-top: 16px; }
+.omdweb-container .omdweb-rtabs .r-tabs-anchor { color: #8f9595; font-size: 16px; font-weight: 100 !important; margin-bottom: 1px; }
+@media (min-width: 48em) { .omdweb-container .omdweb-rtabs .r-tabs-anchor { padding: 1em 2%; text-align: center; } }
+.no-mediaqueries .omdweb-container .omdweb-rtabs .r-tabs-anchor { padding: 1em 2%; text-align: center; }
+@media (min-width: 61.875em) { .omdweb-container .omdweb-rtabs .r-tabs-anchor { padding-left: 1em; padding-right: 1em; text-align: left; } }
+.no-mediaqueries .omdweb-container .omdweb-rtabs .r-tabs-anchor { padding-left: 1em; padding-right: 1em; text-align: left; }
+.omdweb-container .omdweb-rtabs .r-tabs-state-default { border: 1px solid #cfd7d9; border-bottom: none; }
+.omdweb-container .omdweb-rtabs .r-tabs-state-default .r-tabs-anchor { background-color: #eaeeed; }
+.omdweb-container .omdweb-rtabs .r-state-active .r-tabs-anchor { color: #029ddd; }
+@media (min-width: 48em) { .omdweb-container #omdweb-mbo-analytics-tabs div[id^="tab-"] h1 { float: left; } }
+.no-mediaqueries .omdweb-container #omdweb-mbo-analytics-tabs div[id^="tab-"] h1 { float: left; }
+.omdweb-container .table { border-bottom-width: 2px; }
+.omdweb-container .table > tbody > tr > td { vertical-align: middle; }
+.omdweb-container #allocation-table tbody td:first-child { width: 150px; }
+.omdweb-container .omdweb-form-controls { *zoom: 1; }
+.omdweb-container .omdweb-form-controls:after { content: ""; display: table; clear: both; }
+.omdweb-container .omdweb-form-controls .icon-legend { float: none; }
+.omdweb-container .omdweb-form-controls .icon-legend li { float: left; }
+.omdweb-container .omdweb-form-controls .icon-legend li:first-child { margin-right: 12px; }
+.omdweb-container .omdweb-form-controls .icon-legend .omdweb-criteria-icons { display: inline-block; *display: inline; *zoom: 1; width: 18px; height: 18px; position: relative; top: 2px; margin-left: 5px; }
+.omdweb-container .omdweb-form-controls .icon-legend .omdweb-criteria-1 { background-color: #029ddd; }
+.omdweb-container .omdweb-form-controls .icon-legend .omdweb-criteria-2 { background-color: #15b9fd; }
+@media (min-width: 48em) { .omdweb-container .omdweb-form-controls .icon-legend { float: right; margin-top: 16px; } }
+.no-mediaqueries .omdweb-container .omdweb-form-controls .icon-legend { float: right; margin-top: 16px; }
+.omdweb-container .omdweb-rtabs-info-bar { *zoom: 1; margin-top: 0; background-color: #029ddd; padding: 10px; color: white; font-family: "VWHeadlineOTBook", "VWHeadlineOT-Book", arial, helvetica, sans-serif; font-size: 16px; margin-bottom: 2em; }
+.omdweb-container .omdweb-rtabs-info-bar:after { content: ""; display: table; clear: both; }
+.omdweb-container .omdweb-rtabs-info-bar .omdweb-rtabs-info-standard { margin-bottom: 0; }
+.omdweb-container .omdweb-rtabs-info-bar .omdweb-rtabs-info-extra { margin-top: 10px; text-align: center; margin-bottom: 0; }
+.omdweb-container .omdweb-rtabs-info-bar li { display: inline; white-space: nowrap; margin-right: 6.6%; }
+.omdweb-container .omdweb-vehicles-config { *zoom: 1; }
+.omdweb-container .omdweb-vehicles-config:after { content: ""; display: table; clear: both; }
+.omdweb-container .omdweb-vehicles-config-list > li { margin-bottom: 2em; padding-bottom: 1em; position: relative; border-bottom: 1px solid #cfd7d9; }
+.omdweb-container .omdweb-vehicles-config-list > li hr { margin-top: 25px; }
+.omdweb-container .omdweb-vehicles-config-list h2 { margin-bottom: 6px; }
+@media (min-width: 48em) { .omdweb-container .omdweb-vehicles-config-list > li { padding-bottom: 0; border-bottom: none; } }
+.no-mediaqueries .omdweb-container .omdweb-vehicles-config-list > li { padding-bottom: 0; border-bottom: none; }
+.omdweb-container .omdweb-vehicle-config-swatches { *zoom: 1; }
+.omdweb-container .omdweb-vehicle-config-swatches:after { content: ""; display: table; clear: both; }
+@media (min-width: 48em) { .omdweb-container .omdweb-vehicle-config-swatches { width: 60%; } }
+.no-mediaqueries .omdweb-container .omdweb-vehicle-config-swatches { width: 60%; }
+.omdweb-container .omdweb-vehicle-config-swatches li { float: left; margin-right: 1px; border: 2px solid #fff; width: 46px; height: 46px; margin-bottom: 8px; }
+.omdweb-container .omdweb-vehicle-config-swatches li.selected { border-color: #fc0; }
+.omdweb-container hr.omdweb-hr-short { display: none; text-align: left; }
+@media (min-width: 48em) { .omdweb-container hr.omdweb-hr-short { display: block; width: 60%; } }
+.no-mediaqueries .omdweb-container hr.omdweb-hr-short { display: block; width: 60%; }
+.omdweb-container .omdweb-vehicle-config-detail { *zoom: 1; margin-top: 1em; padding-top: 1em; }
+.omdweb-container .omdweb-vehicle-config-detail:after { content: ""; display: table; clear: both; }
+.omdweb-container .omdweb-vehicle-config-detail .omdweb-vehicle-config-detail-single { display: none; margin-top: 0; padding-top: 0; }
+.omdweb-container .omdweb-vehicle-config-detail h3 { font-size: 22px; font-family: "VWHeadlineOTSemibold", "VWHeadlineOT-Semibold", arial, helvetica, sans-serif; margin-bottom: 10px; }
+.omdweb-container .omdweb-vehicle-config-detail dl { *zoom: 1; width: 100%; margin: 0 0 1em; }
+.omdweb-container .omdweb-vehicle-config-detail dl:after { content: ""; display: table; clear: both; }
+.omdweb-container .omdweb-vehicle-config-detail dl a { font-weight: 100; }
+.omdweb-container .omdweb-vehicle-config-detail dt { width: 100px; clear: left; }
+.omdweb-container .omdweb-vehicle-config-detail dt, .omdweb-container .omdweb-vehicle-config-detail dd { white-space: nowrap; margin-bottom: 5px; float: left; }
+.omdweb-container .omdweb-vehicle-config-detail .btn-reject-all { display: none; }
+@media (min-width: 48em) { .omdweb-container .omdweb-vehicle-config-detail { width: 35%; position: absolute; top: -25px; right: 0; }
+  .omdweb-container .omdweb-vehicle-config-detail dl { padding-bottom: .5em; border-bottom: 1px solid #cfd7d9; }
+  .omdweb-container .omdweb-vehicle-config-detail .btn { float: right; }
+  .omdweb-container .omdweb-vehicle-config-detail .btn-reject-all { float: none; position: relative; top: 30px; } }
+.no-mediaqueries .omdweb-container .omdweb-vehicle-config-detail { width: 35%; position: absolute; top: -25px; right: 0; }
+.no-mediaqueries .omdweb-container .omdweb-vehicle-config-detail dl { padding-bottom: .5em; border-bottom: 1px solid #cfd7d9; }
+.no-mediaqueries .omdweb-container .omdweb-vehicle-config-detail .btn { float: right; }
+.no-mediaqueries .omdweb-container .omdweb-vehicle-config-detail .btn-reject-all { float: none; position: relative; top: 30px; }
+.omdweb-container .omdweb-section-header { clear: both; margin-top: 1em; }
+.omdweb-container .form-horizontal.omdweb-form .search-controls-header { *zoom: 1; }
+.omdweb-container .form-horizontal.omdweb-form .search-controls-header:after { content: ""; display: table; clear: both; }
+.omdweb-container .form-horizontal.omdweb-form .search-controls-header .form-group { clear: none; margin-top: 5px; }
+@media (min-width: 48em) { .omdweb-container .form-horizontal.omdweb-form .search-controls-header h2 { width: 57.89474%; float: left; margin-right: 1.05263%; }
+  .omdweb-container .form-horizontal.omdweb-form .search-controls-header .form-group { text-align: right; width: 41.05263%; float: right; margin-right: 0; margin-bottom: 8px; } }
+.no-mediaqueries .omdweb-container .form-horizontal.omdweb-form .search-controls-header h2 { width: 57.89474%; float: left; margin-right: 1.05263%; }
+.no-mediaqueries .omdweb-container .form-horizontal.omdweb-form .search-controls-header .form-group { text-align: right; width: 41.05263%; float: right; margin-right: 0; *margin-left: -0.83333em; margin-bottom: 8px; }
+
+@media (min-width: 48em) { #omdweb-mbo .omdweb-form .omdweb-form-controls .form-group { float: left; clear: none !important; margin-right: 2em !important; }
+  #omdweb-mbo .omdweb-form .omdweb-form-controls h1 { clear: both; } }
+.no-mediaqueries #omdweb-mbo .omdweb-form .omdweb-form-controls .form-group { float: left; clear: none !important; margin-right: 2em !important; }
+.no-mediaqueries #omdweb-mbo .omdweb-form .omdweb-form-controls h1 { clear: both; }
+#omdweb-mbo .range-slider { position: relative; padding-top: 0; }
+#omdweb-mbo .form-group-lot-size .control-label { font-size: 14px; line-height: 1; margin-top: -3px; }
+#omdweb-mbo .form-group-lot-size .range-val { font-family: "VWHeadlineOTSemibold", "VWHeadlineOT-Semibold", Arial, Helvetica, sans-serif; font-size: 20px; line-height: 1; margin-top: 12px; }
+
+.omdweb-lot-size-selector { position: relative; }
+
+#omdweb-mbo-preferences-tabs .omdweb-trim-selection-color-config { border-top: 1px solid #cfd7d9; padding-top: 1em; border-bottom: 1px solid #cfd7d9; margin-bottom: 1em; }
+#omdweb-mbo-preferences-tabs .omdweb-color-config-selectors { margin: 0; }
+#omdweb-mbo-preferences-tabs .omdweb-color-config-row { margin-bottom: 2em; }
+
+.omdweb-vehicle-config-swatch-container { position: relative; border: 1px solid #cfd7d9; background-color: lime; width: 42px; height: 42px; cursor: pointer; }
+.omdweb-vehicle-config-swatch-container > div { position: absolute; bottom: 0; left: 0; display: block; line-height: 1; width: 1px; height: 1px; background-color: white; border-left: 22px solid #fff; border-top: 22px solid lime; }
+.omdweb-vehicle-config-swatch-container > div span { position: absolute; bottom: -1px; left: -20px; font-size: 11px; }

@@ -11,9 +11,15 @@
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
 			classpath:applicationContext.xml
+			classpath:spring-security-config.xml
 		</param-value>
 	</context-param>
-
+	
+	<!-- Define spring listener, load spring -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	
 
 	<filter>
 		<filter-name>appliationEncoding</filter-name>
@@ -32,12 +38,17 @@
 		<filter-name>appliationEncoding</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
+	
+	<filter>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
 
-	<!-- -->
-	<listener>
-		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-	</listener>
-
+	
 	<!-- Config spring MVC Servlet -->
 	<servlet>
 		<servlet-name>dispatcherServlet</servlet-name>

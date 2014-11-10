@@ -1,0 +1,323 @@
+@import "components/vw";
+
+// Browsers that do not support MQs (IE8, IE7)
+.no-mediaqueries {
+  #omdweb-home {
+    #omdweb-info-box-2 {
+      transform: none;
+      left: ($column-width * 4) + ($gutter-width * 4) !important;
+    }
+    #omdweb-info-box-3 {
+      float: right !important;
+      margin-right: 0 !important;
+    }
+    nav > ul {
+      li.locate { margin-left: 0%; clear: left; }
+      li.ordering { margin-left: 16.84211%; clear: none; }
+      li.sales { margin-left: 33.68421%; clear: none; }
+      li.vehicles { margin-left: 50.52632%; clear: none; }
+      li.analysis { margin-left: 67.36842%; clear: none; }
+      li.admin { margin-left: 84.21053%; clear: none; }
+    }
+  }
+  .omdweb-mass-choices-container ul.lastChild {
+    @include omega;
+  }
+  #omdweb-allocation {
+    .btn-remove-option {
+      float: right;
+    }
+  }
+}
+
+// IE7-specific
+.lt-ie8,
+.ie7 {
+  #omdweb-home {
+    nav {
+      .sub-menu { width: $column-width * 4; }
+    }
+
+    .info-box {
+      width: 28%;
+      margin: 0 !important;
+    }
+    #omdweb-info-box-2 {
+      margin-left: 2px !important;
+    }
+  }
+
+  #wrap { padding-left: 19px; padding-right: 19px; width: 952px !important; }
+
+  .omdweb-container {
+    dd {
+      float: none;
+    }
+
+    #interior-nav {
+      .sub-menu-container {
+        width: 215px;
+        height: 225px;
+      }
+    }
+
+    .jcarousel {
+      li .item-content {
+        strong { line-height: 14px; }
+      }
+      li.active .item-content {
+        strong { line-height: 30px; }
+        i { line-height: 14px; }
+      }
+    }
+
+    .form-group-viewing-as {
+      label { width: 46.5% !important; position: relative; }
+      input { width: 48% !important; }
+      a.decorate {
+        float: none;
+        position: absolute;
+        top: 0;
+        right: 8px;
+      }
+    }
+
+    #searchForm {
+      fieldset { zoom: 1; background-color: $input-bg; }
+      #searchField { width: 240px; }
+      input[type="submit"] {
+        font: 0/0 a;
+        color: #8b96a1;
+        text-indent: 0;
+        border: none;
+      }
+    }
+
+    .jcarousel li .item-content strong { top: 0; }
+    .jcarousel li .item-content i { font-style: normal; }
+
+    .omdweb-poptip { zoom: 1; }
+    .action-menu {
+      li.submit {
+        .btn { padding: .45em 1em .4em; }
+        input.btn { padding-top: 5px !important; padding-bottom: 3px !important; }
+      }
+    }
+    .omdweb-form fieldset {
+      .control-label { width: 30%; }
+      &.two-up .form-group { width: 46%; }
+    }
+    .omdweb-form-group-even { float: right !important; }
+    .omdweb-form .form-group-msrp input  { margin-left: 0 !important; }
+
+    .form-horizontal.omdweb-form textarea { width: 95%; }
+
+    .omdweb-programs .form-group-pipeline + .form-group { margin-top: 15px; }
+
+    .responsivetable, .action-menu, table, table td { min-height: 0 !important; }
+
+    .btn,
+    .btn-primary,
+    .btn-secondary {
+      overflow: visible !important;
+      width: auto !important;
+    }
+
+    .btn.omdweb-btn-step-next {
+      padding: 4px 1em 8px 12px;
+    }
+    .btn.omdweb-btn-step-prev {
+      padding: 4px 12px 8px 1em;
+    }
+
+    .view-list-trigger .btn { top: 7px; }
+  }
+
+  #omdweb-configure {
+    .configuration-entry-details {
+      .configuration { padding-right: 0; width: 48%; }
+      .configuration-details { padding-left: 0; width: 48%; }
+    }
+    .configuration-form {
+      .choices-container { width: 71% !important; }
+      textarea { width: 70% !important; }
+      .btn-primary { margin-left: 111px !important; margin-top: 1em; }
+    }
+  }
+
+  #omdweb-locate {
+    .action-buttons .btn.btn-primary { float: right; }
+    section.location fieldset.two-up .form-group { height: 85px; }
+
+    aside .action-buttons .btn.btn-primary { float: none; }
+    .omdweb-search-filters {
+      width: 23%;
+      select,
+      .choices-container,
+      input[type="text"] { width: 95%; }
+      textarea { width: 90%; }
+    }
+    .omdweb-search-results { width: 73%; }
+    .search-controls-header {
+      .form-group-sort-by .control-label { margin-right: 16px; }
+    }
+  }
+
+  #omdweb-detail {
+    .omdweb-vehicle-detail-container { display: inline; float: none; width: 65%; }
+    .vehicle-image { float: none; }
+    .vehicle-detail-overview {
+      .action-buttons {
+        .btn { float: left; }
+        .btn-danger { float: right; }
+      }
+    }
+    .omdweb-form .customer-sales-info {
+      padding-left: 0;
+      fieldset.owner-info { clear: both; }
+      fieldset.driver-info { margin-top: 1em !important; }
+    }
+    .configuration-info .configuration .btn-primary { clear: both !important; }
+
+    .customer-info .form-group label,
+    .configuration-info,
+    .customer-sales-info { width: 48%; }
+
+    .configuration {
+      .form-group {
+        label { float: left; }
+        .choices-container label { float: none; }
+      }
+    }
+    .customer-sales-info {
+      .form-group {
+        label { width: auto; float: left; }
+        input { width: 65.95%; }
+      }
+    }
+  }
+
+  #omdweb-reportsale {
+    section.vehicle-information,
+    section.owner-information,
+    section.driver-information {
+      fieldset.two-up .form-group {
+        height: 50px;
+      }
+    }
+    ul.downloadable { margin-left: 140px; }
+    .omdweb-incentives .form-group { padding-bottom: 1em; }
+
+    .omdweb-incentives,
+    .omdweb-programs { width: 47.5%; }
+
+    .vehicle-detail-info .omdweb-vehicle-detail-item strong { width: 60px; }
+  }
+
+  #omdweb-inventorymix {
+    .omdweb-form-controls {
+      .form-group-toggle-options { clear: left; }
+      .icon-legend .inventory-icons { top: 2px; }
+    }
+
+
+
+    table {
+      &#omdweb-inventory-mix-table td {
+        vertical-align: top;
+      }
+    }
+  }
+
+  #omdweb-mypipeline {
+    table.table th { white-space: nowrap !important; }
+  }
+
+  #omdweb-allocation {
+    .form-horizontal.omdweb-form .form-group-from-to {
+      input[type="text"] {
+        position: relative;
+        top: 7px;
+        padding: 6px;
+      }
+      .btn {
+        position: relative;
+        top: -1px;
+      }
+    }
+  }
+
+  #omdweb-accessorize {
+    .omdweb-row-nested {
+      ul {
+        margin-left: 6px;
+      }
+      li {
+        button {
+          float: none;
+          position: static;
+          width: 14px;
+          height: 14px;
+        }
+      }
+    }
+  }
+
+  #omdweb-help {
+    .omdweb-help-topics { width: 73.5%; }
+    .omdweb-help-topic-indicator {
+      color: #919596;
+      font-weight: 700;
+      font-size: 14px;
+    }
+    dt, dd {
+      .omdweb-help-indicator {
+        margin-left: -20px;
+        margin-right: 10px;
+      }
+    }
+    dt {
+      .omdweb-help-indicator {
+        display: block;
+      }
+    }
+  }
+
+  #omdweb-profile {
+    .omdweb-form-group-search-dealer input[type="text"] {
+      padding-top: 8px;
+      padding-bottom: 6px;
+    }
+    .omdweb-form fieldset.two-up .form-group { width: 46%; }
+    .omdweb-delivery-hours-rows select { margin-left: 0; }
+    .omdweb-visibility-check {
+      margin-top: 6px;
+      label { margin-bottom: 1px; }
+    }
+  }
+
+  #omdweb-mbo {
+    .omdweb-vehicle-config-swatches {
+      li {
+        width: 44px;
+        height: 44px;
+      }
+    }
+    .omdweb-form-controls .icon-legend .omdweb-criteria-icons {
+      top: 2px;
+    }
+    .rangeGrip { top: 5px; }
+
+    .omdweb-trim-info { bottom: -40px; }
+
+    .omdweb-slider-amount-4 { width: 229px; }
+    .omdweb-slider-amount-2 { width: 305px; }
+    .omdweb-slider-amount-1 { width: 458px; }
+
+    .sliderAmounts {
+      bottom: -34px;
+      .omdweb-slider-amount-4 { width: 201px; }
+    }
+
+  }
+}

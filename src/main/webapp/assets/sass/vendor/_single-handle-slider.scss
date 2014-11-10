@@ -1,0 +1,95 @@
+// Single-handle range slider
+#omdweb-mbo {
+  .omdweb-mbo-slider {
+    margin-bottom: 50px;
+  }
+  .noUi-horizontal {
+    height: 40px;
+    .noUi-handle {
+      height: 50px;
+    }
+  }
+  .noUi-target {
+    @include border-radius-all(0px);
+    padding: 0;
+  }
+  .noUi-base {
+    background-color: $brand-primary;
+  }
+  .noUi-origin {
+    @include border-radius-all(0px);
+    background-color: #eaeeed;
+  }
+  .noUi-handle {
+    border-color: lighten($brand-primary,7%);
+    background-color: darken($brand-primary,5%);
+    &:before,
+    &:after {
+      background-color: lighten($brand-primary,5%);
+      height: 36px;
+    }
+  }
+  .omdweb-range-val-scale {
+    position: absolute;
+    top: 0;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    line-height: 42px;
+    font-family: $font-family-brand;
+    font-size: 20px;
+  }
+  .omdweb-range-val-scale-start {
+    left: 10px;
+  }
+  .omdweb-range-val-scale-end {
+    right: 10px;
+  }
+
+  // SPECIFICS
+  .omdweb-color-config-selector-ex {
+    &.omdweb-deep_black_ex .noUi-base        { background-color: $omdweb-deep_black_ex; }
+    &.omdweb-reflex_silver_ex .noUi-base     { background-color: $omdweb-reflex_silver_ex; }
+    &.omdweb-candy_white_ex .noUi-base       { background-color: $omdweb-candy_white_ex; }
+    &.omdweb-night_blue_ex .noUi-base        { background-color: $omdweb-night_blue_ex; }
+    &.omdweb-white_gold_ex .noUi-base        { background-color: $omdweb-white_gold_ex; }
+    &.omdweb-alpine_gray_ex .noUi-base       { background-color: $omdweb-alpine_gray_ex; }
+    &.omdweb-wild_cherry_ex .noUi-base       { background-color: $omdweb-wild_cherry_ex; }
+    &.omdweb-black_ex .noUi-base             { background-color: $omdweb-black_ex; }
+    &.omdweb-platinum_gray_ex .noUi-base     { background-color: $omdweb-platinum_gray_ex; }
+    &.omdweb-tempest_blue_ex .noUi-base      { background-color: $omdweb-tempest_blue_ex; }
+    &.omdweb-tornado_red_ex .noUi-base       { background-color: $omdweb-tornado_red_ex; }
+    &.omdweb-toffee_brown_ex .noUi-base      { background-color: $omdweb-toffee_brown_ex; }
+    &.omdweb-frost_silver_ex .noUi-base      { background-color: $omdweb-frost_silver_ex; }
+    &.omdweb-iron_gray_ex .noUi-base         { background-color: $omdweb-iron_gray_ex; }
+    &.omdweb-island_gray_ex .noUi-base       { background-color: $omdweb-island_gray_ex; }
+    &.omdweb-light_brown_ex .noUi-base       { background-color: $omdweb-light_brown_ex; }
+    &.omdweb-shadow_blue_ex .noUi-base       { background-color: $omdweb-shadow_blue_ex; }
+    &.omdweb-urano_gray_ex .noUi-base        { background-color: $omdweb-urano_gray_ex; }
+    &.omdweb-moonrock_silver_ex .noUi-base   { background-color: $omdweb-moonrock_silver_ex; }
+    &.omdweb-moon_rock_gray_ex .noUi-base    { background-color: $omdweb-moon_rock_gray_ex; }
+    &.omdweb-denim_blue_ex .noUi-base        { background-color: $omdweb-denim_blue_ex; }
+    &.omdweb-saturn_yellow_ex .noUi-base     { background-color: $omdweb-saturn_yellow_ex; }
+    &.omdweb-reef_blue_ex .noUi-base         { background-color: $omdweb-reef_blue_ex; }
+    &.omdweb-tungsten_silver_ex .noUi-base   { background-color: $omdweb-tungsten_silver_ex; }
+    &.omdweb-glacier_blue_ex .noUi-base      { background-color: $omdweb-glacier_blue_ex; }
+    &.omdweb-opera_red_ex .noUi-base         { background-color: $omdweb-opera_red_ex; }
+    &.omdweb-pepper_gray_ex .noUi-base       { background-color: $omdweb-pepper_gray_ex; }
+    &.omdweb-pure_white_ex .noUi-base        { background-color: $omdweb-pure_white_ex; }
+    &.omdweb-oryx_white_ex .noUi-base        { background-color: $omdweb-oryx_white_ex; }
+  }
+
+  .omdweb-color-config-selectors {
+    .noUi-target {
+      border: none;
+    }
+    .noUi-handle {
+      background-color: darken($borders,5%);
+      border-color: darken($borders,20%);
+      &:before,
+      &:after {
+        background-color: darken($borders,20%);
+      }
+    }
+  }
+}

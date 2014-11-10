@@ -1,0 +1,16 @@
+
+.modal { display: none; overflow: auto; position: fixed; top: 15%; right: 20%; bottom: 15%; left: 20%; z-index: 1050; -webkit-overflow-scrolling: touch; outline: 1; }
+
+
+.modal-header  h3 { font-size: 28px; font-weight: 700; margin-bottom: 10px; font-family: inherit; font-family: "VWHeadlineOTSemibold"; }
+.modal-header p { font-family: "VWHeadlineOTSemibold"; }
+.modal-body h3 { font-size: 20px; font-weight: 700; margin-bottom: 10px; font-family: "VWHeadlineOTSemibold"; }
+.modal-body h1 { font-size: 30px; font-weight: 800; margin-bottom: 10px; font-family: "VWHeadlineOTSemibold"; }
+.modal-body p { font-size: 14px; font-weight: 600; margin-bottom: 10px; }
+.modal-body h4 { font-size: 24px; font-weight: 600; margin-bottom: 10px; font-family: "VWHeadlineOTSemibold"; }
+.modal-body h5 { font-size: 16px; font-weight: 500; margin-bottom: 10px; font-family: "VWHeadlineOTSemibold"; }
+
+.modal { display: none; overflow: auto; position: fixed; top: 15%; right: 20%; bottom: 15%; left: 20%; z-index: 1050; -webkit-overflow-scrolling: touch; outline: 1; }
+.modal-backdrop.in { opacity: 1.0; filter: alpha(opacity=100); }
+.modal-backdrop { position: fixed; top: 15%; right: 20%; bottom: 15%; left: 20%; z-index: 1040; background-color: white;}
+.modal-dialog  { position: relative; width: auto; margin: 10px; }

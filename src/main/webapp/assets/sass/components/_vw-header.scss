@@ -1,0 +1,53 @@
+.omdweb-container {
+  // Header
+  header {
+    @include pie-clearfix;
+    padding-bottom: $gutter-width;
+
+    #searchForm {
+      position: relative;
+      margin-top: $gutter-width;
+
+      @include at-breakpoint($gt-tablet) {
+        margin-top: 0;
+      }
+
+      input[type="text"],
+      input[type="search"] {
+        @include box-sizing(border-box);
+        width: 100%;
+        line-height: 1;
+        border: none;
+        background-color: $input-bg;
+        color: $input-color;
+        font-size: 12px;
+        padding: 10px 20px 9px $gutter-width;
+        float: left;
+        &:focus {
+          outline: none;
+          background-color: lighten($input-bg, 3%);
+          -webkit-box-shadow: inset 1px 1px 2px 0 rgba(0,0,0,.3);
+                  box-shadow: inset 1px 1px 2px 0 rgba(0,0,0,.3);
+        }
+      }
+      input[type="submit"] {
+        background: $input-bg url(../../img/icons/icon-search.png) no-repeat center center;
+        height: 33px;
+        width: 41px;
+        float: left;
+        border: none;
+        border-left: 1px solid $input-bg;
+        outline: none;
+        cursor: pointer;
+        text-indent: -9999em;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
+      @include at-breakpoint($gt-tablet) {
+        @include span-columns(4 omega,12);
+      }
+    }
+  }
+}

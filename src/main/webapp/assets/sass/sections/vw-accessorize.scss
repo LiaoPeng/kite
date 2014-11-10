@@ -1,0 +1,68 @@
+@import "components/vw";
+
+#omdweb-accessorize {
+  .omdweb-mass-choices-container {
+    li {
+      @include pie-clearfix;
+    }
+
+    label,
+    input[type="checkbox"] {
+      float: left;
+    }
+    label {
+      width: 90%;
+      font-size: 11px;
+    }
+    input[type="checkbox"] {
+      width: 5%;
+      position: relative;
+      top: 5px;
+    }
+
+    @include at-breakpoint($gt-tablet) {
+      label {
+        width: 88%;
+      }
+      input[type="checkbox"] {
+        width: 7%;
+        position: relative;
+        top: 3px;
+      }
+    }
+  }
+  .omdweb-options-row {
+    td {
+      padding-left: 42px;
+    }
+    strong, ul, li {
+      float: left;
+    }
+    strong {
+      margin-right: 4px;
+    }
+    ul {
+      margin: 0;
+    }
+    li {
+      margin-right: 14px;
+    }
+  }
+  .omdweb-remove-option {
+    margin-left: 4px;
+    position: relative;
+    top: -2px;
+
+    @include at-breakpoint($gt-tablet) {
+      color: #fff;
+      font-size: 10px;
+      background: #999;
+      border: none;
+      border-radius: 100%;
+      text-align: center;
+      padding: 0 3px 1px;
+      line-height: 1;
+      margin-top: 4px;
+    }
+  }
+}

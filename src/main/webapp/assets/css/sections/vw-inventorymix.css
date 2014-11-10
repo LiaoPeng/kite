@@ -1,0 +1,65 @@
+@font-face { font-family: "VWHeadlineOTBlack"; src: url("../../fonts/vwheadlineot-black-webfont.eot"); src: url("../../fonts/vwheadlineot-black-webfont?#iefix") format("embedded-opentype"), url("../../fonts/vwheadlineot-black-webfont.woff") format("woff"), url("../../fonts/vwheadlineot-black-webfont.ttf") format("truetype"), url("../../fonts/vwheadlineot-black-webfont.svg#vwheadlineot-black-webfont") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: "VWHeadlineOTSemibold"; src: url("../../fonts/vwheadlineot-semibold-webfont.eot"); src: url("../../fonts/vwheadlineot-semibold-webfont?#iefix") format("embedded-opentype"), url("../../fonts/vwheadlineot-semibold-webfont.woff") format("woff"), url("../../fonts/vwheadlineot-semibold-webfont.ttf") format("truetype"), url("../../fonts/vwheadlineot-semibold-webfont.svg#vwheadlineot-semibold-webfont") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'VWHeadlineOTBook'; src: url("../../fonts/vwheadlineot-book-webfont.eot"); src: url("../../fonts/vwheadlineot-book-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/vwheadlineot-book-webfont.woff") format("woff"), url("../../fonts/vwheadlineot-book-webfont.ttf") format("truetype"), url("../../fonts/vwheadlineot-book-webfont.svg#vw_headline_otbook") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'Glyphicons Halflings'; src: url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.eot"); src: url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.svg#Glyphicons Halflings") format("svg"); font-style: normal; font-weight: normal; }
+
+.glyphicon { position: relative; top: 1px; display: inline-block; *display: inline; *zoom: 1; font-family: 'Glyphicons Halflings'; font-style: normal; font-weight: normal; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+.glyphicon-check:before { content: "\e067"; }
+
+.glyphicon-remove:before { content: "\e014"; }
+
+#omdweb-inventorymix hr { margin-bottom: 1em; }
+#omdweb-inventorymix .omdweb-form-controls .btn { margin-bottom: 1em; }
+#omdweb-inventorymix .omdweb-form-controls .icon-legend li { float: left; }
+#omdweb-inventorymix .omdweb-form-controls .icon-legend li:first-child { margin-right: 30px; }
+#omdweb-inventorymix .omdweb-form-controls .icon-legend .inventory-icons { background-image: none; position: relative; top: 5px; }
+#omdweb-inventorymix .omdweb-form-controls .icon-legend .icon-dealer { background-color: #029ddd; }
+#omdweb-inventorymix .omdweb-form-controls .icon-legend .icon-area { background-color: #8994a0; }
+#omdweb-inventorymix .omdweb-form-controls .form-group-toggle-colors { clear: left; }
+#omdweb-inventorymix .omdweb-form-controls .form-multiples .control-label + label { margin-right: 12px; }
+#omdweb-inventorymix .form-multiples label { font-weight: 100; }
+#omdweb-inventorymix .form-multiples .control-label { margin-right: 2em; font-weight: 700; }
+#omdweb-inventorymix .form-multiples input { margin-right: 4px; }
+#omdweb-inventorymix .omdweb-options, #omdweb-inventorymix .omdweb-colors { display: block; }
+#omdweb-inventorymix #omdweb-inventory-mix-table th { width: 19% !important; }
+#omdweb-inventorymix #omdweb-inventory-mix-table th:first-child { width: 32% !important; }
+#omdweb-inventorymix #omdweb-inventory-mix-table th:first-child + th { width: 14% !important; }
+#omdweb-inventorymix #omdweb-inventory-mix-table tbody td:first-child { max-width: 300px; }
+#omdweb-inventorymix td { vertical-align: middle; white-space: normal; }
+#omdweb-inventorymix .omdweb-horizontal-chart { width: 100%; }
+#omdweb-inventorymix .omdweb-horizontal-chart .omdweb-horizontal-chart-value { line-height: 16px; }
+#omdweb-inventorymix .omdweb-horizontal-chart .omdweb-horizontal-chart-bar-wrapper { background-color: #cfd7d9; height: 16px; position: relative; margin-bottom: 1px; }
+#omdweb-inventorymix .omdweb-horizontal-chart-bar { position: absolute; top: 0; bottom: 0; left: 0; height: 16px; }
+#omdweb-inventorymix .omdweb-bar { *zoom: 1; }
+#omdweb-inventorymix .omdweb-bar:after { content: ""; display: table; clear: both; }
+#omdweb-inventorymix .omdweb-bar-dealer .omdweb-horizontal-chart-bar { background-color: #029ddd; }
+#omdweb-inventorymix .omdweb-bar-area .omdweb-horizontal-chart-bar { background-color: #8994a0; }
+@media (min-width: 48em) { #omdweb-inventorymix .btn { float: left; }
+  #omdweb-inventorymix .form-group { width: 32.63158%; float: left; margin-right: 1.05263%; }
+  #omdweb-inventorymix .form-group-viewing-as { width: 100%; }
+  #omdweb-inventorymix .omdweb-form-controls .icon-legend { float: right; margin-right: 0; position: relative; top: -3px; }
+  #omdweb-inventorymix .omdweb-form-controls .icon-legend li { margin-left: 16px; }
+  #omdweb-inventorymix .omdweb-form-controls .icon-legend li:first-child { margin-right: 0; }
+  #omdweb-inventorymix .form-multiples .control-label { display: block; }
+  #omdweb-inventorymix .omdweb-horizontal-chart:after { content: ""; display: table; clear: both; }
+  #omdweb-inventorymix .omdweb-horizontal-chart .omdweb-horizontal-chart-value { float: left; width: 30%; }
+  #omdweb-inventorymix .omdweb-horizontal-chart .omdweb-horizontal-chart-bar-wrapper { width: 66%; float: left; margin-left: 4px; } }
+.no-mediaqueries #omdweb-inventorymix .btn { float: left; }
+.no-mediaqueries #omdweb-inventorymix .form-group { width: 32.63158%; float: left; margin-right: 1.05263%; }
+.no-mediaqueries #omdweb-inventorymix .form-group-viewing-as { width: 100%; }
+.no-mediaqueries #omdweb-inventorymix .omdweb-form-controls .icon-legend { float: right; margin-right: 0; *margin-left: -0.83333em; position: relative; top: -3px; }
+.no-mediaqueries #omdweb-inventorymix .omdweb-form-controls .icon-legend li { margin-left: 16px; }
+.no-mediaqueries #omdweb-inventorymix .omdweb-form-controls .icon-legend li:first-child { margin-right: 0; }
+.no-mediaqueries #omdweb-inventorymix .form-multiples .control-label { display: block; }
+.no-mediaqueries #omdweb-inventorymix .omdweb-horizontal-chart { *zoom: 1; }
+.no-mediaqueries #omdweb-inventorymix .omdweb-horizontal-chart:after { content: ""; display: table; clear: both; }
+.no-mediaqueries #omdweb-inventorymix .omdweb-horizontal-chart .omdweb-horizontal-chart-value { float: left; width: 30%; }
+.no-mediaqueries #omdweb-inventorymix .omdweb-horizontal-chart .omdweb-horizontal-chart-bar-wrapper { width: 66%; float: left; margin-left: 4px; }
+@media (min-width: 61.875em) { #omdweb-inventorymix .form-multiples .control-label { display: inline-block; *display: inline; *zoom: 1; }
+  #omdweb-inventorymix .omdweb-horizontal-chart .omdweb-horizontal-chart-bar-wrapper { width: 70%; margin-left: 0; } }
+.no-mediaqueries #omdweb-inventorymix .form-multiples .control-label { display: inline-block; *display: inline; *zoom: 1; }
+.no-mediaqueries #omdweb-inventorymix .omdweb-horizontal-chart .omdweb-horizontal-chart-bar-wrapper { width: 70%; margin-left: 0; }

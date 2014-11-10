@@ -28,9 +28,9 @@
     	<figure class="logo animated fadeInDown delay-07s">
         	<a href="#"><img src="img/logo.png" alt=""></a>	
         </figure>	
-        <h1 class="animated fadeInDown delay-07s">Welcome To Knight Studios</h1>
+        <h1 class="animated fadeInDown delay-07s">Welcome To LuShen Studios</h1>
         <ul class="we-create animated fadeInUp delay-1s">
-        	<li>We are a digital agency that loves crafting beautiful websites.</li>
+        	<li>成功始于合作，合作始于信任;信任始于理解，理解始于沟通生意不成，人情在。</li>
         </ul>
             <a class="link animated fadeInUp delay-1s" href="#">Get Started</a>
     </div>

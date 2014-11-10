@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]>             <html class="no-js">                               <![endif]-->
+<!--[if IE 7]>                 <html class="no-js no-mediaqueries lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>                 <html class="no-js no-mediaqueries lt-ie9">        <![endif]-->
+<!--[if gte IE 9]>             <html class="no-js ie">                            <![endif]-->
+<!--[if (gt IE 8)|!(IE)]><!--> <html class="no-js">                               <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>OMD Web - VW Homepage</title>
+
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--[if ! lte IE 6]><!-->
+    <link href="assets/css/sections/vw-homepage.css" rel="stylesheet">
+    <script src="assets/js/vendor/modernizr.custom.22167.js"></script>
+    <script>
+      Modernizr.load([
+        {
+          test: Modernizr.mq('only screen and (min-width: 960px)'),
+          yep: ['assets/js/vendor/jquery-1.10.2.min.js', 'assets/js/vendor/bootstrap/carousel.js'],
+          complete: function() {
+            if (window.jQuery) {
+              $('#carousel').carousel();
+            }
+          }
+        }
+      ]);
+    </script>
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+    <link href="assets/css/components/vw-legacyie.css" rel="stylesheet">
+  <![endif]-->
+
+  <!--[if IE 8]>
+    <script src="assets/js/vendor/selectivizr-min.js"></script>
+  <![endif]-->
+
+  <!--[if lte IE 6]>
+    <link href="assets/css/legacy-ie/ie6.1.1.css" rel="stylesheet" media="screen, projection">
+  <![endif]-->
+
+  <!--<![endif]-->
+</head>
+
+<body>
+  <div id="wrap">
+    <div class="omdweb-container" id="omdweb-home">
+
+      <a href="#" id="nav-menu-trigger" class="mobile-visible">Main Menu <i></i></a>
+      <nav role="navigation"> <!-- === if there is .omdweb-alert-banner, add class "omdweb-alert-visible" to the nav. otherwise, leave it off. === -->
+        <ul>
+          <li class="locate">
+            <a class="nav-item" href="#">Locate</a>
+            <ul class="sub-menu omdweb-collapsed">
+              <li><a href="">Link 1</a></li>
+              <li><a href="">Link 2</a></li>
+              <li><a href="">Link 3</a></li>
+            </ul>
+          </li>
+          <li class="ordering">
+            <a class="nav-item" href="#">Ordering</a>
+            <ul class="sub-menu omdweb-collapsed">
+              <li><a href="">Link 1</a></li>
+              <li><a href="">Link 2</a></li>
+              <li><a href="">Link 3</a></li>
+            </ul>
+          </li>
+          <li class="sales">
+            <a class="nav-item" href="#">Sales</a>
+            <ul class="sub-menu omdweb-collapsed">
+              <li><a href="">Link 1</a></li>
+              <li><a href="">Link 2</a></li>
+              <li><a href="">Link 3</a></li>
+            </ul>
+          </li>
+          <li class="vehicles">
+            <a class="nav-item" href="#">Vehicles</a>
+            <ul class="sub-menu omdweb-collapsed">
+              <li><a href="">Link 1</a></li>
+              <li><a href="">Link 2</a></li>
+              <li><a href="">Link 3</a></li>
+            </ul>
+          </li>
+          <li class="analysis">
+            <a class="nav-item" href="#">Analysis</a>
+            <ul class="sub-menu omdweb-collapsed">
+              <li><a href="">Link 1</a></li>
+              <li><a href="">Link 2</a></li>
+              <li><a href="">Link 3</a></li>
+            </ul>
+          </li>
+          <li class="admin">
+            <a class="nav-item" href="#">Admin</a>
+            <ul class="sub-menu omdweb-collapsed">
+              <li><a href="">Link 1</a></li>
+              <li><a href="">Link 2</a></li>
+              <li><a href="">Link 3</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <header role="banner">
+        <div class="messaging"> <!-- === THIS IS NEW === -->
+          <!-- === select === -->
+          <div class="form-group form-group-viewing-as">
+            <label for="">View As&hellip;</label>
+            <input type="text" id="" placeholder="Enter Dealer Code/Name">
+          </div>
+
+          <!-- === display === -->
+          <!--
+          <div class="form-group form-group-viewing-as">
+            <label for="">Currently Viewing As&hellip; <a class="decorate" href="">change</a></label>
+            <span>[Dealer Code] [Dealer Name]</span>
+          </div>
+          -->
+        </div>
+        <form action="#" method="post" id="searchForm" role="search">
+          <fieldset>
+            <input type="text" name="" id="searchField" placeholder="Vehicle Search - VIN / COM#">
+            <input id="searchSubmit" type="submit" value="Go">
+          </fieldset>
+        </form>
+
+        <!-- === if there is an alert, show this <div>, otherwise, hide it. ALSO, if there is an alert, need a class added to the <nav> === -->
+        <!--
+        <div class="omdweb-alert-banner">
+          <strong>SYSTEM OUTTAGE -</strong> Tuesday 3/11 through Wednesday 3/12.
+        </div>
+        -->
+      </header>
+
+
+		<div id="wrap">
+		<div class="omdweb-container" id="omdweb-home">
+			<header role="banner">
+		        <jsp:include page="../common/commonHeader.jsp" /> 
+		    </header>
+			<jsp:include page="navigation.jsp" /> 
+			<jsp:include page="alertInformation.jsp" />
+			<main role="main">
+				<jsp:include page="carousel.jsp" /> 
+				<jsp:include page="todoList.jsp" /> 
+				<jsp:include page="notification.jsp" /> 
+				<jsp:include page="referenceItems.jsp" />
+			</main>
+		</div>
+		</div>
+
+      <main role="main">
+
+        <section class="has-carousel">
+          <div id="carousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carousel" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel" data-slide-to="1" class=""></li>
+            </ol>
+
+            <h1 class="mobile-visible">Announcements</h1>
+
+            <ul class="carousel-inner">
+              <li class="item active">
+                <img alt="First slide" src="assets/img/c/carousel/placeholder-vw-carousel-2.jpg">
+                <div class="carousel-caption">
+                  <h2 class="view-list-trigger">First slide</h2>
+                  <p>Lorem ipsum Exercitation qui mollit amet irure minim in laborum.</p>
+                </div>
+              </li>
+              <li class="item">
+                <img alt="Second slide" src="assets/img/c/carousel/placeholder-vw-carousel-1.jpg">
+                <div class="carousel-caption">
+                  <h2 class="view-list-trigger">Second slide</h2>
+                  <p>Lorem ipsum Laboris sint in fugiat laboris incididunt sit consequat sint.</p>
+                </div>
+              </li>
+              <li class="item">
+                <img alt="Second slide" src="assets/img/c/carousel/placeholder-vw-carousel-3.jpg">
+                <div class="carousel-caption">
+                  <h2 class="view-list-trigger">Second slide</h2>
+                  <p>Lorem ipsum Laboris sint in fugiat laboris incididunt sit consequat sint.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="info-box" id="omdweb-info-box-1">
+          <h1>
+            To Do List
+          </h1>
+          <div class="scroller">
+            <ul>
+              <li>You have 4 days until allocations are due. <a href="">View Allocation Details</a></li>
+              <li>There are 3 pending trade requests. <a href="">Respond Now</a></li>
+              <li>You have 1 open campaign. <a href="">View Now</a></li>
+              <li class="home-expander-more">You have 4 open allocation change requests. <a href="">View Allocation Summary</a></li>
+            </ul>
+            <a class="mobile-hidden home-expander" href="#">More&hellip;</a>
+          </div>
+        </section>
+        <section class="info-box" id="omdweb-info-box-2">
+          <h1>
+            Notifications
+          </h1>
+          <div class="scroller">
+            <ul>
+              <li>
+                <h2 class="view-list-trigger">Corporate (4)</h2>
+                <ul class="view-list">
+                  <li><a href="">Voluptate lorem ipsum sunt adipisicing</a></li>
+                  <li><a href="">Proident dolor laborum dolore</a></li>
+                  <li><a href="">Minim reprehenderit magna qui ullamco</a></li>
+                  <li><a class="follow" href="">View All Notifications</a></li>
+                </ul>
+              </li>
+              <li>
+                <h2 class="view-list-trigger">Regional/Field</h2>
+                <ul class="view-list">
+                  <li><a href="">Voluptate lorem ipsum sunt adipisicing</a></li>
+                  <li><a href="">Proident dolor laborum dolore</a></li>
+                  <li><a href="">Minim reprehenderit magna qui ullamco</a></li>
+                  <li><a class="follow" href="">View All Notifications</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="info-box" id="omdweb-info-box-3">
+          <h1>
+            Reference Items
+          </h1>
+          <div class="scroller">
+            <ul>
+              <li>
+                <h2 class="view-list-trigger">Links</h2>
+                <ul class="view-list">
+                  <li><a href="">Voluptate lorem ipsum sunt adipisicing</a></li>
+                  <li><a href="">Proident dolor laborum dolore</a></li>
+                  <li><a href="">Minim reprehenderit magna qui ullamco</a></li>
+                  <li><a class="follow" href="">View All Links</a></li>
+                </ul>
+              </li>
+              <li>
+                <h2 class="view-list-trigger">Forms</h2>
+                <ul class="view-list">
+                  <li><a href="">Voluptate lorem ipsum sunt adipisicing</a></li>
+                  <li><a href="">Proident dolor laborum dolore</a></li>
+                  <li><a href="">Minim reprehenderit magna qui ullamco</a></li>
+                  <li><a class="follow" href="">View All Forms</a></li>
+                </ul>
+              </li>
+              <li>
+                <h2 class="view-list-trigger">Documents</h2>
+                <ul class="view-list">
+                  <li><a href="">Voluptate lorem ipsum sunt adipisicing</a></li>
+                  <li><a href="">Proident dolor laborum dolore</a></li>
+                  <li><a href="">Minim reprehenderit magna qui ullamco</a></li>
+                  <li><a class="follow" href="">View All Documents</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="assets/js/vendor/jquery-1.10.2.min.js"></script>
+
+  <!--[if IE 8]>
+    <script src="assets/js/vendor/bootstrap/carousel.js"></script>
+  <![endif]-->
+
+  <!--[if ! lte IE 6]><!-->
+    <script src="assets/js/vendor/Placeholders.js"></script>
+    <script>
+      $(document).ready(function(){
+        if (window.jQuery) {
+          Placeholders.enable();
+        };
+        expandHomeBoxes();
+        toggleHomeLists();
+      });
+    </script>
+    <script src="assets/js/main.js"></script>
+  <!--<![endif]-->
+
+  <!--[if IE 7]>
+    <script src="assets/js/legacy.js"></script>
+  <![endif]-->
+
+</body>
+</html>

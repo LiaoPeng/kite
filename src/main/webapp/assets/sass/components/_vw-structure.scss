@@ -1,0 +1,146 @@
+// ---------------------------------------------------------------------------
+// Imports
+@import "mixins";
+@import "susy";
+@import "compass";
+
+@import "compass/reset";
+@import "normalize";
+@import "compass/typography/vertical_rhythm";
+@import "compass/typography/lists/inline-block-list";
+@import "compass/css3";
+// @import "vendor/bootstrap-includes";
+
+// Structure
+// ----------------------------------------------------------------
+
+@include border-box-sizing;
+@include establish-baseline;
+
+html,
+body {
+  background-color: $body-bg !important;
+}
+
+body {
+  font-family: $base-font-family;
+}
+
+#wrap {
+  max-width: 98%;
+  margin: 1em auto;
+  border: 1px solid $borders;
+  background-color: white;
+  padding: 10px $wrap-padding 19px;
+
+  @include at-breakpoint($gt-mobile) {
+    max-width: 95%;
+  }
+
+  @include at-breakpoint($gt-desktop) {
+    max-width: 990px;
+  }
+}
+
+.omdweb-container {
+  @include container;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+
+  .messaging {
+    margin-top: $gutter-width;
+    margin-bottom: $gutter-width;
+    background-color: $messaging-bg;
+    color: #fff;
+    position:relative;
+
+    .form-group-viewing-as {
+      @include pie-clearfix;
+      margin-bottom: 0;
+
+      ::-webkit-input-placeholder { color: #ddd; }
+      :-moz-placeholder { color: #ddd; }
+      ::-moz-placeholder { color: #ddd; }
+      :-ms-input-placeholder { color: #ddd; }
+
+      label, input, span {
+        display: block;
+        @include vwBook;
+        padding: 0 0 0 $gutter-width;
+        font-size: 16px;
+        font-weight: 100;
+        line-height: 34px;
+        width: 100%;
+      }
+      label {
+        margin-bottom: 0;
+        padding-right: 8px;
+        a {
+          float: right;
+          font-family: $sans-font;
+          color: #fff;
+          font-size: 11px;
+        }
+      }
+      input, span {
+        border: none;
+        background-color: #747b81;
+        color: #fff;
+        &:focus,
+        &:active {
+          outline: none;
+        }
+      }
+    }
+
+    @include at-breakpoint($gt-tablet) {
+      @include span-columns(8,12);
+      margin-top: 0;
+      margin-bottom: 0;
+      height: 34px;
+      overflow: hidden;
+
+      .form-group-viewing-as {
+        label, input, span {
+          min-height: 34px;
+        }
+        label {
+          @include span-columns(4, 8);
+          padding-right: 0;
+        }
+        input, span {
+          @include span-columns(4 omega, 8);
+        }
+      }
+
+    }
+  }
+
+  header,
+  main {
+    clear: both;
+  }
+  h1 {
+    font-family: $font-family-brand;
+  }
+  ul ul {
+    list-style-type: none;
+  }
+  fieldset {
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  img {
+    max-width: 100%;
+  }
+}
+
+.no-mediaqueries {
+  #wrap {
+    width: 990px !important;
+    max-width: 990px !important;
+  }
+}

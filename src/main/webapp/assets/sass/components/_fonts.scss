@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "VWHeadlineOTBlack";
+  src: url('../../fonts/vwheadlineot-black-webfont.eot');
+  src: url('../../fonts/vwheadlineot-black-webfont?#iefix') format('embedded-opentype'),
+       url('../../fonts/vwheadlineot-black-webfont.woff') format('woff'),
+       url('../../fonts/vwheadlineot-black-webfont.ttf')  format('truetype'),
+       url('../../fonts/vwheadlineot-black-webfont.svg#vwheadlineot-black-webfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "VWHeadlineOTSemibold";
+  src: url('../../fonts/vwheadlineot-semibold-webfont.eot');
+  src: url('../../fonts/vwheadlineot-semibold-webfont?#iefix') format('embedded-opentype'),
+       url('../../fonts/vwheadlineot-semibold-webfont.woff') format('woff'),
+       url('../../fonts/vwheadlineot-semibold-webfont.ttf')  format('truetype'),
+       url('../../fonts/vwheadlineot-semibold-webfont.svg#vwheadlineot-semibold-webfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'VWHeadlineOTBook';
+  src: url('../../fonts/vwheadlineot-book-webfont.eot');
+  src: url('../../fonts/vwheadlineot-book-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../../fonts/vwheadlineot-book-webfont.woff') format('woff'),
+       url('../../fonts/vwheadlineot-book-webfont.ttf') format('truetype'),
+       url('../../fonts/vwheadlineot-book-webfont.svg#vw_headline_otbook') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+// GLYPHICONS
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../../fonts/vendor/bootstrap/glyphicons-halflings-regular.eot');
+  src: url('../../fonts/vendor/bootstrap/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+       url('../../fonts/vendor/bootstrap/glyphicons-halflings-regular.woff') format('woff'),
+       url('../../fonts/vendor/bootstrap/glyphicons-halflings-regular.ttf') format('truetype'),
+       url('../../fonts/vendor/bootstrap/glyphicons-halflings-regular.svg#Glyphicons Halflings') format('svg');
+  font-style: normal;
+  font-weight: normal;
+}
+
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.glyphicon-check                  { &:before { content: "\e067"; } }
+.glyphicon-remove                 { &:before { content: "\e014"; } }

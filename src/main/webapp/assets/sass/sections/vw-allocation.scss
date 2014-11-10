@@ -1,0 +1,107 @@
+@import "components/vw";
+
+#omdweb-allocation {
+  dl {
+    margin-bottom: 0;
+  }
+  .action-buttons {
+    @include pie-clearfix;
+
+    @include at-breakpoint($gt-tablet) {
+      float: right;
+    }
+  }
+  input[type="submit"] {
+    text-transform: uppercase;
+  }
+  .omdweb-view-filter {
+    @include pie-clearfix;
+    padding-top: 2em;
+
+    .allocation-transfer-details {
+      label {
+        font-weight: 700;
+      }
+      @include at-breakpoint($gt-tablet) {
+        @include span-columns(7,12);
+      }
+    }
+    .allocation-order-details {
+      @include at-breakpoint($gt-tablet) {
+        @include span-columns(4 omega, 12);
+      }
+    }
+
+    @include at-breakpoint($gt-tablet) {
+      .form-group {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .form-multiples {
+    input[type="text"] {
+      width: 30%;
+
+      @include at-breakpoint($gt-desktop) {
+        width: 26%;
+      }
+    }
+    .btn {
+      display: block;
+      margin-top: 1em;
+
+      @include at-breakpoint($gt-desktop) {
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        margin-top: 0;
+      }
+    }
+    &.form-group-from-to {
+      input[type="text"] {
+        padding: 5px 6px 4px;
+      }
+
+      @include at-breakpoint($gt-desktop) {
+        .btn {
+          margin-top: 1px;
+        }
+      }
+    }
+  }
+  .search-controls-header {
+    @include pie-clearfix;
+
+    .form-group {
+      clear: none;
+      margin-top: 5px;
+    }
+
+    @include at-breakpoint($gt-tablet) {
+      h2 {
+        @include span-columns(7,12);
+      }
+      .form-group {
+        text-align: right;
+        @include span-columns(5 omega,12);
+        margin-bottom: 8px;
+      }
+    }
+
+  }
+  .allocation-tables {
+    h2 {
+      margin-top: 1em;
+      font-size: 18px;
+      padding-bottom: .5em;
+      border-bottom: 2px solid $tableAndHeaderBorder;
+    }
+  }
+  .table {
+    tbody td:first-child { width: 150px; }
+  }
+  .allocation-summary-table {
+    margin-top: 0;
+    border-bottom-color: $innerTableBorder;
+  }
+}

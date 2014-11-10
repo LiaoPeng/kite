@@ -1,0 +1,321 @@
+.omdweb-container {
+  // Mobile navigation trigger
+  #nav-menu-trigger {
+    position: relative;
+    background-color: $brand-primary;
+    font-family: $font-family-brand;
+    font-size: 14px;
+    font-weight: 100 !important;
+    line-height: 1;
+    color: #fff;
+    padding: 14px 12px;
+    text-decoration: none;
+
+    &.open {
+      background-color: $nav-hover-background-color;
+      color: $nav-hover-text-color;
+      margin-bottom: 0;
+
+      i {
+        border-color: $nav-hover-text-color;
+      }
+    }
+
+    i {
+      content: "";
+      display: block;
+      @include box-sizing(content-box);
+      border-bottom: 12px double #fff;
+      border-top: 4px solid #fff;
+      width: 24px;
+      height: 4px;
+      position: absolute;
+      top: 11px;
+      right: 12px;
+    }
+
+    @include at-breakpoint($lt-tablet) {
+      display: block;
+    }
+  }
+
+// Small device width navigation menu
+  #interior-nav {
+    @include box-sizing(border-box);
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 6000;
+
+    &.open {
+      display: block;
+
+      @include at-breakpoint($lt-tablet) {
+        .nav-item:after {
+          content: "";
+          background: url(../../img/icons/sprite-nav-sm.png) no-repeat 0 0;
+          position: absolute;
+          right: $gutter-width;
+        }
+        li.home {
+          .nav-item {
+            &:after {
+              width: 22px;
+              height: 20px;
+              background-position: 0 0;
+              top: 12px;
+            }
+            &.omdweb-down:after { background-position: -32px 0; }
+          }
+        }
+        li.locate {
+          .nav-item {
+            &:after {
+              width: 22px;
+              height: 20px;
+              background-position: 0 -36px;
+              top: 12px;
+            }
+            &.omdweb-down:after { background-position: -34px -36px; }
+          }
+        }
+        li.ordering {
+          .nav-item {
+            &:after {
+              width: 22px;
+              height: 21px;
+              background-position: 0 -72px;
+              top: 12px;
+            }
+            &.omdweb-down:after { background-position: -34px -72px; }
+          }
+        }
+        li.sales {
+          .nav-item {
+            &:after {
+              width: 22px;
+              height: 21px;
+              background-position: 0 -110px;
+              top: 12px;
+            }
+            &.omdweb-down:after { background-position: -34px -110px; }
+          }
+        }
+        li.vehicles {
+          .nav-item {
+            &:after {
+              width: 22px;
+              height: 17px;
+              background-position: 0 -147px;
+              top: 12px;
+            }
+            &.omdweb-down:after { background-position: -34px -147px; }
+          }
+        }
+        li.analysis {
+          .nav-item {
+            &:after {
+              width: 22px;
+              height: 19px;
+              background-position: 0 -179px;
+              top: 12px;
+            }
+            &.omdweb-down:after { background-position: -34px -179px; }
+          }
+        }
+        li.admin {
+          .nav-item {
+            &:after {
+              width: 20px;
+              height: 19px;
+              background-position: 0 -216px;
+              top: 12px;
+            }
+            &.omdweb-down:after { background-position: -34px -216px; }
+          }
+        }
+      }
+    }
+
+    .nav-item {
+      position: relative;
+      font-family: $font-family-brand;
+      font-size: 15px;
+      color: #fff;
+      display: block;
+      text-decoration: none;
+      background-color: $brand-primary;
+      border-top: 1px solid #fff;
+      line-height: 1;
+      padding: 14px 12px;
+      z-index: 999;
+
+      &.omdweb-down {
+        background-color: darken($brand-primary, 30%);
+        color: $nav-hover-text-color;
+      }
+    }
+
+    .sub-menu {
+      display: block;
+      z-index: 5550;
+      border: 1px solid $borders;
+      border-top: none;
+      background-color: #fff;
+      padding: $gutter-width;
+      margin-bottom: 0;
+
+      li {
+        border-top: 1px solid $borders;
+        a {
+          display: block;
+          padding: 4px 0;
+        }
+
+        &:first-child {
+          border-top: none;
+        }
+      }
+    }
+    .sub-menu-container {
+      &.omdweb-collapsed {
+        display: none;
+      }
+      h2 { display: none; }
+    }
+  }
+
+// Large device width navigation
+  @include at-breakpoint($gt-tablet) {
+    #interior-nav {
+      display: block;
+      position: fixed;
+      right: 0;
+      background-color: $brand-primary;
+      width: 40px;
+      height: 275px;
+
+      > ul > li {
+        display: block;
+
+        &.omdweb-nav-open {
+          background-color: $brand-primary;
+        }
+      }
+
+      .nav-item {
+        display: block;
+        text-indent: -9999em;
+        background: url(../../img/icons/sprite-nav-sm.png) no-repeat 0 0;
+        padding: 0;
+        border: none !important;
+        margin: 0 auto;
+        position: relative;
+
+        &.omdweb-down {
+          background-color: $brand-primary;
+        }
+      }
+
+      li.home {
+        .nav-item {
+          width: 22px;
+          height: 20px;
+          background-position: 0 0;
+          top: 17px;
+
+          &:hover { background-position: -34px 0; }
+        }
+      }
+      li.locate {
+        .nav-item {
+          width: 22px;
+          height: 20px;
+          background-position: 0 -36px;
+          top: 32px;
+
+          &:hover,
+          &.omdweb-down { background-position: -34px -36px; }
+        }
+      }
+      li.ordering {
+        .nav-item {
+          width: 22px;
+          height: 21px;
+          background-position: 0 -72px;
+          top: 48px;
+
+          &:hover,
+          &.omdweb-down { background-position: -34px -72px; }
+        }
+      }
+      li.sales {
+        .nav-item {
+          width: 22px;
+          height: 21px;
+          background-position: 0 -110px;
+          top: 68px;
+
+          &:hover,
+          &.omdweb-down { background-position: -34px -110px; }
+        }
+      }
+      li.vehicles {
+        .nav-item {
+          width: 22px;
+          height: 17px;
+          background-position: 0 -147px;
+          top: 84px;
+
+          &:hover,
+          &.omdweb-down { background-position: -34px -147px; }
+        }
+      }
+      li.analysis {
+        .nav-item {
+          width: 22px;
+          height: 19px;
+          background-position: 0 -179px;
+          top: 100px;
+
+          &:hover,
+          &.omdweb-down { background-position: -34px -179px; }
+        }
+      }
+      li.admin {
+        .nav-item {
+          width: 20px;
+          height: 19px;
+          background-position: 0 -216px;
+          top: 117px;
+
+          &:hover,
+          &.omdweb-down { background-position: -34px -216px; }
+        }
+      }
+
+      .sub-menu-container {
+        position: absolute;
+        top: 0;
+        right: 40px;
+        width: 265px;
+        height: 275px;
+        border: 5px solid $brand-primary;
+        border-right: none;
+        background-color: white;
+        padding: 20px;
+        h2 {
+          display: block;
+          @include vwSemibold;
+          font-size: 20px;
+          font-weight: 100;
+          margin-bottom: 10px;
+        }
+      }
+      .sub-menu {
+        border: none;
+        padding: 0;
+      }
+    }
+  }
+}

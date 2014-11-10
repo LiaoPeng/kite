@@ -1,0 +1,99 @@
+@font-face { font-family: "VWHeadlineOTBlack"; src: url("../../fonts/vwheadlineot-black-webfont.eot"); src: url("../../fonts/vwheadlineot-black-webfont?#iefix") format("embedded-opentype"), url("../../fonts/vwheadlineot-black-webfont.woff") format("woff"), url("../../fonts/vwheadlineot-black-webfont.ttf") format("truetype"), url("../../fonts/vwheadlineot-black-webfont.svg#vwheadlineot-black-webfont") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: "VWHeadlineOTSemibold"; src: url("../../fonts/vwheadlineot-semibold-webfont.eot"); src: url("../../fonts/vwheadlineot-semibold-webfont?#iefix") format("embedded-opentype"), url("../../fonts/vwheadlineot-semibold-webfont.woff") format("woff"), url("../../fonts/vwheadlineot-semibold-webfont.ttf") format("truetype"), url("../../fonts/vwheadlineot-semibold-webfont.svg#vwheadlineot-semibold-webfont") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'VWHeadlineOTBook'; src: url("../../fonts/vwheadlineot-book-webfont.eot"); src: url("../../fonts/vwheadlineot-book-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/vwheadlineot-book-webfont.woff") format("woff"), url("../../fonts/vwheadlineot-book-webfont.ttf") format("truetype"), url("../../fonts/vwheadlineot-book-webfont.svg#vw_headline_otbook") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'Glyphicons Halflings'; src: url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.eot"); src: url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.svg#Glyphicons Halflings") format("svg"); font-style: normal; font-weight: normal; }
+
+.glyphicon { position: relative; top: 1px; display: inline-block; *display: inline; *zoom: 1; font-family: 'Glyphicons Halflings'; font-style: normal; font-weight: normal; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+.glyphicon-check:before { content: "\e067"; }
+
+.glyphicon-remove:before { content: "\e014"; }
+
+#omdweb-configure .action-menu .btn { font-family: arial, helvetica, sans-serif; font-size: 11px; line-height: 14px; }
+@media (max-width: 47.9375em) { #omdweb-configure .omdweb-car-line-carousel { margin-bottom: 1em; } }
+#omdweb-configure .configuration-entry-details { *zoom: 1; padding-top: 2em; }
+#omdweb-configure .configuration-entry-details:after { content: ""; display: table; clear: both; }
+#omdweb-configure .configuration-entry-details .configuration { margin-bottom: 2em; }
+#omdweb-configure .configuration-entry-details .configuration .configuration-form h1 + button { -webkit-border-radius: 4px; border-radius: 4px; text-transform: uppercase; padding-right: 8px; padding-left: 8px; margin-bottom: 1em; font-size: 12px; }
+#omdweb-configure .configuration-entry-details .configuration .configuration-form label { display: block; }
+#omdweb-configure .configuration-entry-details .configuration .configuration-form select { width: 100%; }
+@media (min-width: 30em) { #omdweb-configure .configuration-entry-details .configuration .configuration-form > h1 { display: inline-block; *display: inline; *zoom: 1; vertical-align: middle; }
+  #omdweb-configure .configuration-entry-details .configuration .configuration-form button { margin-top: 15px; display: inline-block; *display: inline; *zoom: 1; vertical-align: middle; float: right; }
+  #omdweb-configure .configuration-entry-details .configuration .configuration-form > p { clear: both; }
+  #omdweb-configure .configuration-entry-details .configuration .configuration-form .control-label { width: 24.21053%; float: left; margin-right: 1.05263%; }
+  #omdweb-configure .configuration-entry-details .configuration .configuration-form select, #omdweb-configure .configuration-entry-details .configuration .configuration-form input[type="text"], #omdweb-configure .configuration-entry-details .configuration .configuration-form .choices-container { width: 74.73684%; float: right; margin-right: 0; }
+  #omdweb-configure .configuration-entry-details .configuration .configuration-form input.btn { margin-left: 25.26316%; }
+  #omdweb-configure .configuration-entry-details .configuration .configuration-form .omdweb-textarea { width: 74.73684%; float: right; margin-right: 0; } }
+.no-mediaqueries #omdweb-configure .configuration-entry-details .configuration .configuration-form > h1 { display: inline-block; *display: inline; *zoom: 1; vertical-align: middle; }
+.no-mediaqueries #omdweb-configure .configuration-entry-details .configuration .configuration-form button { margin-top: 15px; display: inline-block; *display: inline; *zoom: 1; vertical-align: middle; float: right; }
+.no-mediaqueries #omdweb-configure .configuration-entry-details .configuration .configuration-form > p { clear: both; }
+.no-mediaqueries #omdweb-configure .configuration-entry-details .configuration .configuration-form .control-label { width: 24.21053%; float: left; margin-right: 1.05263%; }
+.no-mediaqueries #omdweb-configure .configuration-entry-details .configuration .configuration-form select, .no-mediaqueries #omdweb-configure .configuration-entry-details .configuration .configuration-form input[type="text"], .no-mediaqueries #omdweb-configure .configuration-entry-details .configuration .configuration-form .choices-container { width: 74.73684%; float: right; margin-right: 0; *margin-left: -0.83333em; }
+.no-mediaqueries #omdweb-configure .configuration-entry-details .configuration .configuration-form input.btn { margin-left: 25.26316%; }
+.no-mediaqueries #omdweb-configure .configuration-entry-details .configuration .configuration-form .omdweb-textarea { width: 74.73684%; float: right; margin-right: 0; *margin-left: -0.83333em; }
+@media (max-width: 47.9375em) { #omdweb-configure .configuration-entry-details .configuration { padding-bottom: 2em; border-bottom: 1px solid #cfd7d9; margin-bottom: 2em; } }
+@media (min-width: 48em) { #omdweb-configure .configuration-entry-details .configuration { width: 49.47368%; float: left; margin-right: 1.05263%; padding-right: 15px; } }
+.no-mediaqueries #omdweb-configure .configuration-entry-details .configuration { width: 49.47368%; float: left; margin-right: 1.05263%; padding-right: 15px; }
+@media (min-width: 48em) { #omdweb-configure .configuration-entry-details .configuration-details { width: 49.47368%; float: right; margin-right: 0; padding-left: 15px; } }
+.no-mediaqueries #omdweb-configure .configuration-entry-details .configuration-details { width: 49.47368%; float: right; margin-right: 0; *margin-left: -0.83333em; padding-left: 15px; }
+#omdweb-configure .configuration-entry-details .msrp { *zoom: 1; border-bottom: 1px solid #cfd7d9; padding-bottom: 1.5em; margin-bottom: 1.5em; }
+#omdweb-configure .configuration-entry-details .msrp:after { content: ""; display: table; clear: both; }
+#omdweb-configure .configuration-entry-details .msrp .msrp-context h1 { line-height: 20px; }
+#omdweb-configure .configuration-entry-details .msrp .msrp-context p { font-weight: 700; line-height: 14px; }
+@media (min-width: 30em) { #omdweb-configure .configuration-entry-details .msrp .msrp-context { width: 49.47368%; float: left; margin-right: 1.05263%; } }
+.no-mediaqueries #omdweb-configure .configuration-entry-details .msrp .msrp-context { width: 49.47368%; float: left; margin-right: 1.05263%; }
+#omdweb-configure .configuration-entry-details .msrp .msrp-show { position: relative; top: 6px; padding: 10px 0 12px; background-color: #8994a0; font: 700 30px arial, helvetica, sans-serif; color: #fff; line-height: 1; text-align: center; }
+@media (min-width: 30em) { #omdweb-configure .configuration-entry-details .msrp .msrp-show { width: 49.47368%; float: right; margin-right: 0; } }
+.no-mediaqueries #omdweb-configure .configuration-entry-details .msrp .msrp-show { width: 49.47368%; float: right; margin-right: 0; *margin-left: -0.83333em; }
+#omdweb-configure .configuration-entry-details .allocation dl { margin-bottom: 86px; }
+#omdweb-configure .configuration-entry-details .allocation .chart-wrapper { *zoom: 1; position: relative; height: 122px; }
+#omdweb-configure .configuration-entry-details .allocation .chart-wrapper:after { content: ""; display: table; clear: both; }
+#omdweb-configure .configuration-entry-details .allocation .chart-wrapper + p { margin-top: 1em; text-align: right; }
+#omdweb-configure .configuration-entry-details .allocation .chart-wrapper:before { content: ""; position: absolute; left: 0; top: -30px; width: 100%; height: 2px; background-color: #8994a0; z-index: 5000; }
+#omdweb-configure .configuration-entry-details .allocation .axis { position: absolute; top: -5px; width: 100%; }
+#omdweb-configure .configuration-entry-details .allocation .axis-label { position: relative; line-height: 12px; width: 100%; padding-bottom: 20px; }
+#omdweb-configure .configuration-entry-details .allocation .axis-label:after { content: ""; height: 1px; position: absolute; left: 9.05077%; bottom: 26px; width: 90.94923%; border-bottom: 1px solid #cfd7d9; z-index: 200; }
+#omdweb-configure .configuration-entry-details .allocation .axis-label:nth-child(2) { top: -2px; }
+#omdweb-configure .configuration-entry-details .allocation .axis-label:nth-child(2):after { bottom: 26px; }
+#omdweb-configure .configuration-entry-details .allocation .axis-label:nth-child(3) { top: -3px; }
+#omdweb-configure .configuration-entry-details .allocation .axis-label:nth-child(3):after { bottom: 26px; }
+#omdweb-configure .configuration-entry-details .allocation .axis-label:last-child { top: -4px; }
+#omdweb-configure .configuration-entry-details .allocation .axis-label:last-child:after { bottom: 27px; }
+#omdweb-configure .configuration-entry-details .allocation .chart { margin: 0; border-bottom: 2px solid black; border-left: 2px solid black; padding: 0; height: 124px; width: 91.57895%; float: right; margin-right: 0; *margin-left: -0.83333em; }
+#omdweb-configure .configuration-entry-details .allocation .chart .bar-container { position: relative; text-align: center; height: 100%; width: 24.21053%; float: left; margin-right: 1.05263%; }
+#omdweb-configure .configuration-entry-details .allocation .chart h6 { display: inline-block; *display: inline; *zoom: 1; position: absolute; top: -54px; right: 0; bottom: 0; left: 0; padding-top: 2px; padding-right: 1em; text-align: right; font-weight: 700; }
+#omdweb-configure .configuration-entry-details .allocation .chart h6:after { content: ""; position: absolute; right: 0; top: 0; bottom: 0; border-right: 1px solid #cfd7d9; width: 1px; height: 176px; line-height: 20px; }
+#omdweb-configure .configuration-entry-details .allocation .chart .bar { position: absolute; left: 0; right: 0; bottom: 0; margin-left: auto; margin-right: 1em; width: 25px; height: auto; z-index: 1000; }
+#omdweb-configure .configuration-entry-details .allocation .chart .percent { position: absolute; top: -1.5em; left: 0; right: 0; margin-left: auto; margin-right: auto; width: 100%; font-weight: 700; font-size: 16px; white-space: nowrap; }
+#omdweb-configure .configuration-entry-details .allocation .chart .percent .explanation { margin-left: -3px; display: inline-block; *display: inline; *zoom: 1; vertical-align: top; font-size: 9px; line-height: 1; }
+#omdweb-configure .configuration-entry-details .allocation .chart .allocation { margin-right: -100%; margin-left: 0%; border-left: none; }
+#omdweb-configure .configuration-entry-details .allocation .chart .allocation h6 { color: #0099cc; }
+#omdweb-configure .configuration-entry-details .allocation .chart .allocation .bar { background-color: #0099cc; }
+#omdweb-configure .configuration-entry-details .allocation .chart .submitted { margin-right: -100%; margin-left: 25.26316%; }
+#omdweb-configure .configuration-entry-details .allocation .chart .submitted h6 { color: #009966; }
+#omdweb-configure .configuration-entry-details .allocation .chart .submitted .bar { background-color: #009966; }
+#omdweb-configure .configuration-entry-details .allocation .chart .pending { margin-right: -100%; margin-left: 50.52632%; }
+#omdweb-configure .configuration-entry-details .allocation .chart .pending h6 { color: #ff9933; }
+#omdweb-configure .configuration-entry-details .allocation .chart .pending .bar { background-color: #ff9933; }
+#omdweb-configure .configuration-entry-details .allocation .chart .remaining { margin-right: -100%; margin-left: 75.78947%; float: right; margin-right: 0; *margin-left: -0.83333em; }
+#omdweb-configure .configuration-entry-details .allocation .chart .remaining h6 { color: #e21838; }
+#omdweb-configure .configuration-entry-details .allocation .chart .remaining .bar { background-color: #e21838; }
+
+.no-mediaqueries #omdweb-configure .configuration-entry-details .configuration { width: 49.47368%; float: left; margin-right: 1.05263%; padding-right: 15px; }
+.no-mediaqueries #omdweb-configure .configuration-entry-details .configuration .configuration-form > h1 { float: left; }
+.no-mediaqueries #omdweb-configure .configuration-entry-details .configuration .configuration-form button { margin-top: 13px; float: right; }
+.no-mediaqueries #omdweb-configure .configuration-entry-details .configuration .configuration-form > p { clear: both; }
+.no-mediaqueries #omdweb-configure .configuration-entry-details .configuration .configuration-form .control-label { width: 24.21053%; float: left; margin-right: 1.05263%; }
+.no-mediaqueries #omdweb-configure .configuration-entry-details .configuration .configuration-form .choices-container, .no-mediaqueries #omdweb-configure .configuration-entry-details .configuration .configuration-form select, .no-mediaqueries #omdweb-configure .configuration-entry-details .configuration .configuration-form textarea { width: 74.73684%; float: right; margin-right: 0; *margin-left: -0.83333em; }
+.no-mediaqueries #omdweb-configure .configuration-entry-details .configuration .configuration-form .btn { margin-left: 25.26316%; }
+.no-mediaqueries #omdweb-configure .configuration-entry-details .configuration .configuration-details { width: 49.47368%; float: right; margin-right: 0; *margin-left: -0.83333em; padding-left: 15px; }
+.no-mediaqueries #omdweb-configure .msrp .msrp-context { width: 49.47368%; float: left; margin-right: 1.05263%; }
+.no-mediaqueries #omdweb-configure .msrp .msrp-show { width: 49.47368%; float: right; margin-right: 0; *margin-left: -0.83333em; }
+.no-mediaqueries .omdweb-vehicle-detail-container > h2 { float: left; width: 65%; }
+.no-mediaqueries .omdweb-vehicle-detail-container button { position: absolute; right: 0; }
+.no-mediaqueries .omdweb-vehicle-detail-container .follow { position: absolute; right: 0; }
+.no-mediaqueries .omdweb-vehicle-detail-item { width: 32.63158%; float: left; margin-right: 1.05263%; }
+.no-mediaqueries .omdweb-vehicle-detail-item:nth-child(even) { width: 66.31579%; float: left; margin-right: 1.05263%; float: right; margin-right: 0; *margin-left: -0.83333em; }

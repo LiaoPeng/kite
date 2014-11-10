@@ -1,0 +1,214 @@
+@import "vw";
+
+// Breakpoints
+// ----------------------------------------------------------------
+$gt-desktop  : 82.5em 12 no-mediaqueries;   // 990px
+$gt-tablet   : 64em 12 no-mediaqueries;     // 768px
+$gt-sm-tablet: 50em 12 no-mediaqueries;            // 600px
+$gt-mobile   : 40em 12 no-mediaqueries;            // 480px
+$lt-tablet   : 12 63.9166666667em; // < 767px
+// ----------------------------------------------------------------
+.omdweb-container {
+  .jcarousel-wrapper {
+    width: pxtopercent(950,950);
+    margin: 0;
+    position: relative;
+  }
+
+  .jcarousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+
+    @include at-breakpoint($gt-mobile) {
+      width: 90%;
+    }
+
+    @include at-breakpoint($gt-tablet) {
+      width: 94.105263158%;
+    }
+
+    ul {
+      width: 20000em;
+      position: relative;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      cursor: pointer;
+      *cursor: hand;
+      float: left;
+      line-height: pxtoem(44,12);
+      position: relative;
+
+      .item-content {
+        position: relative;
+        background-color: $borders;
+        height: 44px;
+        overflow: hidden;
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 16px;
+          height: 100%;
+          background-color: white;
+
+          @include at-breakpoint($gt-tablet) {
+            background: none;
+          }
+        }
+
+        img {
+          display: none;
+          max-width: 100%;
+          height: auto !important;
+        }
+        strong, i {
+          font-size: 1em;
+          font-weight: 100;
+          color: #8e9598;
+          display: inline-block;
+          *display: inline;
+          *zoom: 1;
+          line-height: 1;
+          vertical-align: top;
+          position: relative;
+        }
+        strong {
+          font-family: $font-family-brand;
+          top: 15px;
+          left: 15px;
+          padding-right: 16px;
+        }
+        i {
+          @include vwBook;
+          font-size: 12px;
+          position: absolute;
+          top: 6px;
+          right: 22px;
+
+          @include at-breakpoint($gt-tablet) {
+            right: 6px;
+          }
+        }
+      }
+
+      @include at-breakpoint($gt-tablet) {
+        width: 132px !important;
+        margin-right: 16px;
+      }
+
+      &.active {
+        margin-right: 1em;
+        cursor: default;
+
+        .item-content {
+          background-color: #fff;
+          height: auto;
+
+          &:after {
+            background: none;
+          }
+          strong {
+            position: static;
+            font-size: pxtoem(16,12);
+            color: #000;
+            padding: 1px pxtoem(16,20) 0 0;
+            margin-right: pxtoem(16,20);
+          }
+          i {
+            font-family: $sans-font;
+            font-size: 1em;
+            color: #c03;
+            top: 0;
+            right: 0;
+          }
+          img {
+            display: block;
+            margin-bottom: 5px;
+          }
+
+          @include at-breakpoint($lt-tablet) {
+            top: 10px;
+          }
+        }
+
+        @include at-breakpoint($gt-tablet) {
+          width: 280px !important;
+          margin-left: 13px;
+          margin-right: 22px;
+
+          .item-content {
+            strong {
+              font-size: pxtoem(20,12);
+              border-right: 1px solid $borders;
+            }
+            i {
+              font-size: pxtoem(14,12);
+              position: static;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Carousel Controls
+  .jcarousel-control-prev,
+  .jcarousel-control-next {
+    display: none;
+
+    @include at-breakpoint($gt-mobile) {
+      display: block;
+      width: 90%;
+      position: absolute;
+      top: 28%;
+      text-decoration: none;
+      background-image: url(../../img/icons/icon-vw-brand-chevron.png);
+      background-repeat: no-repeat;
+      width: 10px;
+      height: 13px;
+    }
+  }
+  .jcarousel-control-prev {
+    background-position: -30px -62px;
+    left: 0;
+  }
+  .jcarousel-control-next {
+    background-position: 0 -62px;
+    right: 0;
+    text-align: right;
+  }
+}
+
+.no-mediaqueries {
+  .omdweb-container {
+    .jcarousel {
+      width: 94.105263158%;
+    }
+    .jcarousel li {
+      .item-content {
+        position: relative;
+        top: 2.5em;
+
+        &:after {
+          width: 0px !important;
+          border: none !important;
+        }
+      }
+      &.active .item-content {
+        top: 0;
+      }
+    }
+    .jcarousel-control-prev,
+    .jcarousel-control-next {
+      top: 31%;
+    }
+  }
+}

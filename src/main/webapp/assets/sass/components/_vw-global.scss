@@ -1,0 +1,456 @@
+.qtip.omdweb-qtip {
+  max-width: 250px !important;
+}
+.qtip.omdweb-qtip .qtip-content {
+  background: black;
+  color: white;
+  @include border-radius-all(7px);
+  padding-top: 1em;
+}
+
+%break-and-hyphenation {
+  -ms-word-break: break-all;
+      word-break: break-all;
+      word-break: break-word;
+       word-wrap: break-word;
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+}
+
+%triangle-tip-down {
+  width: 0;
+  height: 0;
+  border-top: 5px solid $brand-primary;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+}
+
+.omdweb-container {
+  position: relative;
+
+  .mobile-visible {
+    display: none;
+
+    @include at-breakpoint($lt-tablet) {
+      display: block;
+    }
+  }
+
+  .mobile-hidden {
+    display: block;
+
+    @include at-breakpoint($lt-tablet) {
+      display: none;
+    }
+  }
+  .omdweb-poptip {
+    cursor: pointer;
+  }
+  .omdweb-poptip-hidden {
+    display: none;
+  }
+  .omdweb-poptip-content {
+    text-align: left;
+    white-space: normal;
+    @extend %break-and-hyphenation;
+  }
+  .stylized {
+    border-top: 1px solid $borders;
+    padding: 16px 0;
+    border-bottom: 1px solid $borders;
+    strong {
+      font-weight: 100;
+    }
+  }
+  a {
+    color: $link-color;
+    text-decoration: none;
+
+    &.follow {
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      line-height: 15px;
+      background: url(../../img/icons/icon-vw-brand-chevron-sm2.png) no-repeat 0 0;
+      padding-left: 12px;
+    }
+    &.decorate {
+      text-decoration: underline;
+    }
+    &:hover {
+      text-decoration: underline;
+      background-position: 0 -59px;
+    }
+  }
+
+  hr {
+    clear: both;
+    margin: 0;
+    border-color: $borders;
+    border-style: solid;
+    border-width: 1px 0 0;
+    height: 0;
+  }
+  ul {
+    margin-bottom: 10px;
+  }
+
+  // Main
+  main {
+    position: relative;
+
+    h1 {
+      font-size: 250%;
+      line-height: 32px;
+    }
+
+    section {
+      h1, h2 {
+        font-family: $heading-font;
+        font-weight: 100;
+        font-size: 20px;
+      }
+      a {
+        font-weight: 700;
+      }
+    }
+
+    aside {
+      @include at-breakpoint($gt-tablet) {
+        @include span-columns(3,12);
+        position: relative;
+        padding-right: $gutter-width * 2;
+      }
+      h3 {
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      hr {
+        margin: 1.5em 0;
+      }
+    }
+  }
+  // ++++++++++++++++++++++++++++++++++++++++++++++++++
+  // ALL SCREENS
+  // ++++++++++++++++++++++++++++++++++++++++++++++++++
+  .search-controls-header {
+    @include pie-clearfix;
+    position: relative;
+  }
+  .trade-icons,
+  .inventory-icons {
+    background: url(../../img/icons/sprite-trade-icons.png) no-repeat 0 0;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 19px;
+    height: 18px;
+    margin-right: 6px;
+  }
+  .icon-available-trade {
+    background-position: 0 -36px;
+  }
+  .icon-order-changeable {
+    background-position: 0 -72px;
+  }
+  .omdweb-vehicle-details {
+    @include pie-clearfix;
+  }
+  .omdweb-vehicle-detail-item {
+    margin-bottom: 7px;
+    line-height: 14px;
+
+    @include at-breakpoint($gt-tablet) {
+      @include span-columns(5,12);
+
+      &:nth-child(even) {
+        @include span-columns(7,12);
+        @include omega;
+      }
+
+      strong {
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        width: 8.8em;
+      }
+    }
+  }
+  .icon-pdf {
+    line-height: 18px;
+    text-decoration: underline;
+    background: url(../../img/icons/icon-pdf.png) no-repeat 0 2px;
+    display: block;
+    padding-left: 24px;
+    &:hover {
+      background: url(../../img/icons/icon-pdf.png) no-repeat 0 2px;
+    }
+  }
+  .range-slider {
+    padding-top: 1em;
+    @include at-breakpoint($gt-tablet) {
+      padding-top: 0;
+    }
+  }
+  .range-val {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    margin-top: 8px;
+  }
+  // ++++++++++++++++++++++++++++++++++++++++++++++++++
+  // BOOTSTRAP POPOVER OVERRIDES
+  // ++++++++++++++++++++++++++++++++++++++++++++++++++
+  table {
+    .popover {
+      min-width: 200px;
+      background-color: #111;
+      .arrow {
+        border-top-color: #111 !important;
+        &:after {
+          border-top-color: #111 !important;
+        }
+      }
+    }
+  }
+  h3.popover-title {
+    background-color: #111;
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+    border-bottom: none;
+  }
+  .popover-content {
+    padding: 8px;
+
+    a {
+      color: #fff;
+      font-weight: 100;
+    }
+
+    .help-block {
+      margin-bottom: 0;
+    }
+
+    .form-group {
+      select,
+      label {
+        float: none !important;
+        width: auto !important;
+      }
+    }
+
+    .btn {
+      border-color: $brand-primary;
+      background-color: $brand-primary;
+      color: #fff;
+
+      &:hover {
+        border-color: lighten($brand-primary, 25%);
+        background-color: lighten($brand-primary, 25%);
+      }
+    }
+    .editable-checklist {
+      overflow: auto;
+      max-height: 200px;
+      span {
+        color: #fff;
+        white-space: normal;
+      }
+    }
+    .editableform {
+      .editable-input,
+      .editable-buttons {
+        display: block;
+      }
+      .editable-buttons {
+        margin-top: .75em;
+        border-top: 1px solid rgba(255,255,255,.2);
+        padding-top: .5em;
+        margin-left: 0;
+      }
+    }
+  }
+
+  .view-list-trigger {
+    cursor: pointer;
+    position: relative;
+
+    .btn {
+      text-transform: uppercase;
+      font-size: 14px;
+      padding-right: 20px;
+      padding-left: 20px;
+      position: absolute;
+      top: 8px;
+      right: 0;
+    }
+  }
+
+  .omdweb-collapsed {
+
+    &.omdweb-open-list {
+      display: none;
+      margin-bottom: 3em;
+    }
+  }
+  .action-menu {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    position: relative;
+    margin-bottom: 0;
+
+    li {
+      background-color: $brand-primary;
+      float: left;
+      border-left: 1px solid $borders;
+
+      &:first-child {
+        border-left: none;
+      }
+
+      .btn {
+        @include border-radius-all(0px);
+        display: block;
+        border: none;
+        padding: .5em 1em;
+        font-family: $sans-font;
+        font-size: 10px;
+        line-height: 14px;
+        color: #fff;
+        text-transform: uppercase;
+        &:focus {
+          outline: 1px dotted #fff;
+        }
+        &.btn-primary {
+          background-color: $brand-primary;
+          &:hover {
+            background-color: $brand-primary;
+            text-decoration: underline;
+            color: #fff;
+          }
+        }
+        &.btn-inactive {
+          cursor: default;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+
+      &.submit {
+        .btn {
+          background-color: darken($brand-primary,30%);
+          cursor: pointer;
+          padding: .5em 1em .5em;
+          text-transform: uppercase;
+          &:hover {
+            text-decoration: underline;
+          }
+          &.btn-inactive {
+            background-color: lighten(#000,75%);
+            cursor: default;
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+    a {
+      display: block;
+      padding: 0 1em;
+      font-size: 10px;
+      font-weight: 100;
+      line-height: 14px;
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+    &:after {
+      content: "";
+      @extend %triangle-tip-down;
+      position: absolute;
+      bottom: -5px;
+      left: 4px;
+    }
+  }
+  .omdweb-collapsible-menus {
+    @include pie-clearfix;
+    .view-list-trigger {
+      @include pie-clearfix;
+      position: relative;
+      border-top: 1px solid $borders;
+      padding: 5px 0px 5px 50px;
+      font-size: 200%;
+      font-weight: 100;
+      line-height: 36px;
+      border-bottom: 1px solid $borders;
+      margin-bottom: 10px;
+
+      background-image: url(../../img/icons/header-toggle-vw-square.png);
+      background-repeat: no-repeat;
+      background-position: 0 -41px;
+
+      @include at-breakpoint($lt-tablet) {
+        font-size: 175%;
+      }
+
+      &.omdweb-down-trigger {
+        background-position: 0 5px;
+      }
+    }
+  }
+  .icon-legend {
+    @include pie-clearfix;
+    margin-top: 1em;
+    margin-bottom: 0;
+    float: right;
+
+    li {
+      float: left;
+      margin-right: 30px;
+      position: relative;
+      text-transform: uppercase;
+      font-size: 10px;
+    }
+
+    @include at-breakpoint($gt-tablet) {
+      margin-top: 0;
+      float: none;
+
+      li {
+        float: left;
+        margin-right: 0;
+        margin-left: 30px;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  // ++++++++++++++++++++++++++++++++++++++++++++++++++
+  // DEFINITION LIST
+  // ++++++++++++++++++++++++++++++++++++++++++++++++++
+  dl {
+    @include pie-clearfix;
+    margin: 2em 0;
+  }
+  dt {
+    float: left;
+    font-weight: 700;
+    margin-right: 4px;
+    margin-bottom: 1em;
+  }
+  dd {
+    margin-bottom: 1em;
+    a {
+      text-decoration: underline;
+    }
+  }
+}

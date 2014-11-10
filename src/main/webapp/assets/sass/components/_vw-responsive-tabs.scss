@@ -1,0 +1,93 @@
+@import "vw";
+
+.r-tabs {
+  position: relative;
+
+  .r-tabs-tab {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    margin: 0;
+    list-style: none;
+  }
+  .r-tabs-panel {
+    padding: 15px;
+    display: none;
+    &.r-tabs-state-active {
+      display: block;
+    }
+  }
+  .r-tabs-accordion-title {
+    display: none;
+  }
+
+  .r-tabs-nav {
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid $borders;
+    .r-tabs-tab {
+      position: relative;
+      top: 1px;
+    }
+    .r-tabs-anchor {
+      background: $borders;
+      margin-bottom: 3px;
+      padding: 10px 12px;
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 700 !important;
+    }
+    .r-tabs-state-active {
+      background-color: #fff;
+      margin-bottom: -1px;
+      border-top: 1px solid $borders;
+      border-right: 1px solid $borders;
+      border-left: 1px solid $borders;
+      .r-tabs-anchor {
+        color: $brand-primary;
+        background-color: #fff;
+      }
+    }
+  }
+
+  .r-tabs-panel {
+    border-right: 1px solid $borders;
+    border-bottom: 1px solid $borders;
+    border-left: 1px solid $borders;
+    margin-bottom: 3px;
+  }
+  .r-tabs-accordion-title {
+    .r-tabs-anchor {
+      display: block;
+      padding: 10px;
+      background-color: $borders;
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+      margin-bottom: 3px;
+    }
+    &.r-tabs-state-active .r-tabs-anchor {
+      background-color: #fff;
+      color: $brand-primary !important;
+      border-top: 1px solid $borders;
+      border-right: 1px solid $borders;
+      border-left: 1px solid $borders;
+      margin-bottom: 0;
+    }
+  }
+
+  @include at-breakpoint($lt-tablet) {
+    .r-tabs-nav {
+      display: none;
+      .r-tabs-anchor {
+        background: $borders;
+      }
+    }
+    .r-tabs-accordion-title {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@import "fonts";
+
+// Functions
+@function pxtoem($target, $context) {
+  @return ($target/$context)+0em;
+}
+@function pxtopercent($target, $parent) {
+  @return percentage($target / $parent);
+}
+
+// Mixins
+@mixin table-scroll {
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(100%, rgba(255, 255, 255, 0))), -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, #ffffff), color-stop(100%, rgba(255, 255, 255, 0))), -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #c3c3c5), color-stop(100%, rgba(195, 195, 197, 0))), -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, #c3c3c5), color-stop(100%, rgba(195, 195, 197, 0)));
+  background-image: -webkit-linear-gradient(left, #ffffff, rgba(255, 255, 255, 0)), -webkit-linear-gradient(right, #ffffff, rgba(255, 255, 255, 0)), -webkit-linear-gradient(left, #c3c3c5, rgba(195, 195, 197, 0)), -webkit-linear-gradient(right, #c3c3c5, rgba(195, 195, 197, 0));
+  background-image: -moz-linear-gradient(left, #ffffff, rgba(255, 255, 255, 0)), -moz-linear-gradient(right, #ffffff, rgba(255, 255, 255, 0)), -moz-linear-gradient(left, #c3c3c5, rgba(195, 195, 197, 0)), -moz-linear-gradient(right, #c3c3c5, rgba(195, 195, 197, 0));
+  background-image: -o-linear-gradient(left, #ffffff, rgba(255, 255, 255, 0)), -o-linear-gradient(right, #ffffff, rgba(255, 255, 255, 0)), -o-linear-gradient(left, #c3c3c5, rgba(195, 195, 197, 0)), -o-linear-gradient(right, #c3c3c5, rgba(195, 195, 197, 0));
+  background-image: linear-gradient(left, #ffffff, rgba(255, 255, 255, 0)), linear-gradient(right, #ffffff, rgba(255, 255, 255, 0)), linear-gradient(left, #c3c3c5, rgba(195, 195, 197, 0)), linear-gradient(right, #c3c3c5, rgba(195, 195, 197, 0));
+  background-position: 0 0, 100% 0, 0 0, 100% 0;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-size: 4em 100%, 4em 100%, 1em 100%, 1em 100%;
+  background-attachment: local, local, scroll, scroll;
+}
+
+@mixin border-radius-all($radius: 4px) {
+  -webkit-border-radius: $radius;
+  border-radius:         $radius;
+}
+
+@mixin horizontalGradient($start-color,$end-color) {
+  background: $start-color; /* Old browsers */
+  background: -moz-linear-gradient(left,  $start-color 0%, $end-color 49%, #7db9e8 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,$start-color), color-stop(49%,$end-color), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  $start-color 0%,$end-color 49%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  $start-color 0%,$end-color 49%,#7db9e8 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  $start-color 0%,$end-color 49%,#7db9e8 100%); /* IE10+ */
+  background: linear-gradient(to right,  $start-color 0%,$end-color 49%,#7db9e8 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start-color', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 */
+}
+
+@mixin vwBlack {
+  font-family: "VWHeadlineOTBlack", "VWHeadlineOT-Black", arial, helvetica, sans-serif;
+}
+@mixin vwSemibold {
+  font-family: "VWHeadlineOTSemibold", "VWHeadlineOT-Semibold", arial, helvetica, sans-serif;
+}
+@mixin vwBook {
+  font-family: "VWHeadlineOTBook", "VWHeadlineOT-Book", arial, helvetica, sans-serif;
+}

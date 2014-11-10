@@ -1,0 +1,50 @@
+@font-face { font-family: "VWHeadlineOTBlack"; src: url("../../fonts/vwheadlineot-black-webfont.eot"); src: url("../../fonts/vwheadlineot-black-webfont?#iefix") format("embedded-opentype"), url("../../fonts/vwheadlineot-black-webfont.woff") format("woff"), url("../../fonts/vwheadlineot-black-webfont.ttf") format("truetype"), url("../../fonts/vwheadlineot-black-webfont.svg#vwheadlineot-black-webfont") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: "VWHeadlineOTSemibold"; src: url("../../fonts/vwheadlineot-semibold-webfont.eot"); src: url("../../fonts/vwheadlineot-semibold-webfont?#iefix") format("embedded-opentype"), url("../../fonts/vwheadlineot-semibold-webfont.woff") format("woff"), url("../../fonts/vwheadlineot-semibold-webfont.ttf") format("truetype"), url("../../fonts/vwheadlineot-semibold-webfont.svg#vwheadlineot-semibold-webfont") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'VWHeadlineOTBook'; src: url("../../fonts/vwheadlineot-book-webfont.eot"); src: url("../../fonts/vwheadlineot-book-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/vwheadlineot-book-webfont.woff") format("woff"), url("../../fonts/vwheadlineot-book-webfont.ttf") format("truetype"), url("../../fonts/vwheadlineot-book-webfont.svg#vw_headline_otbook") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'Glyphicons Halflings'; src: url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.eot"); src: url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.svg#Glyphicons Halflings") format("svg"); font-style: normal; font-weight: normal; }
+
+.glyphicon { position: relative; top: 1px; display: inline-block; *display: inline; *zoom: 1; font-family: 'Glyphicons Halflings'; font-style: normal; font-weight: normal; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+.glyphicon-check:before { content: "\e067"; }
+
+.glyphicon-remove:before { content: "\e014"; }
+
+#omdweb-profile .omdweb-dealer-info-group { *zoom: 1; margin-bottom: 1em; }
+#omdweb-profile .omdweb-dealer-info-group:after { content: ""; display: table; clear: both; }
+@media (min-width: 48em) { #omdweb-profile .omdweb-dealer-info-group .form-group { width: 49.47368%; float: left; margin-right: 1.05263%; padding-right: 1em; }
+  #omdweb-profile .omdweb-dealer-info-group .form-group:nth-child(even) { float: right; margin-right: 0; padding-right: 0; } }
+.no-mediaqueries #omdweb-profile .omdweb-dealer-info-group .form-group { width: 49.47368%; float: left; margin-right: 1.05263%; padding-right: 1em; }
+.no-mediaqueries #omdweb-profile .omdweb-dealer-info-group .form-group:nth-child(even) { float: right; margin-right: 0; *margin-left: -0.83333em; padding-right: 0; }
+@media (min-width: 48em) { #omdweb-profile .omdweb-dealer-info-group label, #omdweb-profile .omdweb-dealer-info-group .form-control-static { float: left; } }
+.no-mediaqueries #omdweb-profile .omdweb-dealer-info-group label, .no-mediaqueries #omdweb-profile .omdweb-dealer-info-group .form-control-static { float: left; }
+#omdweb-profile .omdweb-dealer-info-group label { font-weight: 700; }
+#omdweb-profile .omdweb-dealer-info-group.omdweb-full-width-group label { width: 100%; }
+#omdweb-profile .omdweb-form-group-search-dealer input[type="text"] { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 85%; line-height: 1; border: none; background-color: #e9ebea; color: #8994a0; font-size: 12px; padding: 7px 20px 4px 0.83333em; float: left; }
+#omdweb-profile .omdweb-form-group-search-dealer input[type="text"]:focus { outline: none; background-color: #f1f2f2; -webkit-box-shadow: inset 1px 1px 2px 0 rgba(0, 0, 0, 0.3); box-shadow: inset 1px 1px 2px 0 rgba(0, 0, 0, 0.3); }
+@media (min-width: 48em) { #omdweb-profile .omdweb-form-group-search-dealer input[type="text"] { width: 300px; } }
+.no-mediaqueries #omdweb-profile .omdweb-form-group-search-dealer input[type="text"] { width: 300px; }
+#omdweb-profile td { vertical-align: middle; }
+#omdweb-profile td:last-child .btn { float: right; }
+#omdweb-profile .omdweb-delivery-hours-rows { clear: both; margin-top: 6px; }
+#omdweb-profile .omdweb-delivery-hours-rows li { *zoom: 1; }
+#omdweb-profile .omdweb-delivery-hours-rows li:after { content: ""; display: table; clear: both; }
+#omdweb-profile .omdweb-delivery-hours-rows strong { display: inline-block; *display: inline; *zoom: 1; margin: 0 4px; }
+#omdweb-profile .omdweb-delivery-hours-rows select { float: none; display: inline-block; *display: inline; *zoom: 1; }
+#omdweb-profile .omdweb-delivery-hours-rows li { margin-top: 1em; border-top: 1px solid #cfd7d9; padding-top: 1em; }
+#omdweb-profile .omdweb-delivery-hours-rows li:first-child { margin-top: 0; border-top: none; }
+#omdweb-profile .omdweb-delivery-dates { margin-bottom: 1em; }
+#omdweb-profile .omdweb-delivery-dates select { width: 95px; }
+@media (min-width: 61.875em) { #omdweb-profile .omdweb-delivery-dates { margin-bottom: 0; } }
+.no-mediaqueries #omdweb-profile .omdweb-delivery-dates { margin-bottom: 0; }
+#omdweb-profile .omdweb-delivery-hours select { width: 80px; }
+#omdweb-profile .form-group-delivery-hours .btn.btn-primary-button { margin-left: 0; margin-bottom: 1em; }
+@media (min-width: 48em) { #omdweb-profile .form-group-delivery-hours .btn.btn-primary-button { float: right; } }
+.no-mediaqueries #omdweb-profile .form-group-delivery-hours .btn.btn-primary-button { float: right; }
+#omdweb-profile .omdweb-full-width-group .omdweb-visibility-check label { font-weight: 100; width: auto; float: none; }
+@media (min-width: 48em) { #omdweb-profile .omdweb-delivery-dates { margin-right: 5%; }
+  #omdweb-profile .omdweb-delivery-dates, #omdweb-profile .omdweb-delivery-hours { float: left; } }
+.no-mediaqueries #omdweb-profile .omdweb-delivery-dates { margin-right: 5%; }
+.no-mediaqueries #omdweb-profile .omdweb-delivery-dates, .no-mediaqueries #omdweb-profile .omdweb-delivery-hours { float: left; }

@@ -1,0 +1,40 @@
+@font-face { font-family: "VWHeadlineOTBlack"; src: url("../../fonts/vwheadlineot-black-webfont.eot"); src: url("../../fonts/vwheadlineot-black-webfont?#iefix") format("embedded-opentype"), url("../../fonts/vwheadlineot-black-webfont.woff") format("woff"), url("../../fonts/vwheadlineot-black-webfont.ttf") format("truetype"), url("../../fonts/vwheadlineot-black-webfont.svg#vwheadlineot-black-webfont") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: "VWHeadlineOTSemibold"; src: url("../../fonts/vwheadlineot-semibold-webfont.eot"); src: url("../../fonts/vwheadlineot-semibold-webfont?#iefix") format("embedded-opentype"), url("../../fonts/vwheadlineot-semibold-webfont.woff") format("woff"), url("../../fonts/vwheadlineot-semibold-webfont.ttf") format("truetype"), url("../../fonts/vwheadlineot-semibold-webfont.svg#vwheadlineot-semibold-webfont") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'VWHeadlineOTBook'; src: url("../../fonts/vwheadlineot-book-webfont.eot"); src: url("../../fonts/vwheadlineot-book-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/vwheadlineot-book-webfont.woff") format("woff"), url("../../fonts/vwheadlineot-book-webfont.ttf") format("truetype"), url("../../fonts/vwheadlineot-book-webfont.svg#vw_headline_otbook") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'Glyphicons Halflings'; src: url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.eot"); src: url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("../../fonts/vendor/bootstrap/glyphicons-halflings-regular.svg#Glyphicons Halflings") format("svg"); font-style: normal; font-weight: normal; }
+
+.glyphicon { position: relative; top: 1px; display: inline-block; *display: inline; *zoom: 1; font-family: 'Glyphicons Halflings'; font-style: normal; font-weight: normal; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+.glyphicon-check:before { content: "\e067"; }
+
+.glyphicon-remove:before { content: "\e014"; }
+
+#omdweb-reportsale .hgroup { *zoom: 1; margin-bottom: 1em; }
+#omdweb-reportsale .hgroup:after { content: ""; display: table; clear: both; }
+#omdweb-reportsale .hgroup h1 { font-size: 250%; font-family: "VWHeadlineOTSemibold", "VWHeadlineOT-Semibold", Arial, Helvetica, sans-serif; float: left; margin-bottom: 0; margin-right: 1em; }
+#omdweb-reportsale .hgroup h1 span { font-family: "VWHeadlineOTBook", "VWHeadlineOT-Book", arial, helvetica, sans-serif; font-size: 22px; }
+#omdweb-reportsale .action-buttons:not(.step-action-buttons) { *zoom: 1; }
+#omdweb-reportsale .action-buttons:not(.step-action-buttons):after { content: ""; display: table; clear: both; }
+#omdweb-reportsale .action-buttons:not(.step-action-buttons) .btn { float: right; }
+@media (max-width: 47.9375em) { #omdweb-reportsale .step-action-buttons .btn { float: none; } }
+#omdweb-reportsale .top-action-buttons, #omdweb-reportsale .bottom-action-buttons { float: left; margin-top: 26px; }
+@media (min-width: 48em) { #omdweb-reportsale .top-action-buttons, #omdweb-reportsale .bottom-action-buttons { float: right; } }
+.no-mediaqueries #omdweb-reportsale .top-action-buttons, .no-mediaqueries #omdweb-reportsale .bottom-action-buttons { float: right; }
+@media (min-width: 48em) { #omdweb-reportsale .bottom-action-buttons { margin-top: 0; } }
+.no-mediaqueries #omdweb-reportsale .bottom-action-buttons { margin-top: 0; }
+#omdweb-reportsale .vehicle-detail-info { clear: both; margin-top: 1em; font-size: 12px; }
+#omdweb-reportsale .vehicle-detail-info h2 { margin-bottom: .67em; font-size: 16px; }
+@media (min-width: 48em) { #omdweb-reportsale .vehicle-detail-info { width: 49.47368%; float: left; margin-right: 1.05263%; } }
+.no-mediaqueries #omdweb-reportsale .vehicle-detail-info { width: 49.47368%; float: left; margin-right: 1.05263%; }
+@media (min-width: 48em) { #omdweb-reportsale .omdweb-incentives, #omdweb-reportsale .omdweb-programs { width: 49.47368%; float: left; margin-right: 1.05263%; padding-right: 1.66667em; clear: none; } }
+.no-mediaqueries #omdweb-reportsale .omdweb-incentives, .no-mediaqueries #omdweb-reportsale .omdweb-programs { width: 49.47368%; float: left; margin-right: 1.05263%; padding-right: 1.66667em; clear: none; }
+@media (min-width: 48em) { #omdweb-reportsale .omdweb-programs { float: right; margin-right: 0; padding-left: 1.66667em; padding-right: 0; } }
+.no-mediaqueries #omdweb-reportsale .omdweb-programs { float: right; margin-right: 0; *margin-left: -0.83333em; padding-left: 1.66667em; padding-right: 0; }
+#omdweb-reportsale .opt-out { margin-top: 1em; }
+@media (min-width: 48em) { #omdweb-reportsale fieldset.two-up.vehicle-information-set .form-group { margin-right: 0; }
+  #omdweb-reportsale fieldset.two-up.vehicle-information-set .form-group:nth-child(even) { float: left; margin-right: 1.05263%; float: left; padding-left: 0; padding-right: 1.66667em; margin-right: 0; } }
+.no-mediaqueries #omdweb-reportsale fieldset.two-up.vehicle-information-set .form-group { margin-right: 0; }
+.no-mediaqueries #omdweb-reportsale fieldset.two-up.vehicle-information-set .form-group:nth-child(even) { float: left; margin-right: 1.05263%; *margin-left: auto; float: left; padding-left: 0; padding-right: 1.66667em; margin-right: 0; }

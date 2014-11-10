@@ -1,0 +1,136 @@
+// Multi-handle sliders: Exterior/interior colors
+#omdweb-mbo {
+  // Slider background
+  .omdweb-multi-selector-slider {
+    position: relative;
+    margin-bottom: 8em;
+    background-color: white;
+  }
+  // Range slider table
+  .range {
+    border: none;
+    height: 15px;
+    td {
+      border:none;
+      padding: 0 !important;
+    }
+  }
+  // Slider "handles"
+  .rangeGrip {
+    display: block;
+    cursor: e-resize;
+    z-index: 8;
+    position: relative;
+    top: -5px;
+    @include border-radius-all(4px);
+    width: 18px;
+    height: 25px;
+    background-color: darken($borders,5%);
+    border: 1px solid darken($borders,20%);
+    &:before,
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 16px;
+      width: 1px;
+      background: darken($borders, 20%);
+      left: 5px;
+      top: 3px;
+    }
+    &:after {
+      left: 9px;
+    }
+  }
+  section.omdweb-trim-mix-selector {
+    .range {
+      height: 40px;
+    }
+    .rangeGrip {
+      width: 34px;
+      height: 50px;
+      border: 1px solid lighten($brand-primary,7%);
+      background-color: darken($brand-primary,5%);
+      &:before,
+      &:after {
+        content: "";
+        height: 36px;
+        background: lighten($brand-primary,5%);
+        left: 11px;
+        top: 6px;
+      }
+      &:after {
+        left: 15px;
+      }
+    }
+  }
+
+  // Small, bold trim text, "manage" button
+  .omdweb-trim-info {
+    position: absolute;
+    bottom: -42px;
+    width: 100%;
+  }
+  .omdweb-manage {
+    float: left;
+    strong {
+      float: left;
+      display: block;
+      margin-top: 1px;
+      margin-right: 6px;
+      width: 38px;
+    }
+    .btn {
+      margin-top: -2px;
+      margin-left: 40px !important;
+    }
+  }
+  // 1-4 slider range value displays
+  .sliderAmounts {
+    @include pie-clearfix;
+    position: absolute;
+    width: 100%;
+    bottom: -40px;
+  }
+  .omdweb-slider-amount {
+    float: left;
+    padding-left: 28px;
+  }
+  // 1-4 slider range value display widths
+  .omdweb-slider-amount-4 { width: 25%; }
+  .omdweb-slider-amount-3 { width: 33%; }
+  .omdweb-slider-amount-2 { width: 50%; }
+  .omdweb-slider-amount-1 { width: 100%; }
+
+  // Trim selector color values, values don't change, based around primary brand color
+  section.omdweb-trim-mix-selector {
+    .omdweb-trim-selection-range-value-1 { background-color: $brand-primary; }
+    .omdweb-trim-selection-range-value-2 { background-color: #42b6e7; }
+    .omdweb-trim-selection-range-value-3 { background-color: #7fceed; }
+    .omdweb-trim-selection-range-value-4 { background-color: #c1e6f6; }
+  }
+
+  .omdweb-color-config-selectors {
+    h2 {
+      margin-bottom: 10px;
+    }
+    .omdweb-manage {
+      strong {
+        width: auto;
+      }
+    }
+  }
+
+  .omdweb-color-config-selector-in {
+    td.omdweb-charcoal_in          { background-color: $omdweb-charcoal_in; }
+    td.omdweb-clay_gray_in         { background-color: $omdweb-clay_gray_in; }
+    td.omdweb-sandstone_in         { background-color: $omdweb-sandstone_in; }
+    td.omdweb-black_in             { background-color: $omdweb-black_in; }
+    td.omdweb-beige_in             { background-color: $omdweb-beige_in; }
+    td.omdweb-moonrock_in          { background-color: $omdweb-moonrock_in; }
+    td.omdweb-quartz_in            { background-color: $omdweb-quartz_in; }
+    td.omdweb-black_blue_in        { background-color: $omdweb-black_blue_in_2; }
+    td.omdweb-black_gray_in        { background-color: $omdweb-black_gray_in_2; }
+    td.omdweb-beige_black_in       { background-color: $omdweb-beige_black_in_2; }
+  }
+}
