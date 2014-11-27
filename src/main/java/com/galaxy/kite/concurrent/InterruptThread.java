@@ -2,25 +2,21 @@ package com.galaxy.kite.concurrent;
 
 public class InterruptThread {
 
-	Thread thread = new Thread("Interrupt thread") {
+	public Thread thread = new Thread("Interrupt thread") {
 		private int runTimes = 0;
 
 		@Override
 		public void run() {
-			while (true) {
-				doSomething();
-				try {
-					Thread.sleep(100);
-					throw new InterruptedException();
-				} catch (InterruptedException e) {
-					if (Thread.interrupted()) {
-						break;
-					}
-				}
-				if (Thread.interrupted()) {
-					break;
-				}
+
+			try {
+				Thread.sleep(5000);
+				System.out.println("Finish sleep.");
+			} catch (InterruptedException e) {
+				System.out.println("Catch a interruption exception.");
 			}
+			
+			System.out.println("Finish run method.");
+
 		}
 
 		private void doSomething() {
@@ -28,9 +24,5 @@ public class InterruptThread {
 			System.out.println(runTimes);
 		}
 	};
-
-	public static void main(String[] args) {
-		new InterruptThread().thread.start();
-	}
 
 }

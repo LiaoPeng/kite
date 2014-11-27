@@ -5,8 +5,6 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.hamcrest.core.StringEndsWith;
-
 public class NetHashTable {
 	
 	class Node{

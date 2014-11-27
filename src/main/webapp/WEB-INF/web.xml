@@ -14,13 +14,18 @@
 			classpath:spring-security-config.xml
 		</param-value>
 	</context-param>
-	
+
 	<!-- Define spring listener, load spring -->
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
 	
-
+	
+	<context-param>
+        <param-name>spring.profiles.active</param-name>
+        <param-value>db</param-value>
+    </context-param>
+	
 	<filter>
 		<filter-name>appliationEncoding</filter-name>
 		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
