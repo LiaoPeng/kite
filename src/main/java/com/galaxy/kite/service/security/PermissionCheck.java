@@ -24,23 +24,17 @@ public class PermissionCheck implements UserDetailsService {
 
 		Set<GrantedAuthority> authorities = new HashSet<GrantedAuthority>();
 		GrantedAuthority commonAuthority = new GrantedAuthority() {
-
 			@Override
 			public String getAuthority() {
-
 				return "ROLE_COMMON";
 			}
 		};
-
 		GrantedAuthority adminAuthority = new GrantedAuthority() {
-
 			@Override
 			public String getAuthority() {
-
 				return "ROLE_ADMIN";
 			}
 		};
-
 		User user = null;
 		if ("admin".equals(username)) {
 			authorities.add(commonAuthority);

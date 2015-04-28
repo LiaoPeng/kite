@@ -9,10 +9,17 @@ public class InterruptThread {
 		public void run() {
 
 			try {
-				Thread.sleep(5000);
+				
+				while(true){
+					System.out.println("Execute Thread");
+					if(Thread.interrupted()){
+						System.out.println("Thread is interrupt.");
+						break;
+					}
+				}
 				System.out.println("Finish sleep.");
-			} catch (InterruptedException e) {
-				System.out.println("Catch a interruption exception.");
+			} catch (Exception e) {
+				System.out.println("Catch a exception: " + e);
 			}
 			
 			System.out.println("Finish run method.");
@@ -25,4 +32,5 @@ public class InterruptThread {
 		}
 	};
 
+	
 }

@@ -1,6 +1,9 @@
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>  
+
+
 <section class="business-talking"><!--business-talking-start-->
 	<div class="container">
-        <h2>Letâ€™s Talk Business.</h2>
+        <h2>Let'€™s Talk Business.</h2>
     </div>
 </section><!--business-talking-end-->
 <div class="container">
@@ -9,16 +12,16 @@
         <div class="row">
         	<div class="col-lg-6 col-sm-7 wow fadeInLeft">
             	<div class="contact-info-box address clearfix">
-                	<h3><i class=" icon-map-marker"></i>Address:</h3>
-                	<span>308 Negra Arroyo Lane<br>Albuquerque, New Mexico, 87111.</span>
+                	<h3><i class=" icon-map-marker"></i> <spring:message code="kite.contact.addresstag"/> </h3>
+                	<span> <spring:message code="kite.contact.address"/></span>
                 </div>
                 <div class="contact-info-box phone clearfix">
-                	<h3><i class="fa-phone"></i>Phone:</h3>
-                	<span>1-800-BOO-YAHH</span>
+                	<h3><i class="fa-phone"></i> <spring:message code="kite.contact.phonetag"/>  </h3>
+                	<span> <spring:message code="kite.contact.phone"/> </span>
                 </div>
                 <div class="contact-info-box email clearfix">
-                	<h3><i class="fa-pencil"></i>email:</h3>
-                	<span>hello@knightstudios.com</span>
+                	<h3><i class="fa-pencil"></i> <spring:message code="kite.contact.emailtag"/></h3>
+                	<span> <spring:message code="kite.contact.email"/> </span>
                 </div>
             	<div class="contact-info-box hours clearfix">
                 	<h3><i class="fa-clock-o"></i>Hours:</h3>

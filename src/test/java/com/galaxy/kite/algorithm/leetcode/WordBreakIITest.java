@@ -9,7 +9,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 
 
-@Ignore
+
 public class WordBreakIITest {
 	
 	public List<String> wordBreak(String originalString2, Set<String> dict2){
@@ -73,7 +73,6 @@ public class WordBreakIITest {
 	}
 	
 	@Test
-	@Ignore
 	public void testCase6(){
 		originalString = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab";
 		dict.addAll(Arrays.asList("a","aa","aaa","aaaa","aaaaa","aaaaaa","aaaaaaa","aaaaaaaa","aaaaaaaaa","aaaaaaaaaa"));

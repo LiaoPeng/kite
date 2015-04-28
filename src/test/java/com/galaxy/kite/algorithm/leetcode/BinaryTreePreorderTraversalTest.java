@@ -5,6 +5,8 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.galaxy.kite.algorithm.leetcode.model.TreeNode;
+
 
 
 public class BinaryTreePreorderTraversalTest {

@@ -1,6 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@include file="common.jsp"%>
-<%@ page isELIgnored="false" %> 
+<%@ page isELIgnored="false"%>
 
 <!doctype html>
 <html>
@@ -20,152 +21,141 @@
 
 </head>
 <body>
-<div style="overflow:hidden;">
+	<div style="overflow: hidden;">
 
-<c:if test="${target != 'header.jsp'}">
- <jsp:include page="navigate.jsp"></jsp:include>
-</c:if>
-<jsp:include page="${target}"></jsp:include>
+		<c:if test="${target != 'header.jsp'}">
+			<jsp:include page="navigate.jsp"></jsp:include>
+		</c:if>
 
-
-
-
-</div>
-<footer class="footer">
-    <div class="container">
-        <div class="footer-logo"><a href="#"><img src="img/footer-logo.png" alt=""></a></div>
-      	<span class="copyright">Copyright @ 2014 Kite. <a href="javascript:setWebSiteLanguage('zh_CN')">Chinese</a>
-      	 <a href="javascript:setWebSiteLanguage('en_US')">English</a></span>
-    	<span> <a href="javascript:ajaxRequest()">Ajax Request</a> </span>
-    </div>
-</footer>
-
-<script type="text/javascript">
-  
-function setWebSiteLanguage(lng){
-	
-	console.log("language = " + lng);
-	if(lng == null){
-		$.cookie("language","en");
-	} else{
-		$.cookie("language",lng);
-	}
-	location.reload();
-}
+		<jsp:include page="${target}"></jsp:include>
 
 
-function ajaxRequest(){
-	
-	jQuery.ajax({
-			url : "./setI18Lng.do",
-			type : "post",
-			data : {},
-			dataType: "text",
-			success : function(data) {
-				alert(data);
-			},
-			error : function(data) {
-			
+	</div>
+
+	<c:if test="${target != 'header.jsp'}">
+		<footer class="footer">
+			<div class="container">
+				<div class="footer-logo">
+					<a href="#"><img src="img/footer-logo.png" alt=""></a>
+				</div>
+				<span class="copyright">Copyright @ 2014 Kite. 				
+				<div class="animated fadeInUp delay-1s">
+				使用下列语言：
+				<a  href="javascript:setWebSiteLanguage('zh_CN')">中文（简体）</a> 
+				<a  href="javascript:setWebSiteLanguage('en_US')">English</a>
+				</div>
+			</div>
+		</footer>
+
+	</c:if>
+
+	<script type="text/javascript">
+		function setWebSiteLanguage(lng) {
+
+			console.log("language = " + lng);
+			if (lng == null) {
+				$.cookie("language", "en_US");
+			} else {
+				$.cookie("language", lng);
 			}
+			location.reload();
+		}
+	</script>
+
+
+
+	<script type="text/javascript">
+		$(document).ready(function(e) {
+			$('#test').scrollToFixed();
+			$('.res-nav_click').click(function() {
+				$('.main-nav').slideToggle();
+				return false;
+
+			});
+
 		});
-	}
-</script>
+	</script>
 
-
-
-<script type="text/javascript">
-    $(document).ready(function(e) {
-        $('#test').scrollToFixed();
-        $('.res-nav_click').click(function(){
-            $('.main-nav').slideToggle();
-            return false    
-            
-        });
-        
-    });
-</script>
-
-  <script>
-    wow = new WOW(
-      {
-        animateClass: 'animated',
-        offset:       100
-      }
-    );
-    wow.init();
-    /* document.getElementById('').onclick = function() {
-      var section = document.createElement('section');
-      section.className = 'wow fadeInDown';
-      this.parentNode.insertBefore(section, this);
-    }; */
-  </script>
-
-
-<script type="text/javascript">
-	$(window).load(function(){
-		
-		$('.main-nav li a').bind('click',function(event){
-			var $anchor = $(this);
-			
-			$('html, body').stop().animate({
-				scrollTop: $($anchor.attr('href')).offset().top - 102
-			}, 1500,'easeInOutExpo');
-			/*
-			if you don't want to use the easing effects:
-			$('html, body').stop().animate({
-				scrollTop: $($anchor.attr('href')).offset().top
-			}, 1000);
-			*/
-			event.preventDefault();
+	<script>
+		wow = new WOW({
+			animateClass : 'animated',
+			offset : 100
 		});
-	})
-</script>
+		wow.init();
+		/* document.getElementById('').onclick = function() {
+		  var section = document.createElement('section');
+		  section.className = 'wow fadeInDown';
+		  this.parentNode.insertBefore(section, this);
+		}; */
+	</script>
 
-<script type="text/javascript">
 
-$(window).load(function(){
-  
-  
-  var $container = $('.portfolioContainer'),
-      $body = $('body'),
-      colW = 375,
-      columns = null;
+	<script type="text/javascript">
+		$(window).load(function() {
 
-  
-  $container.isotope({
-    // disable window resizing
-    resizable: true,
-    masonry: {
-      columnWidth: colW
-    }
-  });
-  
-  $(window).smartresize(function(){
-    // check if columns has changed
-    var currentColumns = Math.floor( ( $body.width() -30 ) / colW );
-    if ( currentColumns !== columns ) {
-      // set new column count
-      columns = currentColumns;
-      // apply width to container manually, then trigger relayout
-      $container.width( columns * colW )
-        .isotope('reLayout');
-    }
-    
-  }).smartresize(); // trigger resize to set container width
-  $('.portfolioFilter a').click(function(){
-        $('.portfolioFilter .current').removeClass('current');
-        $(this).addClass('current');
- 
-        var selector = $(this).attr('data-filter');
-        $container.isotope({
-			
-            filter: selector,
-         });
-         return false;
-    });
-  
-});
+			$('.main-nav li a').bind('click', function(event) {
+				var $anchor = $(this);
 
-</script>
+				$('html, body').stop().animate({
+					scrollTop : $($anchor.attr('href')).offset().top - 102
+				}, 1500, 'easeInOutExpo');
+				/*
+				if you don't want to use the easing effects:
+				$('html, body').stop().animate({
+					scrollTop: $($anchor.attr('href')).offset().top
+				}, 1000);
+				 */
+				event.preventDefault();
+			});
+		})
+	</script>
+
+	<script type="text/javascript">
+		$(window)
+				.load(
+						function() {
+
+							var $container = $('.portfolioContainer'), $body = $('body'), colW = 375, columns = null;
+
+							$container.isotope({
+								// disable window resizing
+								resizable : true,
+								masonry : {
+									columnWidth : colW
+								}
+							});
+
+							$(window).smartresize(
+									function() {
+										// check if columns has changed
+										var currentColumns = Math.floor(($body
+												.width() - 30)
+												/ colW);
+										if (currentColumns !== columns) {
+											// set new column count
+											columns = currentColumns;
+											// apply width to container manually, then trigger relayout
+											$container.width(columns * colW)
+													.isotope('reLayout');
+										}
+
+									}).smartresize(); // trigger resize to set container width
+							$('.portfolioFilter a').click(
+									function() {
+										$('.portfolioFilter .current')
+												.removeClass('current');
+										$(this).addClass('current');
+
+										var selector = $(this).attr(
+												'data-filter');
+										$container.isotope({
+
+											filter : selector,
+										});
+										return false;
+									});
+
+						});
+	</script>
 </body>
 </html>

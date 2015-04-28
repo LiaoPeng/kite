@@ -31,11 +31,6 @@ import com.galaxy.kite.service.home.api.ILoginService;
 @RequestMapping("/knight")
 public class LoginController {
 	
-	@Autowired
-	@Qualifier("localeResolver")
-	private LocaleResolver localeResolver;
-
-
 	@RequestMapping(value = "/showHomePage.do", method = RequestMethod.GET)
 	public ModelAndView showHomePage() {
 

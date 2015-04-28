@@ -21,7 +21,7 @@ public class SecurityUserFilter implements Filter {
 	public void doFilter(ServletRequest request, ServletResponse response,
 			FilterChain chain) throws IOException, ServletException {
 		// TODO Auto-generated method stub
-		
+		request.getParameterValues("");
 		chain.doFilter(request, response);
 		
 	}

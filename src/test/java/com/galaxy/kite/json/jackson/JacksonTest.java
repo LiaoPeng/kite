@@ -13,6 +13,7 @@ import org.codehaus.jackson.map.ObjectMapper;
 import org.junit.Test;
 
 import com.galaxy.kite.model.user.Person;
+import com.galaxy.kite.tutorial.io.ExternalSerializable;
 import com.galaxy.kite.util.objects.ObjectFormat;
 import com.google.common.base.Objects;
 
@@ -24,7 +25,6 @@ public class JacksonTest {
 		
 		Date date = new Date(2014-1900,10,3);
 		System.out.println(date);
-
 		ObjectMapper mapper = new ObjectMapper();
 		mapper.setDateFormat(new SimpleDateFormat("MM/dd/yyyy"));
 		Person kite = new Person();

@@ -4,15 +4,9 @@ import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
 
-class TreeNode {
-	int val;
-	TreeNode left;
-	TreeNode right;
+import com.galaxy.kite.algorithm.leetcode.model.TreeNode;
 
-	TreeNode(int x) {
-		val = x;
-	}
-}
+
 
 public class BinaryTreePreorderTraversal {
 

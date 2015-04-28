@@ -3,8 +3,7 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
-	xmlns:cache="http://www.springframework.org/schema/cache"
-	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:cache="http://www.springframework.org/schema/cache" xmlns:mvc="http://www.springframework.org/schema/mvc"
 	xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="
         	http://www.springframework.org/schema/beans 
@@ -19,7 +18,7 @@
             http://www.springframework.org/schema/cache/spring-cache.xsd
         	http://www.springframework.org/schema/mvc
         	http://www.springframework.org/schema/mvc/spring-mvc.xsd">
-	
+
 	<context:annotation-config />
 
 	<!-- To load properties file -->
@@ -32,53 +31,37 @@
 		</property>
 	</bean>
 
-	<!-- Initial data source bean -->
-	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
-		<property name="driverClass" value="${database.driver}" />
-		<property name="jdbcUrl" value="${database.url}" />
-		<property name="user" value="${database.user}" />
-		<property name="password" value="${database.password}" />
-	</bean>
-
-
-	<!-- Initial Hibernate Session Factory -->
-	<bean id="sessionFactory"
-		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
-		<property name="dataSource" ref="dataSource"></property>
-		<property name="packagesToScan" value="com.galaxy.kite.util" />
-		<property name="hibernateProperties">
-			<props>
-				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
-				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
-				<prop key="hibernate.autoReconnect">${hibernate.autoReconnect}</prop>
-				<prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
-				<prop key="hibernate.default_schema">${hibernate.default_schema}</prop>
-			</props>
+	<bean id="messageSource"
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="defaultEncoding" value="utf-8" />
+		<property name="useCodeAsDefaultMessage" value="true" />
+		<property name="basenames">
+			<list>
+				<value>classpath:messages/messages</value>
+			</list>
 		</property>
 	</bean>
 
-	<!-- Enables the Hibernate @Transactional programming model -->
-	<tx:annotation-driven transaction-manager="transactionManager" />
-	<bean id="transactionManager"
-		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
-		<property name="sessionFactory" ref="sessionFactory" />
+	<bean id="localeResolver"
+		class="org.springframework.web.servlet.i18n.CookieLocaleResolver">
+		<property name="cookieName" value="language" />
+		<property name="cookieMaxAge" value="3600" />
+		<property name="defaultLocale" value="en_US" />
 	</bean>
 
 	<context:component-scan base-package="com.galaxy.kite">
-		<context:exclude-filter type="regex" expression="com.galaxy.kite.controller" />
+		<context:exclude-filter type="regex"
+			expression="com.galaxy.kite.controller" />
 	</context:component-scan>
 
 	<!-- AOP -->
 
-<!-- 	<aop:aspectj-autoproxy />
-	<bean class="com.galaxy.kite.common.interceptor.ServiceLogInterceptor"></bean> -->
+	<!-- <aop:aspectj-autoproxy /> <bean class="com.galaxy.kite.common.interceptor.ServiceLogInterceptor"></bean> -->
 
 	<aop:aspectj-autoproxy />
-	
-
 
 	<!-- ******************************* ***** CACHE CONFIGURATION ***** ******************************* -->
-	<cache:annotation-driven cache-manager="cacheManager"/>
+	<cache:annotation-driven cache-manager="cacheManager" />
 	<bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager">
 		<property name="cacheManager" ref="ehcache" />
 	</bean>
@@ -88,5 +71,40 @@
 		<property name="shared" value="true" />
 	</bean>
 
+	<beans profile="db">
+	
+		<!-- Initial data source bean -->
+		<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+			destroy-method="close">
+			<property name="driverClass" value="${database.driver}" />
+			<property name="jdbcUrl" value="${database.url}" />
+			<property name="user" value="${database.user}" />
+			<property name="password" value="${database.password}" />
+		</bean>
+
+		<!-- Initial Hibernate Session Factory -->
+		<bean id="sessionFactory"
+			class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+			<property name="dataSource" ref="dataSource"></property>
+			<property name="packagesToScan" value="com.galaxy.kite.util" />
+			<property name="hibernateProperties">
+				<props>
+					<prop key="hibernate.dialect">${hibernate.dialect}</prop>
+					<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+					<prop key="hibernate.autoReconnect">${hibernate.autoReconnect}</prop>
+					<prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
+					<prop key="hibernate.default_schema">${hibernate.default_schema}</prop>
+				</props>
+			</property>
+		</bean>
+
+		<!-- Enables the Hibernate @Transactional programming model -->
+		<tx:annotation-driven transaction-manager="transactionManager" />
+		<bean id="transactionManager"
+			class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+			<property name="sessionFactory" ref="sessionFactory" />
+		</bean>
+
+	</beans>
 
 </beans>

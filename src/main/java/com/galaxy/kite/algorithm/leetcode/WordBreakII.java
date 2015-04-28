@@ -18,15 +18,14 @@ public class WordBreakII {
 	
 	private Set<String> orginalDict = null;
 	
-	private int count =0;
-
-	private Map<String, Word> wordMap = new HashMap<String, WordBreakII.Word>();
+	private Map<String, Word> wordMap = null;
 
 	public List<String> wordBreak(String s, Set<String> dict) {
 
 		int strLength = s.length();
 		orginalStr = s;
-		orginalDict = dict; 
+		orginalDict = dict;
+		wordMap = new HashMap<String, WordBreakII.Word>(256);
 		canWordBreak(0, strLength);
 		return new ArrayList<String>(wordMap.get(s).words);
 	}
@@ -34,7 +33,6 @@ public class WordBreakII {
 	private boolean canWordBreak(int begin, int end) {
 
 		String destStr = orginalStr.substring(begin, end);
-		System.out.println(destStr);
 	
 		if (!wordMap.containsKey(destStr)) {
 			wordMap.put(destStr, new Word());
@@ -43,8 +41,6 @@ public class WordBreakII {
 		}
 		Word word = wordMap.get(destStr);
 		
-		System.out.println("count:" + count++ + destStr);
-
 		if (orginalDict.contains(destStr)) {
 			word.canBreak = true;
 			word.words.add(destStr);

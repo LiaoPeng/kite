@@ -13,7 +13,7 @@
 		password:<input type="text" name="j_password"><br> 
 	
 		
-		<input type="submit" value="提交" />
+		<input type="submit" value="submit" />
 	</form>
 
 

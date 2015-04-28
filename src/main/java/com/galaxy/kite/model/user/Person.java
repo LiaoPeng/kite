@@ -75,4 +75,15 @@ public class Person implements Serializable {
 		return ObjectFormat.toJsonString(this);
 	}
 
+	public static Person newPersionInstance(){
+		
+		Person person = new Person();
+		person.setAddress("New Zealand");
+		person.setAge(28);
+		person.setLoveCalendar(Calendar.getInstance());
+		person.setName("Pumbaa");
+		person.setTotalMoney(12.8d);
+		person.setLuckDay(new Date(12, 1, 1));
+		return person;
+	}
 }
